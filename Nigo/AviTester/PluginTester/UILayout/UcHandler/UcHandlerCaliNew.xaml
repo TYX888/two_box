@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="AviTester.UcHandlerCaliNew"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AviTester"
+             mc:Ignorable="d" 
+             d:DesignHeight="860" d:DesignWidth="1750" Loaded="UcHandlerCaliNew_OnLoaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="550"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Border Margin="3" Style="{StaticResource BlueBorder}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="50"/>
+
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.Resources>
+                    <Style TargetType="CheckBox" x:Key="loadUnloadCheck">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type CheckBox}">
+                                    <Label BorderBrush="DeepSkyBlue" BorderThickness="2" HorizontalContentAlignment="Center" FontSize="30" 
+                                           VerticalContentAlignment="Center" Name="GelBackground" Background="black" FontWeight="Bold"></Label>
+
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsChecked" Value="False">
+                                            <Setter TargetName="GelBackground" Property="Background" Value="Orange" ></Setter>
+                                            <Setter TargetName="GelBackground" Property="Content" Value="LOAD" ></Setter>
+                                        </Trigger>
+                                        <Trigger Property="IsChecked" Value="True">
+                                            <Setter TargetName="GelBackground" Property="Background" Value="Yellow" ></Setter>
+                                            <Setter TargetName="GelBackground" Property="Content" Value="UNLOAD" ></Setter>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Grid.Resources>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="CALIBRATION" Foreground="DeepSkyBlue" FontSize="28"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                </StackPanel>
+                <Border Grid.Row="1" Grid.ColumnSpan="2" BorderThickness="0,0,0,3" CornerRadius="0" Margin="0" Style="{StaticResource BlueBorder}">
+                    <StackPanel Orientation="Horizontal">
+                        <RadioButton IsChecked="True" Width="120" Content="CAMERA CAL" x:Name="BtnCameraCal" Click="BtnCameraCal_OnClick"  Style="{StaticResource MenuRedRadio}" Margin="0,5,0,0"/>
+                        <RadioButton Width="120" Content="FLY CAPTURE" x:Name="BtnCameraFlyCal" Click="BtnCameraFlyCal_OnClick"  Style="{StaticResource MenuRedRadio}" Margin="0,5,0,0"/>
+                        <RadioButton Width="120" Content="AXIS ORG LIMIT" x:Name="BtnAxisOrgLimitCal" Click="BtnAxisOrgLimit_OnClick"  Style="{StaticResource MenuRedRadio}" Margin="0,5,0,0"/>
+                        <RadioButton Width="120" Content="PICKER CAL" x:Name="BtnPickerCal" Click="BtnPickerCal_OnClick" Style="{StaticResource MenuRedRadio}" Margin="0,5,0,0"/>
+
+                    </StackPanel>
+                </Border>
+                <StackPanel  Grid.Row="2">
+                    <Grid x:Name="UcGrid1" />
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Grid.Column="1" BorderThickness="2" Margin="3" BorderBrush="DeepSkyBlue" >
+            <Grid >
+                <StackPanel >
+                    <Label Content="CAMERA VIEW" Foreground="DeepSkyBlue" FontSize="14" Height="25" Width="130" HorizontalAlignment="Left" />
+                    <StackPanel Height="520">
+
+                    </StackPanel>
+                    <local:UcAxisCollection2/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+    </Grid>
+
+</UserControl>

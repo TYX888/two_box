@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Nigo.UcMachinePerformance"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:wpf="clr-namespace:NGettext.Wpf;assembly=NGettext.Wpf"
+             xmlns:local="clr-namespace:Nigo"
+             mc:Ignorable="d" 
+             d:DesignHeight="138" d:DesignWidth="467" >
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/WpfStyleApi;component/Resources/Auto/Bg/PERFORMANCE_bg.png"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="43"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Label Content="{wpf:Gettext PERFORMANCE}" Foreground="#23cefd" FontSize="14" Height="28" Width="200" HorizontalAlignment="Left"  Margin="15,15,0,0">
+            <Label.Background>
+                <ImageBrush ImageSource="/WpfStyleApi;component/Resources/Auto/Other/Title.png"/>
+            </Label.Background>
+        </Label>
+
+        <ScrollViewer Style="{StaticResource MyNewScrollViewerStyle}" Grid.Row="1" HorizontalAlignment="Left" Margin="15,10,15,10" Width="437" Height="75"
+                      HorizontalScrollBarVisibility="Auto">
+            <UniformGrid Name="MachinePerformance" Rows="1">
+                <!--添加机台相关UPH及MTBA等，添加 内容样式 UcMachineUPH.xaml>-->
+            </UniformGrid>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

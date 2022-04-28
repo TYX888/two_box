@@ -1,0 +1,14 @@
+E:\Work\CSharp\Nigo\AviTester\exe\McBaseInfo.dll
+E:\Work\CSharp\Nigo\AviTester\exe\McBaseInfo.pdb
+E:\Work\CSharp\Nigo\AviTester\McBaseInfo\obj\Debug\McBaseInfo.csproj.AssemblyReference.cache
+E:\Work\CSharp\Nigo\AviTester\McBaseInfo\obj\Debug\McBaseInfo.csproj.CoreCompileInputs.cache
+E:\Work\CSharp\Nigo\AviTester\McBaseInfo\obj\Debug\McBaseInfo.dll
+E:\Work\CSharp\Nigo\AviTester\McBaseInfo\obj\Debug\McBaseInfo.pdb
+E:\Work\CSharp\Nigo\Nigo\bin\Debug\McBaseInfo.dll
+E:\Work\CSharp\Nigo\Nigo\bin\Debug\McBaseInfo.pdb
+D:\Nigo\Nigo\bin\Debug\McBaseInfo.dll
+D:\Nigo\Nigo\bin\Debug\McBaseInfo.pdb
+D:\Nigo\AviTester\McBaseInfo\obj\Debug\McBaseInfo.csprojAssemblyReference.cache
+D:\Nigo\AviTester\McBaseInfo\obj\Debug\McBaseInfo.csproj.CopyComplete
+D:\Nigo\AviTester\McBaseInfo\obj\Debug\McBaseInfo.dll
+D:\Nigo\AviTester\McBaseInfo\obj\Debug\McBaseInfo.pdb

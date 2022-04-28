@@ -1,0 +1,16 @@
+E:\state\Nigo-2\Nigo\Nigo\bin\Debug\Common.dll
+E:\state\Nigo-2\Nigo\Nigo\bin\Debug\Common.pdb
+E:\state\Nigo-2\Nigo\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+E:\state\Nigo-2\Nigo\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\state\Nigo-2\Nigo\Common\obj\Debug\Common.dll
+E:\state\Nigo-2\Nigo\Common\obj\Debug\Common.pdb
+E:\Work\CSharp\Nigo\Nigo\bin\Debug\Common.dll
+E:\Work\CSharp\Nigo\Nigo\bin\Debug\Common.pdb
+E:\Work\CSharp\Nigo\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\Work\CSharp\Nigo\Common\obj\Debug\Common.dll
+E:\Work\CSharp\Nigo\Common\obj\Debug\Common.pdb
+E:\Work\CSharp\Nigo\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+D:\Nigo\Nigo\bin\Debug\Common.dll
+D:\Nigo\Nigo\bin\Debug\Common.pdb
+D:\Nigo\Common\obj\Debug\Common.dll
+D:\Nigo\Common\obj\Debug\Common.pdb

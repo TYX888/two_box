@@ -1,0 +1,53 @@
+﻿<Window x:Class="MemsHandler.WfTrayBinArea"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MemsHandler"
+        mc:Ignorable="d"
+        Title="WfTrayBinArea" Height="800" Width="600">
+    <Window.Resources>
+        <local:ListConverter x:Key="listConverter"/>
+    </Window.Resources>
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="470"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Canvas x:Name="mainCanvas" Grid.Row="1" Margin="5" Background="Transparent" MouseMove="MainCanvas_MouseMove"
+                MouseRightButtonUp="MainCanvas_MouseRightButtonUp" MouseRightButtonDown="MainCanvas_MouseRightButtonDown">
+            <UniformGrid x:Name="TrayGrid"  Rows="2" Columns="2" Width="540" Height="420" Margin="0" Canvas.Top="20" Canvas.Left="20"/>
+        </Canvas>
+
+        <DataGrid   x:Name="dataGrid"  Grid.Row="2" IsReadOnly="True"  Margin="10" Style="{StaticResource MyDataGridStyle}" 
+                    SelectionChanged="DataGrid_OnSelectionChanged">
+            <DataGrid.Resources>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Background" Value="{x:Null}" />
+                    <Setter Property="Foreground" Value="White"/>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn  Width="90" Header="BIN NAME" Binding="{Binding Key}" Foreground="White"/>
+                <DataGridTextColumn Width="380" Header="CELL IDs" Binding="{Binding Value, Converter={StaticResource listConverter}}" Foreground="White">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping" Value="Wrap"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTemplateColumn Width="80" Header="UPDATE" IsReadOnly="true" ClipboardContentBinding="{Binding ID}">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Update" Click="BtnUpdate"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns >
+        </DataGrid>
+    </Grid>
+</Window>

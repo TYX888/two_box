@@ -1,0 +1,138 @@
+﻿<UserControl x:Class="AviTester.UcGlobalMark"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AviTester"
+             mc:Ignorable="d" 
+             d:DesignHeight="750" d:DesignWidth="1200" Loaded="UcGlobalMark_OnLoaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="480"/>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Label BorderBrush="DeepSkyBlue" BorderThickness="0,0,0,1" Grid.ColumnSpan="3" Content="TOP CAMERA CAL GLOBAL MARK" Foreground="DeepSkyBlue" FontSize="20" Height="35"  Margin="0,0,0,0" ></Label>
+        <Border Grid.Row="1" Grid.Column="0" BorderBrush="White" BorderThickness="1" CornerRadius="5"  Margin="20,10,10,10" Width="400">
+            <StackPanel Margin="0,10">
+                <StackPanel  Orientation="Horizontal" >
+                    <Label Content="Mark:"  Foreground="DeepSkyBlue" FontSize="14" Height="25" Width="50" HorizontalContentAlignment="Center" Margin="0,4,0,2" ></Label>
+                    <Label Content="X"  Foreground="DeepSkyBlue" FontSize="14" Height="25" Width="40" HorizontalContentAlignment="Center" Margin="0,4,0,2" ></Label>
+                    <Label Content="Y"  Foreground="DeepSkyBlue" FontSize="14" Height="25" Width="40" HorizontalContentAlignment="Center" Margin="35,2,0,0" ></Label>
+                    <Label Content="H" Visibility="Collapsed" Foreground="DeepSkyBlue" FontSize="14" Height="25" Width="100" HorizontalContentAlignment="Center" Margin="20,2,0,0" ></Label>
+                </StackPanel>
+                <StackPanel Name="pnl_mark_top" Orientation="Horizontal">
+                    <TextBox Text="{Binding _dXpos}"   Width="80"  Height="25" Margin="20,0,0,0" Style="{ StaticResource BlueTextBox}"></TextBox>
+                    <TextBox Text="{Binding _dYpos}"   Width="80"  Height="25" Margin="5,0,0,0" Style="{ StaticResource BlueTextBox}"></TextBox>
+                    <TextBox Text="9"  Visibility="Collapsed" Width="100"  Height="25" Margin="20,0,0,0" Style="{ StaticResource BlueTextBox}"></TextBox>
+                    <Button  Margin="25,0" Click="Cur_Mark_XY_Pos_READ_Top" Style="{StaticResource DefDoubleBtn}" Content="Cur Mark XY Pos" Tag="READ" Foreground="White" Width="160"></Button>
+                </StackPanel>
+
+                <StackPanel  Orientation="Horizontal" Margin="0,10">
+                    <Button Margin="20,5" Click="Cam_To_Mark_Pos_MOVE_Top" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Cam To Mark Pos" Tag="MOVE"  Foreground="White"></Button>
+                    <Button  Margin="10,5" Click="BtnFocus_Top" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Cam To Mark Pos" Tag="FOCUS" Foreground="White"></Button>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <StackPanel Grid.Row="1" Grid.Column="1"  Margin="0,0">
+            <StackPanel  Orientation="Horizontal" Margin="0,40,0,0">
+                <Button x:Name="BtnMarkPr" Click="BtnMarkPr_Top" Margin="0,10,10,10" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Cam Pr Mark" Tag="PR" Foreground="White"></Button>
+                <Button x:Name="BtnMarkEditVpp" Click="BtnMarkEditVpp_Top" Margin="10" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Pr Mark Vpp" Tag="EDIT" Foreground="White"></Button>
+            </StackPanel>
+            <StackPanel Margin="0" Orientation="Horizontal">
+                <Button Click="StartTopCal" Margin="0,10,10,10" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Top Cam Cal" Tag="START" Foreground="GreenYellow"></Button>
+                <Button Click="StopTopCal"  Margin="10" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Top Cam Cal" Tag="ABORT" Foreground="IndianRed"></Button>
+            </StackPanel>
+        </StackPanel>
+        <!--#region Bottom Calibration-->
+        <Label BorderBrush="DeepSkyBlue" BorderThickness="0,0,0,1" Grid.ColumnSpan="3" Grid.Row="2" Grid.Column="0" Content="TOP BOT CAMERA CAL " Foreground="DeepSkyBlue" FontSize="20" Height="35"   Margin="0,0,0,0" ></Label>
+        <Border Grid.Row="3" Grid.Column="0" BorderBrush="White" BorderThickness="1" CornerRadius="5" Margin="20,10,10,10" Width="400">
+            <StackPanel Margin="0,10">
+                <StackPanel  Orientation="Horizontal" >
+                    <Label Content="Mark:"  Foreground="DeepSkyBlue" FontSize="14" Height="25" Width="50" HorizontalContentAlignment="Center" Margin="0,4,0,2" ></Label>
+                    <Label Content="X"  Foreground="DeepSkyBlue" FontSize="14" Height="25" Width="40" HorizontalContentAlignment="Center" Margin="0,4,0,2" ></Label>
+                    <Label Content="Y"  Foreground="DeepSkyBlue" FontSize="14" Height="25" Width="40" HorizontalContentAlignment="Center" Margin="50,2,0,0" ></Label>
+                    <Label Content="Cali Height" Foreground="DeepSkyBlue" FontSize="14" Height="25" Width="100" HorizontalContentAlignment="Center" Margin="80,2,0,0" ></Label>
+                </StackPanel>
+                <StackPanel  Orientation="Horizontal" Name="pnl_mark_bot">
+                    <TextBox Text="{Binding _dXpos}"   Width="80"  Height="25" Margin="20,0,0,0" Style="{ StaticResource BlueTextBox}"></TextBox>
+                    <TextBox Text="{Binding _dYpos}"   Width="80"  Height="25" Margin="20,0,0,0" Style="{ StaticResource BlueTextBox}"></TextBox>
+                    <TextBox x:Name="txtCaliHeight" Text="{Binding CaliHeight}" Width="100"  Height="25" Margin="60,0,0,0" Style="{ StaticResource BlueTextBox}"></TextBox>
+                </StackPanel>
+
+                <StackPanel  Orientation="Horizontal" Margin="0,10">
+                    <Button Margin="20,5" Click="Cam_To_Mark_Pos_MOVE_Bot" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Top Cam To Mark Pos" Tag="MOVE"  Foreground="White"></Button>
+                    <Button  Margin="20,5" Click="Cur_Mark_XY_Pos_READ_Bot" Style="{StaticResource DefDoubleBtn}" Content="Cur Mark XY Pos" Tag="READ" Foreground="White" Width="160"></Button>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <StackPanel Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
+            <StackPanel  Orientation="Horizontal" Margin="0,0,0,0">
+                <ComboBox Style="{StaticResource ComboBoxStyle}" Width="160" Margin="0,10,10,10" x:Name="BoxPickerSel" SelectionChanged="BoxPickerSel_OnSelectionChanged">
+                    <ComboBoxItem >PICKER1</ComboBoxItem>
+                </ComboBox>
+                <Button Margin="10" Click="BtnTopChartPr" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Top Cam Chart" Tag="PR" Foreground="White"></Button>
+                <Button Margin="10" Click="BtnTopChartEdit" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Top Cam Chart" Tag="EDIT" Foreground="White"></Button>
+                <Button Margin="10" Click="BtnPickDut" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Pick Dut" Tag="PICK" Foreground="White"></Button>
+            </StackPanel>
+            <StackPanel Margin="0" Orientation="Horizontal" >
+                <Button Margin="0,10,10,10"  Click="BtnBotPickerMovoToCam" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Picker To Bot Cam" Tag="Move" Foreground="White"></Button>
+                <Button Margin="10"  Click="BtnBotChartPr" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Bot Cam Chart" Tag="PR" Foreground="White"></Button>
+                <Button Margin="10" Click="BtnBotChartEdit" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Bot Cam Chart" Tag="EDIT" Foreground="White"></Button>
+                <Button Margin="10" Click="BtnPlaceDut" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Place Dut" Tag="PLACE" Foreground="White"></Button>
+            </StackPanel>
+            <StackPanel Margin="0" Orientation="Horizontal">
+                <Button Click="BtnStartUpDwn" Margin="0,10,10,10" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Bot Cam Cal" Tag="START" Foreground="GreenYellow"></Button>
+                <Button  Margin="10" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Bot Cam Cal" Tag="ABORT" Foreground="IndianRed"></Button>
+            </StackPanel>
+        </StackPanel>
+        <!--#endregion-->
+
+        <!--#region Tray Calibration-->
+        <Label x:Name="lblTrayMapping" BorderBrush="DeepSkyBlue" BorderThickness="0,0,0,1" Grid.ColumnSpan="3" Grid.Row="4" Grid.Column="0" Content="TRAY CAMERA CAL GLOBAL MARK" Foreground="DeepSkyBlue" FontSize="20" Height="35"  Margin="0,0,0,0" ></Label>
+        <Border x:Name="brdlblTrayMapping" Grid.Row="5" Grid.Column="0" BorderBrush="White" BorderThickness="1" CornerRadius="5" Margin="20,10,10,10" Width="400">
+            <StackPanel Margin="0,10">
+                <StackPanel  Orientation="Horizontal" >
+                    <Label Content="Mark:"  Foreground="DeepSkyBlue" FontSize="14" Height="25" Width="50" HorizontalContentAlignment="Center" Margin="0,4,0,2" ></Label>
+                    <Label Content="X"  Foreground="DeepSkyBlue" FontSize="14" Height="25" Width="40" HorizontalContentAlignment="Center" Margin="0,4,0,2" ></Label>
+                    <Label Content="Y"  Foreground="DeepSkyBlue" FontSize="14" Height="25" Width="40" HorizontalContentAlignment="Center" Margin="35,2,0,0" ></Label>
+                    <Label Content="H" Visibility="Collapsed" Foreground="DeepSkyBlue" FontSize="14" Height="25" Width="100" HorizontalContentAlignment="Center" Margin="20,2,0,0" ></Label>
+                </StackPanel>
+                <StackPanel  Orientation="Horizontal" Name="pnl_mark_tray">
+                    <TextBox Text="{Binding _dXpos}"   Width="80"  Height="25" Margin="20,0,0,0" Style="{ StaticResource BlueTextBox}"></TextBox>
+                    <TextBox Text="{Binding _dYpos}"   Width="80"  Height="25" Margin="5,0,0,0" Style="{ StaticResource BlueTextBox}"></TextBox>
+                    <TextBox Text="9"  Visibility="Collapsed" Width="100"  Height="25" Margin="20,0,0,0" Style="{ StaticResource BlueTextBox}"></TextBox>
+                    <Button  Margin="25,0" Click="Cur_Mark_XY_Pos_READ_Tray" Style="{StaticResource DefDoubleBtn}" Content="Cur Mark XY Pos" Tag="READ" Foreground="White" Width="160"></Button>
+                </StackPanel>
+
+                <StackPanel  Orientation="Horizontal" Margin="0,10">
+                    <Button Margin="20,5" Click="Cam_To_Mark_Pos_MOVE_Tray" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Cam To Mark Pos" Tag="MOVE"  Foreground="White"></Button>
+                    <Button  Margin="10,5" Click="BtnFocus_Tray" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Cam To Mark Pos" Tag="FOCUS" Foreground="White"></Button>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+        <StackPanel x:Name="pnlTrayMapping" Grid.Row="5" Grid.Column="1"  Margin="0,0">
+            <StackPanel  Orientation="Horizontal" Margin="0,40,0,0">
+                <Button  Click="BtnMarkPr_Tray" Margin="0,10,10,10" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Cam Pr Mark" Tag="PR" Foreground="White"></Button>
+                <Button Click="BtnMarkEditVpp_Tray" Margin="10,10" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Pr Mark Vpp" Tag="EDIT" Foreground="White"></Button>
+            </StackPanel>
+            <StackPanel Margin="0" Orientation="Horizontal">
+                <Button Click="StartTrayCal" Margin="0,10,10,10" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Top Cam Cal" Tag="START" Foreground="GreenYellow"></Button>
+                <Button Click="StopTrayCal" Margin="10" Width="160" Style="{StaticResource DefDoubleBtn}" Content="Top Cam Cal" Tag="ABORT" Foreground="IndianRed"></Button>
+            </StackPanel>
+        </StackPanel>
+        <!--#endregion-->
+    </Grid>
+</UserControl>

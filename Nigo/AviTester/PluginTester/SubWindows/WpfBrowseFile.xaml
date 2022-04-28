@@ -1,0 +1,36 @@
+﻿<Window x:Class="AviTester.WpfBrowseFile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AviTester"
+        mc:Ignorable="d"
+       Title="Login" Height="550" Width="400" WindowStyle="None" AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"  Topmost="True"  Background="Transparent"  ResizeMode="CanMinimize">
+    <Border Style="{StaticResource BlueBorder}" Margin="10" Background="Transparent">
+        <Border.Effect>
+            <DropShadowEffect ShadowDepth="0" BlurRadius="20" Color="#33CCFF"/>
+        </Border.Effect>
+        <Grid Background="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="1" Foreground="White" Content="BROWSE   FILE"  FontSize="24" HorizontalContentAlignment="Center"  VerticalContentAlignment="Bottom"></Label>
+            <Label Foreground="DeepSkyBlue"  Content="FILE LIST"  FontSize="16" Height="30" FontWeight="Bold" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.ColumnSpan="2" ></Label>
+            <ListView x:Name="LstFiles" Grid.Row="2" Grid.Column="1"  Foreground="White" Background="{x:Null}" Margin="10"  Style="{StaticResource MyListView}"></ListView>
+
+            <Button Grid.Row="3" Grid.Column="1" x:Name="BtnOk" Click="BtnOk_OnClick" Content="OK" IsCancel="True" Width="100" Height="30"  Margin="10,10,0,0" Style="{StaticResource DefBtn}" HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
+            <Button Grid.Row="3" Grid.Column="1" x:Name="BtnCancel" Click="BtnCancel_OnClick" Content="CANCEL" Width="100" IsCancel="True" Height="30"   Margin="0,10,10,0" Style="{StaticResource DefBtn}" HorizontalAlignment="Right" VerticalAlignment="Top"></Button>
+
+
+        </Grid>
+    </Border>
+</Window>

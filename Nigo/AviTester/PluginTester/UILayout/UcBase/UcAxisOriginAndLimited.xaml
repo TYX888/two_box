@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="AviTester.UcAxisOriginAndLimited"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AviTester"
+             xmlns:wpf="clr-namespace:NGettext.Wpf;assembly=NGettext.Wpf"
+             mc:Ignorable="d" d:DesignHeight="238" Width="324" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Label  x:Name="labAxisNameXY"  Content="{wpf:Gettext X AXIS}" Height="34" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="14" Foreground="#23cefd" />
+            <StackPanel Grid.Row="0"  Grid.Column="1"  Orientation="Horizontal" Margin="0,0,0,0" Height="28" >
+                <Label x:Name="lblAxisNameOrg"  Content="{wpf:Gettext ORIGIN}" Margin="5,0,0,0" Width="77" HorizontalAlignment="Left" VerticalContentAlignment="Center"  BorderThickness="0" FontSize="12" Foreground="#ffffff" />
+                <Button x:Name="btnSetNewParamOrg"  Content="{wpf:Gettext SET}" Click="btnSetNewParamOrg_Click" Height="28" Width="236" Margin="0,0,0,0" VerticalAlignment="Top" Style="{StaticResource SetBtnMouseOverWidth236}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="32">
+                <Label x:Name="lblAxisNamePos"  Content="{wpf:Gettext LMT(HW) +}" Margin="5,0,0,0" Width="77" HorizontalAlignment="Left" VerticalContentAlignment="Center"  BorderThickness="0" FontSize="12" Foreground="#ffffff" />
+                <TextBox x:Name="txt_pos_limit_pos"  Text="0" Width="64" Height="32" VerticalContentAlignment="Center" Style="{StaticResource BlueTextBox}"/>
+                <Button x:Name="btnReadNewParamPos"  Content="{wpf:Gettext READ}" Click="btnReadNewParamPos_Click" HorizontalAlignment="Left" Width="76" Height="28" Margin="10,0,0,0" VerticalAlignment="Center"  Style="{StaticResource SetBtnMouseOverWidth76}"  />
+                <Button x:Name="btnSetNewParamPos"  Content="{wpf:Gettext SET}" Click="btnSetNewParamPos_Click" HorizontalAlignment="Left" Width="76" Height="28" Margin="10,0,0,0" VerticalAlignment="Center"  Style="{StaticResource SetBtnMouseOverWidth76}"  />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="32">
+                <Label x:Name="lblAxisNameNeg"  Content="{wpf:Gettext LMT(HW) -}" Margin="5,0,0,0" Width="77" HorizontalAlignment="Left" VerticalContentAlignment="Center"  BorderThickness="0" FontSize="12" Foreground="#ffffff" />
+                <TextBox x:Name="txt_neg_limit_pos"  Text="0"   Width="64" Height="32" VerticalContentAlignment="Center" Style="{StaticResource BlueTextBox}"/>
+                <Button x:Name="btnReadNewParamNeg"  Content="{wpf:Gettext READ}" Click="btnReadNewParamNeg_Click" Width="76" Height="28" Margin="10,0,0,0" VerticalAlignment="Center"  Style="{StaticResource SetBtnMouseOverWidth76}"  />
+                <Button x:Name="btnSetNewParamNeg"  Content="{wpf:Gettext SET}"  Click="btnSetNewParamNeg_Click" Width="76" Height="28" Margin="10,0,0,0" VerticalAlignment="Center"  Style="{StaticResource SetBtnMouseOverWidth76}"  />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="32">
+                <Label  Content="{wpf:Gettext LMT(SW) +}" Margin="5,0,0,0" Width="77" HorizontalAlignment="Left" VerticalContentAlignment="Center"  BorderThickness="0" FontSize="12" Foreground="#ffffff" />
+                <TextBox x:Name="txt_soft_pos_limit_pos" Text="0"  Width="64" Height="32" VerticalContentAlignment="Center" Style="{StaticResource BlueTextBox}"/>
+                <Button x:Name="btnReadNewParamPosSoft"  Content="{wpf:Gettext READ}" Click="btnReadNewLimitPosSoft_Click" HorizontalAlignment="Left" Width="76" Height="28" Margin="10,0,0,0" VerticalAlignment="Center"  Style="{StaticResource SetBtnMouseOverWidth76}"  />
+                <Button x:Name="btnSetNewParamPosSoft"  Content="{wpf:Gettext SET}" Click="btnSetNewLimitPosSoft_Click" HorizontalAlignment="Left" Width="76" Height="28" Margin="10,0,0,0" VerticalAlignment="Center"  Style="{StaticResource SetBtnMouseOverWidth76}"  />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Height="32">
+                <Label   Content="{wpf:Gettext LMT(SW) -}" Margin="5,0,0,0" Width="77" HorizontalAlignment="Left" VerticalContentAlignment="Center"  BorderThickness="0" FontSize="12" Foreground="#ffffff" />
+                <TextBox x:Name="txt_soft_neg_limit_pos"  Text="0"   Width="64" Height="32" VerticalContentAlignment="Center" Style="{StaticResource BlueTextBox}"/>
+                <Button x:Name="btnReadNewParamNegSoft"  Content="{wpf:Gettext READ}" Click="btnReadNewLimitNegSoft_Click" HorizontalAlignment="Left" Width="76" Height="28" Margin="10,0,0,0" VerticalAlignment="Center"  Style="{StaticResource SetBtnMouseOverWidth76}"  />
+                <Button x:Name="btnSetNewParamNegSoft"  Content="{wpf:Gettext SET}" Click="btnSetNewLimitNegSoft_Click" HorizontalAlignment="Left" Width="76" Height="28" Margin="10,0,0,0" VerticalAlignment="Center"  Style="{StaticResource SetBtnMouseOverWidth76}"  />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

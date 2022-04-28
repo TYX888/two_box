@@ -1,0 +1,1969 @@
+{
+	"Hardware" : {
+		"Machine" : {
+			"default" : {
+				"description" : "",
+				"subtype" : "Machine",
+				"link" : {
+					"hardware_manager" : "HardwareManager::default",
+					"beacon_1" : "Beacon::default",
+					"digital_input" : "*::DigitalInput::*",
+					"analog_input" : "*::AnalogInput::*",
+					"digital_output" : "*::DigitalOutput::*",
+					"lua_manager_1" : "LuaScriptManager::default",
+					"coord1" : "Null::node",
+					"group" : "*::Group::*"
+				},
+				"cfg" : {}
+			}
+		},
+		"HardwareManager" : {
+			"default" : {
+				"description" : "",
+				"subtype" : "DefaultHardwareManager",
+				"link" : {
+					"io_api" : "IoApi::*",
+					"digital_input" : "*::DigitalInput::*",
+					"analog_input" : "*::AnalogInput::*",
+					"cylinder" : "*::Cylinder::*",
+					"digital_output" : "*::DigitalOutput::*",
+					"beacon" : "Beacon::*",
+					"motion_api" : "MotionApi::*",
+					"axis" : "Axis::*",
+					"group" : "Group::*",
+					"simple_syn_comm" : "SimpleSynComm::*"
+				},
+				"cfg" : {}
+			}
+		},
+		"LuaScriptManager" : {
+			"default" : {
+				"description" : "",
+				"subtype" : "DefaultLuaScriptManager",
+				"link" : {
+					"man" : "HardwareManager::default",
+					"has_script" : ""
+				},
+				"cfg" : {}
+			}
+		},
+		"MotionApi" : {
+			"GM06EC_MOTION_0" : {
+				"description" : "",
+				"subtype" : "Motion_GM06EC",
+				"link" : {
+					"parent" : "Root::node",
+					"logger" : "Logger::global_log"
+				},
+				"cfg" : {
+					"ip_addr" : "192.168.5.110",
+					"port" : 2017,
+					"board_id" : 0,
+					"limit_ref_logic" : [
+						{
+							"pos_limit_level" : 0,
+							"neg_limit_level" : 0,
+							"ref_level" : 0,
+							"alarm_level" : 1
+						},
+						{
+							"pos_limit_level" : 0,
+							"neg_limit_level" : 0,
+							"ref_level" : 0,
+							"alarm_level" : 1
+						},
+						{
+							"pos_limit_level" : 1,
+							"neg_limit_level" : 1,
+							"ref_level" : 0,
+							"alarm_level" : 0
+						},
+						{
+							"pos_limit_level" : 1,
+							"neg_limit_level" : 1,
+							"ref_level" : 0,
+							"alarm_level" : 0
+						},
+						{
+							"pos_limit_level" : 1,
+							"neg_limit_level" : 1,
+							"ref_level" : 0,
+							"alarm_level" : 0
+						},
+						{
+							"pos_limit_level" : 1,
+							"neg_limit_level" : 1,
+							"ref_level" : 0,
+							"alarm_level" : 0
+						}
+					],
+					"is_reverse_feederback" : [ 0, 0, 0, 0, 0, 0 ],
+					"cmd_pos_buffered_ticks" : [ 5, 5, 5, 5, 5, 5 ],
+					"is_stop_buffered_ticks" : [ 5, 5, 5, 5, 5, 5 ],
+					"is_home_fin_bufffered_ticks" : [ 20, 20, 20, 20, 20, 20 ]
+				}
+			},
+			"GM06EC_MOTION_1" : {
+				"description" : "",
+				"subtype" : "Motion_GM06EC",
+				"link" : {
+					"parent" : "Root::node",
+					"logger" : "Logger::global_log"
+				},
+				"cfg" : {
+					"ip_addr" : "192.168.5.111",
+					"port" : 2017,
+					"board_id" : 1,
+					"limit_ref_logic" : [
+						{
+							"pos_limit_level" : 1,
+							"neg_limit_level" : 1,
+							"ref_level" : 0,
+							"alarm_level" : 0
+						},
+						{
+							"pos_limit_level" : 1,
+							"neg_limit_level" : 1,
+							"ref_level" : 0,
+							"alarm_level" : 0
+						},
+						{
+							"pos_limit_level" : 1,
+							"neg_limit_level" : 1,
+							"ref_level" : 0,
+							"alarm_level" : 0
+						},
+						{
+							"pos_limit_level" : 0,
+							"neg_limit_level" : 0,
+							"ref_level" : 0,
+							"alarm_level" : 0
+						},
+						{
+							"pos_limit_level" : 1,
+							"neg_limit_level" : 0,
+							"ref_level" : 1,
+							"alarm_level" : 0
+						},
+						{
+							"pos_limit_level" : 1,
+							"neg_limit_level" : 0,
+							"ref_level" : 1,
+							"alarm_level" : 0
+						}
+					],
+					"is_reverse_feederback" : [ 1, 0, 0, 0, 0, 0 ],
+					"cmd_pos_buffered_ticks" : [ 5, 5, 5, 5, 5, 5 ],
+					"is_stop_buffered_ticks" : [ 5, 5, 5, 5, 5, 5 ],
+					"is_home_fin_bufffered_ticks" : [ 20, 20, 20, 20, 20, 20 ]
+				}
+			},
+			"GM04EC_MOTION_0" : {
+				"description" : "",
+				"subtype" : "MotionGm91Ecu",
+				"link" : {
+					"parent" : "Root::node",
+					"logger" : "Logger::global_log"
+				},
+				"cfg" : {
+					"ip_addr" : "192.168.5.140",
+					"port" : 2017,
+					"board_id" : 0,
+					"limit_ref_logic" : [
+						{
+							"limit_level" : 0,
+							"ref_level" : 0
+						},
+						{
+							"limit_level" : 0,
+							"ref_level" : 0
+						},
+						{
+							"limit_level" : 0,
+							"ref_level" : 0
+						},
+						{
+							"limit_level" : 1,
+							"ref_level" : 0
+						}
+					],
+					"cmd_pos_buffered_ticks" : [ 5, 5, 5, 5 ],
+					"is_stop_buffered_ticks" : [ 5, 5, 5, 5 ],
+					"is_home_fin_bufffered_ticks" : [ 20, 20, 20, 20 ]
+				}
+			},
+			"GM04EC_MOTION_1" : {
+				"description" : "",
+				"subtype" : "MotionGm91Ecu",
+				"link" : {
+					"parent" : "Root::node",
+					"logger" : "Logger::global_log"
+				},
+				"cfg" : {
+					"ip_addr" : "192.168.5.141",
+					"port" : 2017,
+					"board_id" : 1,
+					"limit_ref_logic" : [
+						{
+							"limit_level" : 0,
+							"ref_level" : 0
+						},
+						{
+							"limit_level" : 0,
+							"ref_level" : 0
+						},
+						{
+							"limit_level" : 0,
+							"ref_level" : 0
+						},
+						{
+							"limit_level" : 1,
+							"ref_level" : 0
+						}
+					],
+					"cmd_pos_buffered_ticks" : [ 5, 5, 5, 5 ],
+					"is_stop_buffered_ticks" : [ 5, 5, 5, 5 ],
+					"is_home_fin_bufffered_ticks" : [ 20, 20, 20, 20 ]
+				}
+			}
+		},
+		"Axis" : {
+			"s1_turner" : {
+				"description" : "",
+				"subtype" : "DefaultAxis",
+				"link" : {
+					"neg_limit_input" : "Null::node",
+					"org_ref_input" : "Null::node",
+					"pos_limit_input" : "Null::node",
+					"motion_if" : "MotionApi::GM06EC_MOTION_0",
+					"encoder_reader" : "Null::node",
+					"check_phase" : "DigitalInput::in_turner_phase_sensor"
+				},
+				"cfg" : {
+					"is_abs_encoder" : false,
+					"axis_index" : 1
+				}
+			},
+			"s1_ccdz1" : {
+				"description" : "",
+				"subtype" : "StepAxis",
+				"link" : {
+					"neg_limit_input" : "Null::node",
+					"org_ref_input" : "Null::node",
+					"pos_limit_input" : "Null::node",
+					"motion_if" : "MotionApi::GM06EC_MOTION_0",
+					"encoder_reader" : "Null::node"
+				},
+				"cfg" : {
+					"is_abs_encoder" : false,
+					"axis_index" : 2
+				}
+			},
+			"s1_ccdz2" : {
+				"description" : "",
+				"subtype" : "StepAxis",
+				"link" : {
+					"neg_limit_input" : "Null::node",
+					"org_ref_input" : "Null::node",
+					"pos_limit_input" : "Null::node",
+					"motion_if" : "MotionApi::GM06EC_MOTION_0",
+					"encoder_reader" : "Null::node"
+				},
+				"cfg" : {
+					"is_abs_encoder" : false,
+					"axis_index" : 3
+				}
+			},
+			"s1_ccdz3" : {
+				"description" : "",
+				"subtype" : "StepAxis",
+				"link" : {
+					"neg_limit_input" : "Null::node",
+					"org_ref_input" : "Null::node",
+					"pos_limit_input" : "Null::node",
+					"motion_if" : "MotionApi::GM06EC_MOTION_0",
+					"encoder_reader" : "Null::node"
+				},
+				"cfg" : {
+					"is_abs_encoder" : false,
+					"axis_index" : 4
+				}
+			},
+			"s1_ccdz4" : {
+				"description" : "",
+				"subtype" : "StepAxis",
+				"link" : {
+					"neg_limit_input" : "Null::node",
+					"org_ref_input" : "Null::node",
+					"pos_limit_input" : "Null::node",
+					"motion_if" : "MotionApi::GM06EC_MOTION_0",
+					"encoder_reader" : "Null::node"
+				},
+				"cfg" : {
+					"is_abs_encoder" : false,
+					"axis_index" : 5
+				}
+			},
+			"s1_ccdz5" : {
+				"description" : "",
+				"subtype" : "StepAxis",
+				"link" : {
+					"neg_limit_input" : "Null::node",
+					"org_ref_input" : "Null::node",
+					"pos_limit_input" : "Null::node",
+					"motion_if" : "MotionApi::GM06EC_MOTION_1",
+					"encoder_reader" : "Null::node"
+				},
+				"cfg" : {
+					"is_abs_encoder" : false,
+					"axis_index" : 0
+				}
+			},
+			"s1_ccdz6" : {
+				"description" : "",
+				"subtype" : "StepAxis",
+				"link" : {
+					"neg_limit_input" : "Null::node",
+					"org_ref_input" : "Null::node",
+					"pos_limit_input" : "Null::node",
+					"motion_if" : "MotionApi::GM06EC_MOTION_1",
+					"encoder_reader" : "Null::node"
+				},
+				"cfg" : {
+					"is_abs_encoder" : false,
+					"axis_index" : 1
+				}
+			},
+			"s1_ccdz7" : {
+				"description" : "",
+				"subtype" : "StepAxis",
+				"link" : {
+					"neg_limit_input" : "Null::node",
+					"org_ref_input" : "Null::node",
+					"pos_limit_input" : "Null::node",
+					"motion_if" : "MotionApi::GM06EC_MOTION_1",
+					"encoder_reader" : "Null::node"
+				},
+				"cfg" : {
+					"is_abs_encoder" : false,
+					"axis_index" : 2
+				}
+			}
+		},
+		"IoApi" : {
+			"GM06EC_IO_0" : {
+				"description" : "",
+				"subtype" : "IO_GM06EC",
+				"link" : {
+					"parent" : "Root::node",
+					"logger" : "Logger::global_log"
+				},
+				"cfg" : {
+					"ip_addr" : "192.168.5.110",
+					"port" : 2017,
+					"board_id" : 0,
+					"input_is_reversed" : [
+						false,
+						false,
+						false,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						false,
+						true,
+						true,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						true,
+						false,
+						false,
+						false,
+						true,
+						false,
+						false,
+						false,
+						false,
+						true,
+						true
+					],
+					"output_is_reversed" : [
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						true,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false
+					],
+					"input_buffered_ticks" : [
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5
+					],
+					"output_buffered_ticks" : [
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20
+					]
+				}
+			},
+			"GM06EC_IO_1" : {
+				"description" : "",
+				"subtype" : "IO_GM06EC",
+				"link" : {
+					"parent" : "Root::node",
+					"logger" : "Logger::global_log"
+				},
+				"cfg" : {
+					"ip_addr" : "192.168.5.111",
+					"port" : 2017,
+					"board_id" : 0,
+					"input_is_reversed" : [
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						true,
+						false,
+						false,
+						false,
+						true,
+						false,
+						false,
+						false,
+						false
+					],
+					"output_is_reversed" : [
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false
+					],
+					"input_buffered_ticks" : [
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5
+					],
+					"output_buffered_ticks" : [
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20
+					]
+				}
+			},
+			"GM04EC_IO_0" : {
+				"description" : "",
+				"subtype" : "IoGm91Ecu",
+				"link" : {
+					"parent" : "Root::node",
+					"logger" : "Logger::global_log"
+				},
+				"cfg" : {
+					"ip_addr" : "192.168.5.140",
+					"port" : 2017,
+					"board_id" : 0,
+					"input_is_reversed" : [
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true
+					],
+					"output_is_reversed" : [
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true
+					],
+					"input_buffered_ticks" : [
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10
+					],
+					"output_buffered_ticks" : [
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20
+					]
+				}
+			},
+			"GM04EC_IO_1" : {
+				"description" : "",
+				"subtype" : "IoGm91Ecu",
+				"link" : {
+					"parent" : "Root::node",
+					"logger" : "Logger::global_log"
+				},
+				"cfg" : {
+					"ip_addr" : "192.168.5.141",
+					"port" : 2017,
+					"board_id" : 1,
+					"input_is_reversed" : [
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true
+					],
+					"output_is_reversed" : [
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true
+					],
+					"input_buffered_ticks" : [
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10
+					],
+					"output_buffered_ticks" : [
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20
+					]
+				}
+			}
+		},
+		"DigitalInput" : {
+			"in_rear_door_sensor" : {
+				"description" : "后门感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 0,
+					"is_reversed" : true
+				}
+			},
+			"in_left_door_sensor" : {
+				"description" : "左门感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 1,
+					"is_reversed" : true
+				}
+			},
+			"in_right_door_sensor" : {
+				"description" : "右门感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 2,
+					"is_reversed" : true
+				}
+			},
+			"in_rear_door_cylinder_release" : {
+				"description" : "后门锁气缸松开感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 3,
+					"is_reversed" : false
+				}
+			},
+			"in_rear_door_cylinder_clamp" : {
+				"description" : "后门锁气缸夹紧感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 4,
+					"is_reversed" : false
+				}
+			},
+			"in_left_door_cylinder_release" : {
+				"description" : "左门锁气缸松开感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 5,
+					"is_reversed" : false
+				}
+			},
+			"in_left_door_cylinder_clamp" : {
+				"description" : "左门锁气缸夹紧感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 6,
+					"is_reversed" : false
+				}
+			},
+			"in_right_door_cylinder_release" : {
+				"description" : "右门锁气缸松开感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 7,
+					"is_reversed" : false
+				}
+			},
+			"in_right_door_cylinder_clamp" : {
+				"description" : "右门锁气缸夹紧感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 8,
+					"is_reversed" : false
+				}
+			},
+			"in_air_source" : {
+				"description" : "气源开关信号",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 9,
+					"is_reversed" : true
+				}
+			},
+			"in_handler_emo" : {
+				"description" : "",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 10,
+					"is_reversed" : true
+				}
+			},
+			"in_handler_ems" : {
+				"description" : "",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 11,
+					"is_reversed" : false
+				}
+			},
+			"in_handler_door_close" : {
+				"description" : "Handler门关信号",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 0,
+					"is_reversed" : false
+				}
+			},
+			"in_turner_phase_sensor" : {
+				"description" : "转盘寻相信号",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 38,
+					"is_reversed" : true
+				}
+			},
+			"in_vacc_station1" : {
+				"description" : "1工站真空吸感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 0,
+					"is_reversed" : false
+				}
+			},
+			"in_vacc_station2" : {
+				"description" : "2工站真空吸感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 1,
+					"is_reversed" : false
+				}
+			},
+			"in_vacc_station3" : {
+				"description" : "3工站真空吸感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 2,
+					"is_reversed" : false
+				}
+			},
+			"in_vacc_station4" : {
+				"description" : "4工站真空吸感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 3,
+					"is_reversed" : false
+				}
+			},
+			"in_vacc_station5" : {
+				"description" : "5工站真空吸感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 4,
+					"is_reversed" : false
+				}
+			},
+			"in_vacc_station6" : {
+				"description" : "6工站真空吸感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 5,
+					"is_reversed" : false
+				}
+			},
+			"in_vacc_station7" : {
+				"description" : "7工站真空吸感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 0,
+					"is_reversed" : false
+				}
+			},
+			"in_vacc_station8" : {
+				"description" : "8工站真空吸感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 1,
+					"is_reversed" : false
+				}
+			},
+			"in_vacc_station9" : {
+				"description" : "9工站真空吸感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 2,
+					"is_reversed" : false
+				}
+			},
+			"in_vacc_station10" : {
+				"description" : "10工站真空吸感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 3,
+					"is_reversed" : false
+				}
+			},
+			"in_vacc_station11" : {
+				"description" : "11工站真空吸感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 4,
+					"is_reversed" : false
+				}
+			},
+			"in_vacc_station12" : {
+				"description" : "12工站真空吸感应器",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 5,
+					"is_reversed" : false
+				}
+			},
+			"in_ccdz1_lmtp" : {
+				"description" : "",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 23,
+					"is_reversed" : false
+				}
+			},
+			"in_ccdz1_lmtn" : {
+				"description" : "",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 22,
+					"is_reversed" : false
+				}
+			},
+			"in_ccdz2_lmtp" : {
+				"description" : "",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 27,
+					"is_reversed" : false
+				}
+			},
+			"in_ccdz2_lmtn" : {
+				"description" : "",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 26,
+					"is_reversed" : false
+				}
+			},
+			"in_ccdz3_lmtp" : {
+				"description" : "",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 31,
+					"is_reversed" : false
+				}
+			},
+			"in_ccdz3_lmtn" : {
+				"description" : "",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 30,
+					"is_reversed" : false
+				}
+			},
+			"in_ccdz4_lmtp" : {
+				"description" : "",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 35,
+					"is_reversed" : false
+				}
+			},
+			"in_ccdz4_lmtn" : {
+				"description" : "",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 34,
+					"is_reversed" : false
+				}
+			},
+			"in_ccdz5_lmtp" : {
+				"description" : "",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 15,
+					"is_reversed" : false
+				}
+			},
+			"in_ccdz5_lmtn" : {
+				"description" : "",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 14,
+					"is_reversed" : false
+				}
+			},
+			"in_ccdz6_lmtp" : {
+				"description" : "",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 19,
+					"is_reversed" : false
+				}
+			},
+			"in_ccdz6_lmtn" : {
+				"description" : "",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 18,
+					"is_reversed" : false
+				}
+			},
+			"emg" : {
+				"description" : "",
+				"subtype" : "DefaultDigitalInput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 36,
+					"is_reversed" : false
+				}
+			}
+		},
+		"AnalogInput" : {
+			"light_intensity_ch0" : {
+				"description" : "1工站真空吸感应器",
+				"subtype" : "DefaultAnalogInput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 0,
+					"is_reversed" : false
+				}
+			},
+			"light_intensity_ch1" : {
+				"description" : "1工站真空吸感应器",
+				"subtype" : "DefaultAnalogInput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 1,
+					"is_reversed" : false
+				}
+			},
+			"light_intensity_ch2" : {
+				"description" : "1工站真空吸感应器",
+				"subtype" : "DefaultAnalogInput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 2,
+					"is_reversed" : false
+				}
+			},
+			"light_intensity_ch3" : {
+				"description" : "1工站真空吸感应器",
+				"subtype" : "DefaultAnalogInput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 3,
+					"is_reversed" : false
+				}
+			}
+		},
+		"DigitalOutput" : {
+			"out_fly_capture_trigger" : {
+				"description" : "飞拍触发备用信号",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 1,
+					"is_reversed" : false
+				}
+			},
+			"out_rear_door_cylinder_lock" : {
+				"description" : "后门锁气缸电磁阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 4,
+					"is_reversed" : false
+				}
+			},
+			"out_left_door_cylinder_lock" : {
+				"description" : "左门锁气缸电磁阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 2,
+					"is_reversed" : false
+				}
+			},
+			"out_right_door_cylinder_lock" : {
+				"description" : "右门锁气缸电磁阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 3,
+					"is_reversed" : false
+				}
+			},
+			"out_led_red" : {
+				"description" : "报警灯红",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 6,
+					"is_reversed" : false
+				}
+			},
+			"out_led_yellow" : {
+				"description" : "报警灯黄",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 7,
+					"is_reversed" : false
+				}
+			},
+			"out_led_green" : {
+				"description" : "报警灯绿",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 8,
+					"is_reversed" : false
+				}
+			},
+			"out_led_beep" : {
+				"description" : "报警灯蜂鸣",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 9,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_open_station1" : {
+				"description" : "1工站真空吸电磁阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 0,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_break_station1" : {
+				"description" : "1工站破真空电磁阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 1,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_open_station2" : {
+				"description" : "吸嘴1真空阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 2,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_break_station2" : {
+				"description" : "吸嘴1吹气阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 3,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_open_station3" : {
+				"description" : "吸嘴1真空阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 4,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_break_station3" : {
+				"description" : "吸嘴1吹气阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 5,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_open_station4" : {
+				"description" : "吸嘴1真空阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 6,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_break_station4" : {
+				"description" : "吸嘴1吹气阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 7,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_open_station5" : {
+				"description" : "吸嘴1真空阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 8,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_break_station5" : {
+				"description" : "吸嘴1吹气阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 9,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_open_station6" : {
+				"description" : "吸嘴1真空阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 10,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_break_station6" : {
+				"description" : "吸嘴1吹气阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 11,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_open_station7" : {
+				"description" : "吸嘴1真空阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 0,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_break_station7" : {
+				"description" : "吸嘴1吹气阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 1,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_open_station8" : {
+				"description" : "吸嘴1真空阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 2,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_break_station8" : {
+				"description" : "吸嘴1吹气阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 3,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_open_station9" : {
+				"description" : "吸嘴1真空阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 4,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_break_station9" : {
+				"description" : "吸嘴1吹气阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 5,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_open_station10" : {
+				"description" : "吸嘴1真空阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 6,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_break_station10" : {
+				"description" : "吸嘴1吹气阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 7,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_open_station11" : {
+				"description" : "吸嘴1真空阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 8,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_break_station11" : {
+				"description" : "吸嘴1吹气阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 9,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_open_station12" : {
+				"description" : "吸嘴1真空阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 10,
+					"is_reversed" : false
+				}
+			},
+			"out_vacc_break_station12" : {
+				"description" : "吸嘴1吹气阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM04EC_IO_1"
+				},
+				"cfg" : {
+					"index" : 11,
+					"is_reversed" : false
+				}
+			},
+			"out_turner_svon" : {
+				"description" : "吸嘴1吹气阀",
+				"subtype" : "DefaultDigitalOutput",
+				"link" : {
+					"io_if" : "IoApi::GM06EC_IO_0"
+				},
+				"cfg" : {
+					"index" : 19,
+					"is_reversed" : false
+				}
+			}
+		},
+		"Cylinder" : {
+			"rear_door_cylinder" : {
+				"description" : "",
+				"subtype" : "DefaultCylinder",
+				"link" : {
+					"action_output" : "DigitalOutput::out_rear_door_cylinder_lock",
+					"retract_pos_input" : "DigitalInput::in_rear_door_cylinder_release",
+					"extend_pos_input" : "DigitalInput::in_rear_door_cylinder_clamp"
+				},
+				"cfg" : {
+					"timeout_ticks" : 2000
+				}
+			},
+			"left_door_cylinder" : {
+				"description" : "",
+				"subtype" : "DefaultCylinder",
+				"link" : {
+					"action_output" : "DigitalOutput::out_left_door_cylinder_lock",
+					"retract_pos_input" : "DigitalInput::in_left_door_cylinder_release",
+					"extend_pos_input" : "DigitalInput::in_left_door_cylinder_clamp"
+				},
+				"cfg" : {
+					"timeout_ticks" : 2000
+				}
+			},
+			"right_door_cylinder" : {
+				"description" : "",
+				"subtype" : "DefaultCylinder",
+				"link" : {
+					"action_output" : "DigitalOutput::out_right_door_cylinder_lock",
+					"retract_pos_input" : "DigitalInput::in_right_door_cylinder_release",
+					"extend_pos_input" : "DigitalInput::in_right_door_cylinder_clamp"
+				},
+				"cfg" : {
+					"timeout_ticks" : 2000
+				}
+			}
+		},
+		"Beacon" : {
+			"default" : {
+				"description" : "",
+				"subtype" : "DefaultBeacon",
+				"link" : {
+					"green_light_output" : "DigitalOutput::out_led_green",
+					"yellow_light_output" : "DigitalOutput::out_led_yellow",
+					"red_light_output" : "DigitalOutput::out_led_red",
+					"alarm_output" : "DigitalOutput::out_led_beep"
+				},
+				"cfg" : {
+					"cycle_ticks" : 3200
+				}
+			}
+		},
+		"EncoderReader" : {
+			"axis_ccdx_encoder" : {
+				"description" : "",
+				"subtype" : "LuaMockEncoderReader",
+				"link" : {
+					"parent" : "LuaScriptManager::default",
+					"comm_port" : "SimpleSynComm::encoder_reader"
+				},
+				"cfg" : {
+					"station_id" : "01",
+					"specific_script_file" : "hechuanEncoderReader"
+				}
+			}
+		},
+		"SimpleSynComm" : {
+			"encoder_reader" : {
+				"description" : "x,y axis in this machine use abs encoder. so need this port to read encoder value.",
+				"subtype" : "SerialComm",
+				"link" : {
+					"parent" : "Root::node"
+				},
+				"cfg" : {
+					"serial_comm_cfg_str" : "57600,n,8,1",
+					"write_overtime_ticks" : 200,
+					"read_wait_ticks" : 20,
+					"comm_port_index" : 9
+				}
+			}
+		},
+		"Group" : {},
+		"CmdAgent" : {
+			"default" : {
+				"description" : "",
+				"subtype" : "CalibrationVisionService",
+				"link" : {},
+				"cfg" : {}
+			}
+		}
+	},
+	"Frame" : {},
+	"Interface" : {
+		"Logger" : {
+			"global_file_log" : {
+				"description" : "",
+				"subtype" : "Logger",
+				"link" : {
+					"parent" : "LogManager::singleton_instance"
+				},
+				"cfg" : {
+					"logger_info" : {
+						"is_async" : false,
+						"full_policy" : "block_retry",
+						"flush_interval_ticks" : 10,
+						"q_size" : 8192,
+						"sink_list" : [ "global_file_sink", "global_display" ],
+						"log_level" : "debug",
+						"flush_on_level" : "error"
+					}
+				}
+			},
+			"conv_feeder_file_log" : {
+				"description" : "",
+				"subtype" : "Logger",
+				"link" : {
+					"parent" : "LogManager::singleton_instance"
+				},
+				"cfg" : {
+					"logger_info" : {
+						"is_async" : false,
+						"full_policy" : "block_retry",
+						"flush_interval_ticks" : 10,
+						"q_size" : 8192,
+						"sink_list" : [ "conv_feeder_sink" ],
+						"log_level" : "debug",
+						"flush_on_level" : "error"
+					}
+				}
+			},
+			"global_log" : {
+				"description" : "",
+				"subtype" : "Logger",
+				"link" : {
+					"parent" : "LogManager::singleton_instance"
+				},
+				"cfg" : {
+					"logger_info" : {
+						"is_async" : false,
+						"full_policy" : "block_retry",
+						"flush_interval_ticks" : 10,
+						"q_size" : 8192,
+						"sink_list" : [ "global_file_sink", "global_display" ],
+						"log_level" : "trace",
+						"flush_on_level" : "error"
+					}
+				}
+			}
+		}
+	}
+}

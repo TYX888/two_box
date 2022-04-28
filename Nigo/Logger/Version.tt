@@ -1,0 +1,19 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+ 
+<#
+  DateTime now = DateTime.Now;
+  Version ver = new Version(3, int.Parse(now.Year.ToString().Remove(0,2)) * 100+0, int.Parse(now.ToString("MMdd")), now.Hour * 100 + now.Minute );
+   string his="       //** 作者：Kenneth   ** 修改日期："+now.ToString("yyyy/MM/dd HH:mm:ss")+"   ** 修改描述：Logger("+ ver +") ";
+  string his_end=" End";
+#>
+ 
+[assembly: System.Reflection.AssemblyCompany("GHJ Technology Co., Ltd.")]
+[assembly: System.Reflection.AssemblyCopyright("Copyright © GHJ 2013")]
+
+[assembly: System.Reflection.AssemblyVersion("<#= ver #>")]
+<#= his #><#= his_end #>

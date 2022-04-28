@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="Nigo.UcMachineInfo "
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:wpf="clr-namespace:NGettext.Wpf;assembly=NGettext.Wpf"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:local="clr-namespace:Nigo"
+             mc:Ignorable="d" 
+             d:DesignHeight="36" d:DesignWidth="170"             
+             x:Name="Window">
+    <i:Interaction.Behaviors>
+        <wpf:TrackCurrentCultureBehavior />
+    </i:Interaction.Behaviors>
+    <Grid>
+        <StackPanel Orientation="Horizontal" x:Name="MachineInfo">
+            <Label Name="ItemName" Foreground ="#23cefd" HorizontalAlignment ="Left" VerticalAlignment ="Center"/>
+            <Label Name="ItemValue" Foreground ="White" HorizontalAlignment ="Left" VerticalAlignment ="Center" Margin="5, 0, 0, 0"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

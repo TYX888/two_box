@@ -1,0 +1,190 @@
+﻿<UserControl x:Class="AviTester.UcTurnTableIo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AviTester"
+             mc:Ignorable="d" 
+             xmlns:wpf="clr-namespace:NGettext.Wpf;assembly=NGettext.Wpf"
+             d:DesignHeight="806" d:DesignWidth="1678">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="1120"/>
+            <ColumnDefinition Width="6"/>
+            <ColumnDefinition Width="552"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.RowSpan="2">
+            <Grid.Background>
+                <ImageBrush ImageSource="/WpfStyleApi;component/Resources/System/ContentBG.png"/>
+            </Grid.Background>
+        </Grid>
+        
+        <StackPanel Grid.Row="0" Grid.Column="0" Margin="20,0,0,0">
+            <Label   Content="{wpf:Gettext TURN TABLE}"  Foreground="#23cefd" VerticalContentAlignment="Center" FontSize="16" Margin="0,17,0,20" ></Label>
+            <StackPanel  Orientation="Horizontal" x:Name="spmotionplatm" Margin="0,0,0,0">
+                <Label  Content="{wpf:Gettext STEP SIZE[mm]}" VerticalAlignment="Center" Foreground="White" FontSize="14" ></Label>
+                <local:NumericControl  x:Name="NcMoveStep" ValueChange="NcMoveStep_OnValueChange" Margin="20,0" Width="94" Height="32" Increment="1" MaxValue="300" MinValue="0"></local:NumericControl>
+                <RadioButton Checked="space10_Checked"  Content="10" Style="{StaticResource RadioButtonSixRect44Style}" Height="28" FontSize="14"  Foreground="White" Margin="10,0,0,0" VerticalContentAlignment="Center" VerticalAlignment="Center"/>
+                <RadioButton Checked="space1_Checked"  Content="1" Style="{StaticResource RadioButtonSixRect44Style}" Height="28" FontSize="14"  Foreground="White" Margin="10,0,0,0" VerticalContentAlignment="Center" VerticalAlignment="Center"/>
+                <RadioButton Checked="spacePoint1_Checked"  Content="0.1" Style="{StaticResource RadioButtonSixRect44Style}" Height="28" FontSize="14"  Foreground="White" Margin="10,0,0,0" VerticalContentAlignment="Center" VerticalAlignment="Center"/>
+                <RadioButton Checked="spacePoint01_Checked" Content="0.01" Style="{StaticResource RadioButtonSixRect44Style}" Height="28" FontSize="14"  Foreground="White"  Margin="10,0,0,0" VerticalContentAlignment="Center" VerticalAlignment="Center"/>
+                <CheckBox IsChecked="{Binding IsCheckDoorClosed}" Style="{StaticResource chkBase}" FontSize="14" Foreground="White" Margin="10,0,0,0"  Content="{wpf:Gettext Check door}"  Height="44" ></CheckBox>
+                <CheckBox IsChecked="{Binding IsCheckAirSource}" Style="{StaticResource chkBase}" FontSize="14" Foreground="White" Margin="10,0,0,0"  Content="{wpf:Gettext Check AirSource}"  Height="44" ></CheckBox>
+                <Button  Content="{wpf:Gettext Show Tester IO}" Click="BtnShowTesterIO_Click" Style="{StaticResource BtnVerticalWidth164}" Height="44"  Width="164" Margin="10,0,0,0" />
+
+            </StackPanel>
+            <local:UcAxis AxisName="turner" Equ_idx="0" Margin="0,6,0,0"></local:UcAxis>
+            <local:UcAxis x:Name="ccdxAxis" AxisName="ccdx" Equ_idx="0"  Margin="0,6,0,0"></local:UcAxis>
+            <local:UcAxis AxisName="ccdz1" Equ_idx="0" Margin="0,6,0,0"></local:UcAxis>
+            <local:UcAxis AxisName="ccdz2" Equ_idx="0" Margin="0,6,0,0"></local:UcAxis>
+            <local:UcAxis AxisName="ccdz3" Equ_idx="0" Margin="0,6,0,0"></local:UcAxis>
+            <local:UcAxis AxisName="ccdz4" Equ_idx="0" Margin="0,6,0,0"></local:UcAxis>
+            <local:UcAxis AxisName="ccdz5" Equ_idx="0" Margin="0,6,0,0"></local:UcAxis>
+            <local:UcAxis AxisName="ccdz7" Equ_idx="0" Margin="0,6,0,0"></local:UcAxis>
+            <local:UcAxis AxisName="ccdz6" Equ_idx="0" Margin="0,6,0,0"></local:UcAxis>
+
+
+            <StackPanel Margin="0,20,0,0">
+                <Label   Content="{wpf:Gettext SOCKET IO}"   Foreground="#23cefd" VerticalContentAlignment="Center" FontSize="16" Margin="0,0,0,0" ></Label>
+
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Margin="0,0,0,0">
+                        <Label  Content="{wpf:Gettext VACC 1#:}" Foreground="#ffffff" Margin="0,10,0,0" Height="28" VerticalContentAlignment="Center"  />
+                        <Label  Content="{wpf:Gettext VACC 2#:}" Foreground="#ffffff" Margin="0,10,0,0" Height="28" VerticalContentAlignment="Center" />
+                        <Label  Content="{wpf:Gettext VACC 3#:}" Foreground="#ffffff" Margin="0,10,0,0" Height="28" VerticalContentAlignment="Center" />
+                        <Label  Content="{wpf:Gettext VACC 4#:}" Foreground="#ffffff" Margin="0,10,0,0" Height="28" VerticalContentAlignment="Center" />
+                        <Label  Content="{wpf:Gettext VACC 5#:}" Foreground="#ffffff" Margin="0,10,0,0" Height="28" VerticalContentAlignment="Center" />
+                        <Label  Content="{wpf:Gettext VACC 6#:}" Foreground="#ffffff" Margin="0,10,0,0" Height="28" VerticalContentAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Margin="10,5,0,0">
+                        <CheckBox x:Name="chkVacc1" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[in_vacc_station1].State}"/>
+                        <CheckBox x:Name="chkVacc2" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[in_vacc_station2].State}"/>
+                        <CheckBox x:Name="chkVacc3" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[in_vacc_station3].State}"/>
+                        <CheckBox x:Name="chkVacc4" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[in_vacc_station4].State}"/>
+                        <CheckBox x:Name="chkVacc5" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[in_vacc_station5].State}"/>
+                        <CheckBox x:Name="chkVacc6" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[in_vacc_station6].State}"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,0,0,0">
+                        <CheckBox x:Name="chkVacc_S1" Click="OpenVacc_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                        <CheckBox x:Name="chkVacc_S2" Click="OpenVacc_Click" Margin="0,10,0,0" FontSize="14" Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center"/>
+                        <CheckBox x:Name="chkVacc_S3" Click="OpenVacc_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center"/>
+                        <CheckBox x:Name="chkVacc_S4" Click="OpenVacc_Click" Margin="0,10,0,0" FontSize="14" Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                        <CheckBox x:Name="chkVacc_S5" Click="OpenVacc_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                        <CheckBox x:Name="chkVacc_S6" Click="OpenVacc_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Margin="10,0,0,0">
+                        <CheckBox x:Name="chkBreakVacc_S1" Click="BreakVacc_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                        <CheckBox x:Name="chkBreakVacc_S2" Click="BreakVacc_Click" Margin="0,10,0,0" FontSize="14" Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center"/>
+                        <CheckBox x:Name="chkBreakVacc_S3" Click="BreakVacc_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center"/>
+                        <CheckBox x:Name="chkBreakVacc_S4" Click="BreakVacc_Click" Margin="0,10,0,0" FontSize="14" Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                        <CheckBox x:Name="chkBreakVacc_S5" Click="BreakVacc_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                        <CheckBox x:Name="chkBreakVacc_S6" Click="BreakVacc_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Margin="30,0,0,0">
+                            <Label  Content="{wpf:Gettext VACC 7#:}" Foreground="#ffffff" Margin="10,10,0,0" Height="28" VerticalContentAlignment="Center"  />
+                            <Label  Content="{wpf:Gettext VACC 8#:}" Foreground="#ffffff" Margin="10,10,0,0" Height="28" VerticalContentAlignment="Center" />
+                            <Label  Content="{wpf:Gettext VACC 9#:}" Foreground="#ffffff" Margin="10,10,0,0" Height="28" VerticalContentAlignment="Center" />
+                            <Label  Content="{wpf:Gettext VACC 10#:}" Foreground="#ffffff" Margin="10,10,0,0" Height="28" VerticalContentAlignment="Center" />
+                            <Label  Content="{wpf:Gettext VACC 11#:}" Foreground="#ffffff" Margin="10,10,0,0" Height="28" VerticalContentAlignment="Center" />
+                            <Label  Content="{wpf:Gettext VACC 12#:}" Foreground="#ffffff" Margin="10,10,0,0" Height="28" VerticalContentAlignment="Center" />
+                        </StackPanel>
+                        <StackPanel Margin="10,5,0,0">
+                            <CheckBox x:Name="chkVacc7"  Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[in_vacc_station7].State}"/>
+                            <CheckBox x:Name="chkVacc8" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[in_vacc_station8].State}"/>
+                            <CheckBox x:Name="chkVacc9" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[in_vacc_station9].State}"/>
+                            <CheckBox x:Name="chkVacc10" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[in_vacc_station10].State}"/>
+                            <CheckBox x:Name="chkVacc11" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[in_vacc_station11].State}"/>
+                            <CheckBox x:Name="chkVacc12" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[in_vacc_station12].State}"/>
+                        </StackPanel>
+                        <StackPanel Margin="0,0,0,0">
+                            <CheckBox x:Name="chkVacc_S7" Click="OpenVacc_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                            <CheckBox x:Name="chkVacc_S8" Click="OpenVacc_Click" Margin="0,10,0,0" FontSize="14" Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center"/>
+                            <CheckBox x:Name="chkVacc_S9" Click="OpenVacc_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center"/>
+                            <CheckBox x:Name="chkVacc_S10" Click="OpenVacc_Click" Margin="0,10,0,0" FontSize="14" Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                            <CheckBox x:Name="chkVacc_S11" Click="OpenVacc_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                            <CheckBox x:Name="chkVacc_S12" Click="OpenVacc_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                        </StackPanel>
+                        <StackPanel Margin="10,0,0,0">
+                            <CheckBox x:Name="chkBreakVacc_S7" Click="BreakVacc_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                            <CheckBox x:Name="chkBreakVacc_S8" Click="BreakVacc_Click" Margin="0,10,0,0" FontSize="14" Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center"/>
+                            <CheckBox x:Name="chkBreakVacc_S9" Click="BreakVacc_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center"/>
+                            <CheckBox x:Name="chkBreakVacc_S10" Click="BreakVacc_Click" Margin="0,10,0,0" FontSize="14" Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                            <CheckBox x:Name="chkBreakVacc_S11" Click="BreakVacc_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                            <CheckBox x:Name="chkBreakVacc_S12" Click="BreakVacc_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                        </StackPanel>
+                        <StackPanel Margin="30,0,0,0">
+                            <Label  Content="{wpf:Gettext TURNER SVON:}" Foreground="#ffffff" Margin="0,10,0,0" Height="28" Width="105"  VerticalContentAlignment="Center"  />
+                            <Label  Content="{wpf:Gettext Left Door:}" Foreground="#ffffff"  Margin="0,10,0,0" Height="28" Width="105"  VerticalContentAlignment="Center" />
+                            <Label  Content="{wpf:Gettext Right Door:}" Foreground="#ffffff" Margin="0,10,0,0" Height="28" Width="105"  VerticalContentAlignment="Center" />
+                            <Label  Content="{wpf:Gettext Behind Door:}" Foreground="#ffffff" Margin="0,10,0,0" Height="28" Width="105"  VerticalContentAlignment="Center" />
+                            <Label  Content="{wpf:Gettext Left Door Lock:}" Foreground="#ffffff"  Margin="0,10,0,0" Height="28" Width="105"  VerticalContentAlignment="Center" />
+                            <Label  Content="{wpf:Gettext Right Door Lock:}" Foreground="#ffffff" Margin="0,10,0,0" Height="28" Width="105" VerticalContentAlignment="Center" />
+                        </StackPanel>
+                        <StackPanel Margin="10,5,0,0">
+                            <CheckBox x:Name="chkTurnPhase" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[in_turner_phase_sensor].State}"/>
+                            <CheckBox x:Name="chkLeftDoor" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[in_left_door_sensor].State}"/>
+                            <CheckBox x:Name="chkRightDoor" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[in_right_door_sensor].State}"/>
+                            <CheckBox x:Name="chkBehindDoor" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[in_rear_door_sensor].State}"/>
+                            <CheckBox x:Name="chkin_left_door_cylinder_clamp" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[in_left_door_cylinder_clamp].State}"/>
+                            <CheckBox x:Name="chkin_right_door_cylinder_release" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[in_right_door_cylinder_clamp].State}"/>
+                        </StackPanel>
+                        <StackPanel Margin="0,0,0,0">
+                            <CheckBox Tag="out_turner_svon" Click="OutControl_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                            <CheckBox Tag="out_left_door_cylinder_lock" Click="OutControl_Click" Margin="0,120,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                            <CheckBox Tag="out_right_door_cylinder_lock" Click="OutControl_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                        </StackPanel>
+                        
+                        <StackPanel Margin="30,0,0,0">
+                            <Label  Content="{wpf:Gettext Behind Door Lock:}" Foreground="#ffffff" Margin="0,10,0,0" Height="28" Width="105"  VerticalContentAlignment="Center"  />
+                            <Label  Content="{wpf:Gettext EMG:}" Foreground="#ffffff"  Margin="0,10,0,0" Height="28" Width="105"  VerticalContentAlignment="Center" />
+                            <Label  Content="{wpf:Gettext LED YELLOW:}" Foreground="#ffffff"  Margin="0,10,0,0" Height="28" Width="105"  VerticalContentAlignment="Center" />
+                            <Label  Content="{wpf:Gettext LED GREEN:}" Foreground="#ffffff"  Margin="0,10,0,0" Height="28" Width="105"  VerticalContentAlignment="Center" />
+                            <Label  Content="{wpf:Gettext LED RED:}" Foreground="#ffffff"  Margin="0,10,0,0" Height="28" Width="105"  VerticalContentAlignment="Center" />
+                            <Label  Content="{wpf:Gettext LED BEEP:}" Foreground="#ffffff"  Margin="0,10,0,0" Height="28" Width="105"  VerticalContentAlignment="Center" />
+                        </StackPanel>
+                        <StackPanel Margin="10,5,0,0">
+                            <CheckBox x:Name="chkin_rear_door_cylinder_clamp" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[in_rear_door_cylinder_clamp].State}"/>
+                            <CheckBox x:Name="chkEmg" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[emg].State}"/>
+                            <CheckBox x:Name="chkLedYellow" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[out_led_yellow].State}"/>
+                            <CheckBox x:Name="chkLedGreen" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[out_led_green].State}"/>
+                            <CheckBox x:Name="chkLedRed" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[out_led_red].State}"/>
+                            <CheckBox x:Name="chkLedBeep" Margin="0,0,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[out_led_beep].State}"/>
+                        </StackPanel>
+                        <StackPanel Margin="0,0,0,0">
+                            <CheckBox Tag="out_rear_door_cylinder_lock" Click="OutControl_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                            <CheckBox Tag="out_led_yellow" Click="OutControl_Click" Margin="0,47,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                            <CheckBox Tag="out_led_green" Click="OutControl_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                            <CheckBox Tag="out_led_red" Click="OutControl_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                            <CheckBox Tag="out_led_beep" Click="OutControl_Click" Margin="0,10,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+
+                        </StackPanel>
+                        <!--<StackPanel Margin="30,0,0,0" Orientation="Horizontal" VerticalAlignment="Top">
+                            <Label  Content="{wpf:Gettext Behind Door Lock:}" Foreground="#ffffff" Margin="5,5,0,0" Height="28" Width="115" VerticalContentAlignment="Center" />
+                            <CheckBox x:Name="chkin_rear_door_cylinder_clamp" Margin="0,5,0,0" FontSize="14" Height="38" Style="{StaticResource ChxStyleHeight38}" VerticalContentAlignment="Center" IsChecked="{Binding ListIoState[in_rear_door_cylinder_clamp].State}"/>
+                            <CheckBox Tag="out_rear_door_cylinder_lock" Click="OutControl_Click" Margin="0,5,0,0" FontSize="14"  Height="28" Style="{StaticResource ChxOnOffSixRecStyleHeight28}" VerticalContentAlignment="Center" />
+                        </StackPanel>-->
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+        <Grid Grid.Column="2" Grid.Row="0" Grid.RowSpan="3">
+            <Grid.Background>
+                <ImageBrush ImageSource="/WpfStyleApi;component/Resources/System/RightBg.png"/>
+            </Grid.Background>
+            <StackPanel Grid.Row="0" Grid.Column="0" Margin="20,0,0,0">
+                <Label   Content="{wpf:Gettext LIGHT INTENSITY}"  Foreground="#23cefd" VerticalContentAlignment="Center" FontSize="16" Margin="0,17,0,20" ></Label>
+                <StackPanel  Orientation="Horizontal" Margin="0,0,0,0">
+                    <TextBox x:Name="txtLight1" TextWrapping="NoWrap" Style="{StaticResource BlueTextBox}" IsReadOnly="True" Margin="15,0,0,0" Width="110" Height="32" Padding="0" />
+                    <TextBox x:Name="txtLight2" TextWrapping="NoWrap" Style="{StaticResource BlueTextBox}" IsReadOnly="True" Margin="15,0,0,0" Width="110" Height="32" Padding="0" />
+                    <TextBox x:Name="txtLight3" TextWrapping="NoWrap" Style="{StaticResource BlueTextBox}" IsReadOnly="True" Margin="15,0,0,0" Width="110" Height="32" Padding="0" />
+                    <TextBox x:Name="txtLight4" TextWrapping="NoWrap" Style="{StaticResource BlueTextBox}" IsReadOnly="True" Margin="15,0,0,0" Width="110" Height="32" Padding="0" />
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

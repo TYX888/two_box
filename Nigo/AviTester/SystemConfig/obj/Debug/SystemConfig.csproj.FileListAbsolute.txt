@@ -1,0 +1,13 @@
+E:\Work\CSharp\Nigo\AviTester\exe\SystemConfig.dll
+E:\Work\CSharp\Nigo\AviTester\exe\SystemConfig.pdb
+E:\Work\CSharp\Nigo\AviTester\SystemConfig\obj\Debug\SystemConfig.csproj.CoreCompileInputs.cache
+E:\Work\CSharp\Nigo\AviTester\SystemConfig\obj\Debug\SystemConfig.dll
+E:\Work\CSharp\Nigo\AviTester\SystemConfig\obj\Debug\SystemConfig.pdb
+E:\Work\CSharp\Nigo\AviTester\SystemConfig\obj\Debug\SystemConfig.csproj.AssemblyReference.cache
+E:\Work\CSharp\Nigo\Nigo\bin\Debug\SystemConfig.dll
+E:\Work\CSharp\Nigo\Nigo\bin\Debug\SystemConfig.pdb
+D:\Nigo\Nigo\bin\Debug\SystemConfig.dll
+D:\Nigo\Nigo\bin\Debug\SystemConfig.pdb
+D:\Nigo\AviTester\SystemConfig\obj\Debug\SystemConfig.csproj.CopyComplete
+D:\Nigo\AviTester\SystemConfig\obj\Debug\SystemConfig.dll
+D:\Nigo\AviTester\SystemConfig\obj\Debug\SystemConfig.pdb

@@ -1,0 +1,81 @@
+﻿<UserControl x:Class="AviTester.UcYieldStatus"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AviTester"
+             xmlns:memsHandler="clr-namespace:AviTester"
+             mc:Ignorable="d" 
+             d:DesignHeight="480" d:DesignWidth="700" FontSize="12">
+    <Grid >
+        <Border Grid.Row="1"  Margin="3" Style="{StaticResource BlueBorder}">
+            <StackPanel >
+                <Label Content="STATUS:" Foreground="DeepSkyBlue" FontSize="14" Height="30" Width="130" HorizontalAlignment="Left" ></Label>
+                <StackPanel Orientation="Horizontal" Margin="5,0" Width="610">
+                    <Border   Margin="0,0,10,0" Width="300" Height="300"  Style="{StaticResource BlueBorder}">
+                        <ScrollViewer Style="{StaticResource MyNewScrollViewerStyle}"  Margin="5,0,0,0" 
+                                      VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" >
+                        <memsHandler:UcYieldChart x:Name="ucChart"></memsHandler:UcYieldChart>
+                            </ScrollViewer>
+                        <!--<Image  Margin="1" Source="/MemsHandler;component/Pic/1593400240(1).png" />-->
+                    </Border>
+                    <Border   Margin="0" Width="300" Height="300" Style="{StaticResource BlueBorder}" >
+                        <ScrollViewer Style="{StaticResource MyNewScrollViewerStyle}"  x:Name="scrList" Margin="5,0,0,0" 
+                                      VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" >
+                            <StackPanel Orientation="Vertical" Name="layerList" ScrollViewer.VerticalScrollBarVisibility="Visible" >
+                                <Label Content="YIELD SUMMARY" Foreground="DeepSkyBlue"  Height="25"  HorizontalAlignment="Center" ></Label>
+                                <StackPanel Orientation="Vertical" x:Name="PanelDutResult">
+
+                                </StackPanel>
+
+                            </StackPanel>
+                        </ScrollViewer>
+
+                    </Border>
+                </StackPanel>
+                <Border  Margin="5" Width="610" Height="120" Style="{StaticResource BlueBorder}" >
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="PERFORMANCE:" Foreground="DeepSkyBlue" FontSize="12" Height="30" HorizontalContentAlignment="Center"  ></Label>
+                        <StackPanel Orientation="Horizontal" Margin="10,0">
+                            <Border   Margin="5,2,2,2" Width="110" Height="80" Style="{StaticResource BlueBorder}">
+                                <StackPanel  Orientation="Vertical"  >
+                                    <Label Content="OPERATION" Foreground="DeepSkyBlue" HorizontalContentAlignment="Center"  ></Label>
+                                    <Label Content="UPH" Foreground="DeepSkyBlue"  HorizontalContentAlignment="Center"></Label>
+                                    <Label Content="{Binding Operation_Uph}" Foreground="White"  HorizontalContentAlignment="Center"></Label>
+                                </StackPanel>
+                            </Border>
+                            <Border   Margin="2" Width="110" Height="80" Style="{StaticResource BlueBorder}">
+                                <StackPanel  Orientation="Vertical"  >
+                                    <Label Content="MACHINE" Foreground="DeepSkyBlue" HorizontalContentAlignment="Center"  ></Label>
+                                    <Label Content="UPH" Foreground="DeepSkyBlue"  HorizontalContentAlignment="Center"></Label>
+                                    <Label Content="{Binding Machine_Uph}" Foreground="White"  HorizontalContentAlignment="Center"></Label>
+                                </StackPanel>
+                            </Border>
+                            <Border   Margin="2" Width="110" Height="80" Style="{StaticResource BlueBorder}" >
+                                <StackPanel  Orientation="Vertical"  >
+                                    <Label Content="JAM RATE" Foreground="DeepSkyBlue" HorizontalContentAlignment="Center"  ></Label>
+                                    <Label Content="[%]" Foreground="DeepSkyBlue"  HorizontalContentAlignment="Center"></Label>
+                                    <Label Content="{Binding Jam_Rate}" Foreground="White"  HorizontalContentAlignment="Center"></Label>
+                                </StackPanel>
+                            </Border>
+                            <Border   Margin="2" Width="110" Height="80" Style="{StaticResource BlueBorder}" >
+                                <StackPanel  Orientation="Vertical"  >
+                                    <Label Content="MTBA" Foreground="DeepSkyBlue" HorizontalContentAlignment="Center"  ></Label>
+                                    <Label Content="[H]" Foreground="DeepSkyBlue"  HorizontalContentAlignment="Center"></Label>
+                                    <Label Content="{Binding MTBA}" Foreground="White"  HorizontalContentAlignment="Center"></Label>
+                                </StackPanel>
+                            </Border>
+                            <Border   Margin="2" Width="110" Height="80"  Style="{StaticResource BlueBorder}">
+                                <StackPanel  Orientation="Vertical"  >
+                                    <Label Content="MTBF" Foreground="DeepSkyBlue" HorizontalContentAlignment="Center"  ></Label>
+                                    <Label Content="[H]" Foreground="DeepSkyBlue"  HorizontalContentAlignment="Center"></Label>
+                                    <Label Content="{Binding MTBF}" Foreground="White"  HorizontalContentAlignment="Center"></Label>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

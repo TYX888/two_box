@@ -1,0 +1,465 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WpfStyleApi"
+                    xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+
+    <Style x:Key="TabItemLeft84Style" TargetType="{x:Type TabItem}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TabItem}">
+                    <Grid >
+                        <!-- 主Border -->
+                        <Border x:Name="bd" Background="{x:Null}" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="5,0,0,5"
+                                Margin="0,0,0,0" BorderBrush="#33CCFF" >
+                            <ContentPresenter x:Name="ItemContent"  ContentSource="Header" HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="bd" Property="Background" >
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="/WpfStyleApi;component/Resources/TableItemLeft84.png"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="bd" Property="BorderThickness" Value="0"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="TabItemRight84Style" TargetType="{x:Type TabItem}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TabItem}">
+                    <Grid >
+                        <!-- 主Border -->
+                        <Border x:Name="bd" Background="{x:Null}" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="0,5,5,0"
+                                Margin="0,0,0,0" BorderBrush="#33CCFF" >
+                            <ContentPresenter x:Name="ItemContent"  ContentSource="Header" HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="bd" Property="Background" >
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="/WpfStyleApi;component/Resources/TableItemRight84.png"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="bd" Property="BorderThickness" Value="0"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LableTitleWidth200" TargetType="Label">
+        <Setter Property="Background" >
+            <Setter.Value>
+                <ImageBrush ImageSource="/WpfStyleApi;component/Resources/TitleWidth200.png"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LableTitleWidth150" TargetType="Label">
+        <Setter Property="Background" >
+            <Setter.Value>
+                <ImageBrush ImageSource="/WpfStyleApi;component/Resources/TitleWidth150.png"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LableTitleWidth234" TargetType="Label">
+        <Setter Property="Background" >
+            <Setter.Value>
+                <ImageBrush ImageSource="/WpfStyleApi;component/Resources/TitleWidth234.png"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="BorderLable" TargetType="Label">
+        <Setter Property="Background" >
+            <Setter.Value>
+                <ImageBrush ImageSource="/WpfStyleApi;component/Resources/Auto/MainWindow/border.png"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="FIcon" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="pack://application:,,,/WpfStyleApi;component/Resources/Login/#iconfont"></Setter>
+        <Setter Property="Foreground" Value="{Binding TextForeground}"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="{Binding TextFontSize}"/>
+    </Style>
+
+    <Style x:Key="FIconSf" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="pack://application:,,,/WpfStyleApi;component/Resources/Login/#iconfontNew"></Setter>
+        <Setter Property="Foreground" Value="{Binding TextForeground}"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="{Binding TextFontSize}"/>
+    </Style>
+
+    <Style x:Key="BlueTextBox" TargetType="TextBox">
+        <Setter Property="Background" Value="{x:Null}"/>
+        <Setter Property="BorderBrush" Value="#23cefd"/>
+        <Setter Property="Foreground" Value="#23cefd"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="AllowDrop" Value="true"/>
+        <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+        <Setter Property="CaretBrush" Value="Red"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="5" SnapsToDevicePixels="True">
+                        <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" FontSize="{TemplateBinding FontSize}" Padding="20,0,0,0"  VerticalAlignment="Center" VerticalScrollBarVisibility="Hidden"/>
+                        <!--<TextBox x:Name="TxtContent" ></TextBox>-->
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                    <Condition Property="IsSelectionActive" Value="false"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--<Style x:Key="TextBoxColorSet" TargetType="TextBox">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Background" Value="{x:Null}"></Setter>
+        <Setter Property="CaretBrush" Value="Red"></Setter>
+        -->
+    <!--<Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Grid  FocusManager.FocusedElement="{Binding ElementName=border}">
+                        <Border BorderBrush="#23cefd" BorderThickness ="1" CornerRadius="5" >
+                            <TextBox x:Name="BtnContent"  VerticalAlignment="Center" Foreground="{TemplateBinding Foreground}"  Background="{x:Null}"
+                                        Text="{TemplateBinding Text}" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0">
+                            </TextBox>
+                        </Border>
+
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>-->
+    <!--光标颜色-->
+    <!--<Setter Property="Validation.ErrorTemplate">
+            <Setter.Value>
+                <ControlTemplate>
+                    <DockPanel LastChildFill="True">
+                        <TextBlock DockPanel.Dock="Bottom"
+                                   Foreground="Red" FontSize="10" 
+                                   Text="{Binding ErrorContent}" >
+                        </TextBlock>
+                        <Border BorderBrush="OrangeRed" BorderThickness="1" CornerRadius="5">
+                            <AdornedElementPlaceholder Name="adornerPlaceholder"></AdornedElementPlaceholder>
+                        </Border>
+                    </DockPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>-->
+    <!--<Style.Triggers>
+            <Trigger Property="Validation.HasError" Value="true">
+                <Setter Property="Text" Value="{Binding ErrorContent}"/>
+            </Trigger>
+        </Style.Triggers>-->
+    <!--
+    </Style>-->
+
+    <Style x:Key="TextBoxColorSet" TargetType="{x:Type TextBox}">
+        <Setter Property="Background" Value="{x:Null}"/>
+        <Setter Property="BorderBrush" Value="#23cefd"/>
+        <Setter Property="Foreground" Value="#23cefd"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="AllowDrop" Value="true"/>
+        <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+        <Setter Property="CaretBrush" Value="Red"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="5" SnapsToDevicePixels="True">
+                        <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" FontSize="{TemplateBinding FontSize}" Padding="20,0,0,0"  VerticalAlignment="Center" VerticalScrollBarVisibility="Hidden"/>
+                        <!--<TextBox x:Name="TxtContent" ></TextBox>-->
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                    <Condition Property="IsSelectionActive" Value="false"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="{x:Type TabItem}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TabItem}">
+                    <Grid >
+                        <!-- 主Border -->
+                        <Border Name="bd"
+                                Background="{x:Null}"
+                                BorderThickness="2"
+                                CornerRadius="2,2,0,0"
+                                Margin="0,-2,0,0" BorderBrush="#33CCFF" >
+                            <ContentPresenter ContentSource="Header" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <!-- 选择后背景 -->
+                            <!--<Setter TargetName="bd" Property="Background" Value="White" />-->
+                            <Setter TargetName="bd" Property="CornerRadius" Value="2,30,0,0" />
+                            <!-- 选择后Margin设置成0，这样它成了最高的TabItem -->
+                            <Setter TargetName="bd" Property="Margin" Value="0" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <!-- 设置鼠标指向时的颜色 -->
+                            <!--<Setter TargetName="bd" Property="Background" Value="White" />-->
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="BlueBorder" TargetType="Border">
+        <Setter Property="BorderBrush" Value="#33CCFF"/>
+        <Setter Property="BorderThickness" Value="2"/>
+    </Style>
+
+    <Style x:Key="BlueLabel" TargetType="Label">
+        <Setter Property="BorderBrush" Value="#33CCFF"/>
+        <Setter Property="BorderThickness" Value="0,0,0,2"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
+
+    <Style x:Key="TransText" TargetType="local:WpfTextPath">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="LayoutTransform">
+            <Setter.Value>
+                <RotateTransform Angle="-90">
+                </RotateTransform>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="TransLabel" TargetType="Label">
+        <Setter Property="Foreground" Value="#33CCFF"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="LayoutTransform">
+            <Setter.Value>
+                <RotateTransform Angle="-90">
+                </RotateTransform>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- =============== 提示文本样式 =============== -->
+    <Style x:Key="FlowToolTip" TargetType="ToolTip">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Border Background="White" CornerRadius="2" Grid.ColumnSpan="2">
+                            <Border.Effect>
+                                <DropShadowEffect Direction="0" BlurRadius="7" ShadowDepth="0" Color="Black" Opacity="0.09" />
+                            </Border.Effect>
+                        </Border>
+                        <TextBlock Grid.Column="0" Margin="5" FontSize="11" Text="{TemplateBinding ContentControl.Content}"/>
+                        <TextBlock Grid.Column="1" Margin="5" FontSize="11" Text="{TemplateBinding ContentControl.Tag}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="TabItemLeft164Style" TargetType="{x:Type TabItem}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TabItem}">
+                    <Grid >
+                        <!-- 主Border -->
+                        <Border x:Name="bd" Background="{x:Null}" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
+                                 BorderThickness="1,1,1,1"
+                                CornerRadius="5,0,0,5"
+                                Margin="0,0,0,0" BorderBrush="#33CCFF" >
+                            <ContentPresenter x:Name="ItemContent"  ContentSource="Header" HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="bd" Property="Background" >
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="/WpfStyleApi;component/Resources/TableItemLeft164.png"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="bd" Property="BorderThickness" Value="0"/>
+                            <Setter Property="Foreground" Value="#23cefd"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="#23cefd"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="TabItemRight164Style" TargetType="{x:Type TabItem}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TabItem}">
+                    <Grid >
+                        <!-- 主Border -->
+                        <Border x:Name="bd" Background="{x:Null}" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
+                                 BorderThickness="1,1,1,1"
+                                CornerRadius="0,5,5,0"
+                                Margin="0,0,0,0" BorderBrush="#33CCFF" >
+                            <ContentPresenter x:Name="ItemContent"  ContentSource="Header" HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="bd" Property="Background" >
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="/WpfStyleApi;component/Resources/TableItemRight164.png"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="bd" Property="BorderThickness" Value="0"/>
+                            <Setter Property="Foreground" Value="#23cefd"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="#23cefd"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="TabItemLeft110Style" TargetType="{x:Type TabItem}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TabItem}">
+                    <Grid >
+                        <!-- 主Border -->
+                        <Border x:Name="bd" Background="{x:Null}" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
+                                 BorderThickness="1,1,1,1"
+                                CornerRadius="5,0,0,5"
+                                Margin="0,0,0,0" BorderBrush="#33CCFF" >
+                            <ContentPresenter x:Name="ItemContent"  ContentSource="Header" HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="bd" Property="Background" >
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="/WpfStyleApi;component/Resources/TableItemLeft110.png"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="bd" Property="BorderThickness" Value="0"/>
+                            <Setter Property="Foreground" Value="#23cefd"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="#23cefd"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="TabItemCenter110Style" TargetType="{x:Type TabItem}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TabItem}">
+                    <Grid >
+                        <!-- 主Border -->
+                        <Border x:Name="bd" Background="{x:Null}" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
+                                 BorderThickness="1,1,1,1"
+                                CornerRadius="0,0,0,0"
+                                Margin="0,0,0,0" BorderBrush="#33CCFF" >
+                            <ContentPresenter x:Name="ItemContent"  ContentSource="Header" HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="bd" Property="Background" >
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="/WpfStyleApi;component/Resources/TableItemCenter110.png"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="bd" Property="BorderThickness" Value="0"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
+    
+    

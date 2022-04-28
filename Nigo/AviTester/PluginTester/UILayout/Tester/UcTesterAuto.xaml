@@ -1,0 +1,199 @@
+﻿<UserControl x:Class="AviTester.UcTesterAuto"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AviTester"
+             xmlns:gif="http://wpfanimatedgif.codeplex.com"
+             xmlns:wpfStyleApi="clr-namespace:WpfStyleApi;assembly=WpfStyleApi"
+             mc:Ignorable="d" 
+             d:DesignHeight="860" d:DesignWidth="1750" gif:ImageBehavior.AnimateInDesignMode="True">
+    <UserControl.Resources>
+        <local:LevelConvert x:Key="ValueConv" />
+        <local:VisibilityConvertC x:Key="boolConv" />
+    </UserControl.Resources>
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="300"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="700"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Row="0" Grid.Column="0"  Margin="3" Grid.RowSpan="2" Style="{StaticResource BlueBorder}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="130"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="80"/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0">
+                    <Label Content="INFORMATION:" Foreground="DeepSkyBlue" FontSize="14" Height="25" Width="130" HorizontalAlignment="Left" ></Label>
+                    <StackPanel Orientation="Horizontal" x:Name="PnlLot" >
+                        <StackPanel Orientation="Vertical" Width="220" >
+                            <Border   Margin="2"  Height="30" Style="{StaticResource BlueBorder}">
+                                <StackPanel  Orientation="Horizontal" >
+                                    <Label Content="Line:" Foreground="DeepSkyBlue"  Width="60" ></Label>
+                                    <Label Content="{Binding Line}" Foreground="White"  ></Label>
+                                </StackPanel>
+                            </Border>
+                            <Border  Margin="2"  Height="30" Style="{StaticResource BlueBorder}">
+                                <StackPanel  Orientation="Horizontal"  >
+                                    <Label Content="Floor:" Foreground="DeepSkyBlue"  Width="60" ></Label>
+                                    <Label Content="{Binding Floor}" Foreground="White"  ></Label>
+                                </StackPanel>
+                            </Border>
+                            <Border  Margin="2"  Height="30" Style="{StaticResource BlueBorder}">
+                                <StackPanel  Orientation="Horizontal"  >
+                                    <Label Content="Building:" Foreground="DeepSkyBlue"  Width="60" ></Label>
+                                    <Label Content="{Binding Building}" Foreground="White"  ></Label>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical" Width="250" Margin="20,0">
+                            <Border   Margin="2" Height="30" Style="{StaticResource BlueBorder}">
+                                <StackPanel  Orientation="Horizontal"  >
+                                    <Label Content="Machine ID:" Foreground="DeepSkyBlue"  Width="80" ></Label>
+                                    <Label Content="{Binding MachineID}" Foreground="White" ></Label>
+                                </StackPanel>
+                            </Border>
+                            <Border  Margin="2"  Height="30" Style="{StaticResource BlueBorder}">
+                                <StackPanel  Orientation="Horizontal"  >
+                                    <Label Content="LOT NO:" Foreground="DeepSkyBlue"  Width="80" ></Label>
+                                    <Label Content="{Binding LotID}" Foreground="White"  ></Label>
+                                </StackPanel>
+                            </Border>
+                            <Border   Margin="2"  Height="30" Style="{StaticResource BlueBorder}">
+                                <StackPanel  Orientation="Horizontal"  >
+                                    <Label Content="Dut Module:" Foreground="DeepSkyBlue"  Width="80" ></Label>
+                                    <Label Content="{Binding DutModule}" Foreground="White"  ></Label>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                        <Border   Margin="2" Height="94" Width="500" Style="{StaticResource BlueBorder}">
+                            <Grid Height="94">
+                                <Image  Margin="0,-60" x:Name="ImgSts"
+                                       gif:ImageBehavior.AutoStart="True"  gif:ImageBehavior.RepeatBehavior="Forever"/>
+                                <StackPanel   Orientation="Horizontal"  >
+
+                                    <!--<Image  Margin="10"   Source="/MemsHandler;component/Pic/Icon/Heartbeat Red.png" />-->
+                                    <wpfStyleApi:WpfTextPath x:Name="PathHand" VerticalAlignment="Center"
+                                                    Fill="White" Stroke="DeepSkyBlue" StrokeThickness="2" Margin="40,0,0,20"
+                                                    FontSize="38" FontWeight="Bold" Text="TESTER:"/>
+
+                                    <wpfStyleApi:WpfTextPath x:Name="PathEdge" VerticalAlignment="Center"
+                                                    Fill="White" Stroke="Green" StrokeThickness="2" Margin="10,0,0,20"
+                                                    FontSize="38" FontWeight="Bold" Text="RUNNING"/>
+
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Grid.Column="0"  Height="552" Width="943" Orientation="Horizontal">
+                    <Grid Margin="100,0,0,0">
+                        <Label Content="S1" Foreground="Yellow" FontWeight="Bold" FontSize="30" Width="60" Height="60" Margin="0,260,50,0"/>
+                        <Label Content="S2" Foreground="Yellow" FontWeight="Bold" FontSize="30" Width="60" Height="60" Margin="0,200,160,0"/>
+                        <Label Content="S3" Foreground="Yellow" FontWeight="Bold" FontSize="30" Width="60" Height="60" Margin="0,90,230,0"/>
+                        <Label Content="S4" Foreground="Yellow" FontWeight="Bold" FontSize="30" Width="60" Height="60" Margin="0,0,230,60"/>
+                        <Label Content="S5" Foreground="Yellow" FontWeight="Bold" FontSize="30" Width="60" Height="60" Margin="0,0,160,180"/>
+                        <Label Content="S6" Foreground="Yellow" FontWeight="Bold" FontSize="30" Width="60" Height="60" Margin="0,0,60,240"/>
+                        <Label Content="S7" Foreground="Yellow" FontWeight="Bold" FontSize="30" Width="60" Height="60" Margin="80,0,0,240"/>
+                        <Label Content="S8" Foreground="Yellow" FontWeight="Bold" FontSize="30" Width="60" Height="60" Margin="190,0,0,180"/>
+                        <Label Content="S9" Foreground="Yellow" FontWeight="Bold" FontSize="30" Width="60" Height="60" Margin="260,0,0,60"/>
+                        <Label Content="S10" Foreground="Yellow" FontWeight="Bold" FontSize="30" Width="70" Height="60" Margin="230,80,0,0"/>
+                        <Label Content="S11" Foreground="Yellow" FontWeight="Bold" FontSize="30" Width="70" Height="60" Margin="170,200,0,0"/>
+                        <Label Content="S12" Foreground="Yellow" FontWeight="Bold" FontSize="30" Width="70" Height="60" Margin="70,260,0,0"/>
+                        <local:TurnTable x:Name="ttSocket" Width="388" Height="400" Angle="15" Rotate="0" VerticalAlignment="Top" Margin="0,36,0,0"/>
+                    </Grid>
+                    <StackPanel Orientation="Vertical" Margin="80,0,20,30" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                        <StackPanel Orientation="Horizontal"  Margin="55,0,0,0">
+                            <Image Source="/WpfStyleApi;component/Resources/Auto/MainWindow/decorateLeft.png"></Image>
+                            <Label Content="Socket 1 ~ 6 :" Foreground="#20bcfc"  Width="110" VerticalContentAlignment="Center" FontSize="14" HorizontalContentAlignment="Center"/>
+                            <Image Source="/WpfStyleApi;component/Resources/Auto/MainWindow/decorateRight.png"></Image>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                            <Label x:Name="Label1" Content="PASS" Foreground="Green" BorderThickness="0" Width="42" Height="42" Margin="0,0,0,0" Style="{StaticResource BorderLable}"
+                                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="12" ></Label>
+                            <Label x:Name="Label2" Content="FAIL" Foreground="Red" BorderThickness="0" Width="42" Height="42" Margin="16,0,0,0" Style="{StaticResource BorderLable}"
+                                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="12" ></Label>
+                            <Label x:Name="Label3" Content="PASS" Foreground="Green" BorderThickness="0" Width="42" Height="42" Margin="16,0,0,0" Style="{StaticResource BorderLable}"
+                                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="12" ></Label>
+                            <Label x:Name="Label4" Content="FAIL" Foreground="Red" BorderThickness="0" Width="42" Height="42" Margin="16,0,0,0" Style="{StaticResource BorderLable}"
+                                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="12" ></Label>
+                            <Label x:Name="Label5" Content="PASS" Foreground="Green" BorderThickness="0" Width="42" Height="42" Margin="16,0,0,0" Style="{StaticResource BorderLable}"
+                                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="12" ></Label>
+                            <Label x:Name="Label6" Content="PASS" Foreground="Green" BorderThickness="0" Width="42" Height="42" Margin="16,0,0,0" Style="{StaticResource BorderLable}"
+                                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="12" ></Label>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                            <Label  Content="1" Foreground="#20bcfc" BorderThickness="0" Width="42" Margin="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="12" ></Label>
+                            <Label  Content="2" Foreground="#20bcfc" BorderThickness="0" Width="42" Margin="16,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="12" ></Label>
+                            <Label  Content="3" Foreground="#20bcfc" BorderThickness="0" Width="42" Margin="16,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="12" ></Label>
+                            <Label  Content="4" Foreground="#20bcfc" BorderThickness="0" Width="42" Margin="16,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="12" ></Label>
+                            <Label  Content="5" Foreground="#20bcfc" BorderThickness="0" Width="42" Margin="16,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="12" ></Label>
+                            <Label  Content="6" Foreground="#20bcfc" BorderThickness="0" Width="42" Margin="16,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="12" ></Label>
+                        </StackPanel>
+
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Margin="20,15" Orientation="Horizontal" Grid.Row="2">
+                    <Button Margin="50,2,20,2" Width="150" Style="{StaticResource DefDoubleBtn}" Content="CHANGE" Tag="TESTER RECIPE" Foreground="White" Click="btnLoadTestPlan_Click"></Button>
+                    <TextBox x:Name="txtTestPlanFileName" Text="{Binding ProductionTestPlan}" Style="{ StaticResource BlueTextBox}" BorderThickness="2" 
+                              FontSize="14" HorizontalContentAlignment="Left"  Height="40" Margin="10,0" Width="500" IsReadOnly="True"></TextBox>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <Border Margin="3" Style="{StaticResource BlueBorder}" Height="74">
+                <StackPanel >
+                    <Label Content="CONNECTION:" Foreground="DeepSkyBlue" FontSize="14" Height="30" Width="130" HorizontalAlignment="Left" ></Label>
+                    <StackPanel Orientation="Horizontal" >
+                        <CheckBox Margin="10,0,0,0" Content="MES" Foreground="DeepSkyBlue" FontSize="14"  Width="80" Height="25" Style="{DynamicResource CheckBoxLedGrStyle}" VerticalContentAlignment="Center"/>
+                        <CheckBox Content="HANDLER" Foreground="DeepSkyBlue"  FontSize="14" Width="110" Height="25" Style="{DynamicResource CheckBoxLedGrStyle}" VerticalContentAlignment="Center" IsChecked="True"/>
+                        <CheckBox Content="VISION 1" Foreground="DeepSkyBlue" FontSize="14" Width="110" Height="25" Style="{DynamicResource CheckBoxLedGrStyle}" VerticalContentAlignment="Center" IsChecked="True"/>
+                        <CheckBox Content="VISION 2" Foreground="DeepSkyBlue" FontSize="14" Width="110" Height="25" Style="{DynamicResource CheckBoxLedGrStyle}" VerticalContentAlignment="Center" IsChecked="True"/>
+                        <CheckBox Content="VISION 3" Foreground="DeepSkyBlue" FontSize="14" Width="110" Height="25" Style="{DynamicResource CheckBoxLedGrStyle}" VerticalContentAlignment="Center" IsChecked="True"/>
+                        <StackPanel Orientation="Horizontal" x:Name="spMotionIo">
+                            <CheckBox Content="EMG" x:Name="chkEmg" IsEnabled="True" Foreground="DeepSkyBlue" FontSize="14" Width="80" Height="25" Style="{DynamicResource CheckBoxLedRgStyle}" VerticalContentAlignment="Center"/>
+                            <CheckBox Content="AIR" x:Name="chkAir" IsEnabled="True" Foreground="DeepSkyBlue" FontSize="14" Height="25" Style="{DynamicResource CheckBoxLedGrStyle}" VerticalContentAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <local:UcTestStatus></local:UcTestStatus>
+        </StackPanel>
+        <Border x:Name="BorderLog" Grid.Row="1" Grid.Column="1"  Style="{StaticResource  BlueBorder}" Margin="3" Background="Black">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Content="DATALOG:" Foreground="DeepSkyBlue" FontSize="14" Grid.Row="0" Width="130" HorizontalAlignment="Left" ></Label>
+
+                <DataGrid x:Name="DataGridLog"  Grid.Row="1" IsReadOnly="True"  Margin="3"
+                            MouseDoubleClick="DataGridLog_MouseDoubleClick" MouseLeave="DataGridLog_MouseLeave" Style="{StaticResource MyDataGridStyle}" >
+                    <DataGrid.Resources>
+                        <Style TargetType="DataGridRow">
+                            <Setter Property="Background" Value="{x:Null}" />
+                            <Setter Property="Foreground" Value="{Binding Level,Converter={StaticResource ValueConv}}"/>
+                        </Style>
+                    </DataGrid.Resources>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Width="80" Header="LEVEL" Binding="{Binding Level}" />
+                        <DataGridTextColumn Width="150" Header="DATE TIME" Binding="{Binding Time}" />
+                        <DataGridTextColumn Width="150" Header="TITLE" Binding="{Binding Title}" />
+                        <DataGridTextColumn Width="Auto" Header="MESSAGE" Binding="{Binding Msg}"  />
+                    </DataGrid.Columns >
+                    <DataGrid.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Clear" Click="btnClear_Click"/>
+                            <MenuItem Header="Logger Folder" Click="btnFolder_Click"/>
+                        </ContextMenu>
+                    </DataGrid.ContextMenu>
+                </DataGrid>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

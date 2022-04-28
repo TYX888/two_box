@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="Nigo.UcMachineStatus"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:wpf="clr-namespace:NGettext.Wpf;assembly=NGettext.Wpf"
+             xmlns:wpfStyleApi="clr-namespace:WpfStyleApi;assembly=WpfStyleApi"
+              xmlns:gif="http://wpfanimatedgif.codeplex.com"
+             xmlns:local="clr-namespace:Nigo"
+             mc:Ignorable="d" 
+             d:DesignHeight="158" d:DesignWidth="729" >
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/WpfStyleApi;component/Resources/Auto/Bg/STATUS_bg.png"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="43"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="{wpf:Gettext STATUS}" Foreground="#23cefd" FontSize="14" Height="28" Width="200" HorizontalAlignment="Left"  Margin="15,15,0,0">
+            <Label.Background>
+                <ImageBrush ImageSource="/WpfStyleApi;component/Resources/Auto/Other/Title.png"/>
+            </Label.Background>
+        </Label>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <StackPanel Orientation="Horizontal" Name="PathEdge" Margin="20,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <!--添加机台当前工作状态 Lable-->
+                <TextBox Name="SystemStatus" Text="{Binding SystemStatus}" VerticalAlignment="Center" HorizontalAlignment="Left" Background="{x:Null}" FontFamily="/WpfStyleApi;component/Resources/Font/#Quantum"
+                                HorizontalContentAlignment="Left" Foreground="#23cefd"   BorderThickness="0"   Margin="20,0,0,15" FontSize="38"  >
+                </TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Name="ImgSts" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <!--添加机台当前工作状态的Gif动图-->
+                <Image x:Name="ImageStatus" Margin="10,0,0,0" gif:ImageBehavior.AutoStart="True"  gif:ImageBehavior.RepeatBehavior="Forever"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Name="FlowSts" Orientation="Vertical" Visibility="Hidden">
+            <!--添加机台当前工作流程-->
+            <TextBox Text="当前老化圈数" VerticalAlignment="Center" HorizontalAlignment="Center" Background="{x:Null}" FontFamily="/WpfStyleApi;component/Resources/Font/#Quantum"
+                                HorizontalContentAlignment="Left" Foreground="#23cefd"   BorderThickness="0"   Margin="20,0,0,15" FontSize="38"  >
+            </TextBox>
+            <TextBox Name="CurLoop" Text="{Binding CurLoop}" VerticalAlignment="Center" HorizontalAlignment="Center" Background="{x:Null}" FontFamily="/WpfStyleApi;component/Resources/Font/#Quantum"
+                                HorizontalContentAlignment="Left" Foreground="#23cefd"   BorderThickness="0"   Margin="20,0,0,15" FontSize="38"  >
+            </TextBox>
+        </StackPanel>
+        
+    </Grid>
+</UserControl>

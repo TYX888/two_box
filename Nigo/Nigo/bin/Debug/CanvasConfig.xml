@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConfigMgmt xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CurrConfigName>Config1</CurrConfigName>
+  <ConfigNameInfos>
+    <ConfigNameInfo>
+      <configName>Config1</configName>
+      <configInfo>
+        <LineWidthEffectID>3</LineWidthEffectID>
+        <FillEffectID>3</FillEffectID>
+        <TextEffectID>3</TextEffectID>
+        <LineWidth>1</LineWidth>
+        <TextFont />
+        <TextColor>ARGB=255,255,0,0</TextColor>
+        <FillColor>ARGB=255,255,0,0</FillColor>
+        <FillMode>OnlyBorder</FillMode>
+        <SettingTabIndex>1</SettingTabIndex>
+      </configInfo>
+    </ConfigNameInfo>
+    <ConfigNameInfo>
+      <configName>Config2</configName>
+      <configInfo>
+        <LineWidthEffectID>3</LineWidthEffectID>
+        <FillEffectID>3</FillEffectID>
+        <TextEffectID>3</TextEffectID>
+        <LineWidth>1</LineWidth>
+        <TextFont />
+        <TextColor>ARGB=255,255,0,0</TextColor>
+        <FillColor>ARGB=255,255,0,0</FillColor>
+        <FillMode>OnlyBorder</FillMode>
+        <SettingTabIndex>0</SettingTabIndex>
+      </configInfo>
+    </ConfigNameInfo>
+  </ConfigNameInfos>
+</ConfigMgmt>

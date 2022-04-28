@@ -1,0 +1,14 @@
+E:\Work\CSharp\Nigo\Nigo\bin\Debug\MotionDriver.dll
+E:\Work\CSharp\Nigo\Nigo\bin\Debug\MotionDriver.pdb
+E:\Work\CSharp\Nigo\AviTester\exe\MotionDriver.dll
+E:\Work\CSharp\Nigo\AviTester\exe\MotionDriver.pdb
+E:\Work\CSharp\Nigo\AviTester\MotionDriver\obj\Debug\MotionDriver.csproj.AssemblyReference.cache
+E:\Work\CSharp\Nigo\AviTester\MotionDriver\obj\Debug\MotionDriver.csproj.CoreCompileInputs.cache
+E:\Work\CSharp\Nigo\AviTester\MotionDriver\obj\Debug\MotionDriver.dll
+E:\Work\CSharp\Nigo\AviTester\MotionDriver\obj\Debug\MotionDriver.pdb
+D:\Nigo\Nigo\bin\Debug\MotionDriver.dll
+D:\Nigo\Nigo\bin\Debug\MotionDriver.pdb
+D:\Nigo\AviTester\MotionDriver\obj\Debug\MotionDriver.csprojAssemblyReference.cache
+D:\Nigo\AviTester\MotionDriver\obj\Debug\MotionDriver.csproj.CopyComplete
+D:\Nigo\AviTester\MotionDriver\obj\Debug\MotionDriver.dll
+D:\Nigo\AviTester\MotionDriver\obj\Debug\MotionDriver.pdb

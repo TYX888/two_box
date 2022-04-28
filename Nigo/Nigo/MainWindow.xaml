@@ -1,0 +1,860 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpf="clr-namespace:NGettext.Wpf;assembly=NGettext.Wpf"
+        x:Name="Window" x:Class="Nigo.MainWindow"
+        mc:Ignorable="d"  WindowChrome.WindowChrome="{DynamicResource WindowChromeKey}"
+        Title="MainWindow" Height="1050" Width="1920"  MaxHeight="1050" MaxWidth="1920"
+    WindowStartupLocation="CenterScreen" Closing="Window_Closing" WindowStyle="None" Loaded="Window_Loaded" >
+
+    <Window.Resources>
+        <WindowChrome x:Key="WindowChromeKey">
+            <WindowChrome.ResizeBorderThickness>
+                <Thickness>0</Thickness>
+            </WindowChrome.ResizeBorderThickness>
+        </WindowChrome>
+    </Window.Resources>
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="View/Resources/bg.png"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <!--<RowDefinition Height="30"/>-->
+            <RowDefinition Height="74"/>
+            <RowDefinition Height="867"/>
+            <RowDefinition Height="109"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="230"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"  BorderThickness="0,0,0,2" Margin="3"  Style="{StaticResource BlueBorder}" Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Menu  Name="menu1"   Foreground="DeepSkyBlue" Background="Black"  FontSize="12" Margin="20,0,20,0" Width="900" HorizontalAlignment="Left">
+                    <MenuItem Header="MAIN"   HorizontalContentAlignment="Center" Width="150">
+                        <MenuItem Header="User control" Click="User_control" />
+                        <MenuItem Header="-----" />
+                    </MenuItem>
+                    <MenuItem Header="DATA" Width="150"/>
+                    <MenuItem Header="REMOTE" Width="150"/>
+                    <MenuItem Header="LANGUAGE" Width="150"/>
+                    <MenuItem Header="ABOUT" Width="150"/>
+                </Menu>
+            </StackPanel>
+        </Border>
+
+        <Grid  Grid.ColumnSpan="2">
+            <Grid.Background>
+                <ImageBrush ImageSource="/WpfStyleApi;component/Resources/Auto/Bg/AppBar.png"/>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="262"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="2">
+                <Image Margin="20,0,0,0"  Source="/WpfStyleApi;component/Resources/Auto/AppBar/GHJ_logo.png" Width="186" Height="48"></Image>
+
+                <StackPanel Orientation="Horizontal" Margin="55,0,0,0"  Width="800">
+                    <Image Source="/WpfStyleApi;component/Resources/Auto/AppBar/left.png" Height="30" Width="35" Margin="0,0,0,0"></Image>
+                    <TextBlock Margin="10,5,10,0" FontSize="34" Foreground="#4af0f7" VerticalAlignment="Center" TextDecorations="{x:Null}" FontFamily="/WpfStyleApi;component/Resources/Font/#Unisono Quickpath"> NVS-360</TextBlock>
+                    <Image Source="/WpfStyleApi;component/Resources/Auto/AppBar/right.png" Height="30" Width="35" Margin="0,0,0,0"></Image>
+                    <TextBlock Margin="10,5,0,0" FontSize="34" Foreground="#4af0f7" VerticalAlignment="Center" TextDecorations="{x:Null}" FontFamily="/WpfStyleApi;component/Resources/Font/#Unisono Quickpath"> AVI TESTER SYSTEM</TextBlock>
+                </StackPanel>
+                <Label  VerticalContentAlignment="Center" Foreground="#4af0f7"  HorizontalContentAlignment="Right">
+                </Label>
+                <Label Content="{wpf:Gettext OPERATOR:}" Foreground="#23cefd"  FontSize="16" Height="40" Width="110" Margin="123,0,0,0" VerticalContentAlignment="Center"></Label>
+                <Label x:Name="lblUserName" Margin="0,0,28,0" Content="STMOP-20060001" Foreground="White" FontSize="16" Height="40" Width="160" VerticalContentAlignment="Center"></Label>
+
+                <Border Visibility="Collapsed" Height="32" Width="1" Style="{StaticResource BlueBorder}" CornerRadius="0" Background="#23cefd"></Border>
+                <Button Visibility="Collapsed" Margin="12,0,12,0" Height="68" Width="112"  BorderBrush="#23cefd" BorderThickness="0" x:Name="BtnLogin" Click="BtnLogin_OnClick" 
+                        Content="{wpf:Gettext LOGIN}" FontSize="14" Foreground="#23cefd" >
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="border"  BorderThickness="0"  BorderBrush="#33CCFF"  CornerRadius="5"  Height="68" Width="112" >
+                                <Border.Background>
+                                    <ImageBrush ImageSource="/WpfStyleApi;component/Resources/Auto/AppBar/Login.png"/>
+                                </Border.Background>
+                                <Grid >
+                                    <TextBlock  x:Name="content"   VerticalAlignment="Center" 
+                                        Text="{TemplateBinding Content}" HorizontalAlignment="Center" Block.TextAlignment="Center"></TextBlock>
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <!--//当控件获取焦点时要执行的内容-->
+                                <Trigger Property="IsKeyboardFocused"  Value="true"></Trigger>
+                                <!--//当鼠标放上去时要设置的内容-->
+                                <Trigger Property="IsMouseOver"  Value="true" >
+                                    <Setter Property="Background" TargetName="border" >
+                                        <Setter.Value>
+                                            <ImageBrush ImageSource="/WpfStyleApi;component/Resources/Auto/AppBar/LOGIN_Mouse.png"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Border Visibility="Collapsed" Height="32" Width="1" Style="{StaticResource BlueBorder}" CornerRadius="0" Background="#23cefd" Margin="0,0,0,0"></Border>
+
+                <Button Visibility="Collapsed" x:Name="ButtonUserManager" Margin="12,0,12,0"  Height="68" Width="112"  Content="{wpf:Gettext User Mgr}"  FontSize="14" Click="BtnDebug" BorderThickness="0" Foreground="Red" HorizontalAlignment="Left">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="border"  BorderThickness="0"  BorderBrush="#33CCFF"  CornerRadius="5"  Height="68" Width="112" >
+                                <Border.Background>
+                                    <ImageBrush ImageSource="/WpfStyleApi;component/Resources/Auto/AppBar/Login.png"/>
+                                </Border.Background>
+                                <Grid >
+                                    <TextBlock  x:Name="content"   VerticalAlignment="Center" 
+                                        Text="{TemplateBinding Content}" HorizontalAlignment="Center" Block.TextAlignment="Center"></TextBlock>
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsKeyboardFocused"  Value="true"></Trigger>
+                                <Trigger Property="IsMouseOver"  Value="true" >
+                                    <Setter Property="Background" TargetName="border" >
+                                        <Setter.Value>
+                                            <ImageBrush ImageSource="/WpfStyleApi;component/Resources/Auto/AppBar/LOGIN_Mouse.png"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+            </StackPanel>
+
+            <Grid Grid.Column="1">
+                <Expander x:Name="MaxMinExpander" Header=" " Margin="0,0,0,0" IsExpanded="False" FontSize="18" Foreground="#03cefd" Style="{DynamicResource HeaderExpanderStyle}" HorizontalAlignment="Right"  Height="74" >
+                    <StackPanel  Orientation="Horizontal" Background="#1eb0fc" Margin="-1,0,0,0">
+                        <Button Height="16" Width="16"  Margin="96,0,0,0" x:Name="BtnMin"  BorderBrush="#23cefd" BorderThickness="1"  Click="BtnMin_Click">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/WpfStyleApi;component/Resources/Auto/AppBar/min.png"/>
+                            </Button.Background>
+                        </Button>
+                        <Button Height="16" Width="16"  Margin="32,0,0,0" x:Name="BtnMax"  BorderBrush="#23cefd" BorderThickness="1" Click="BtnMax_Click">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/WpfStyleApi;component/Resources/Auto/AppBar/max.png"/>
+                            </Button.Background>
+                        </Button>
+                        <Button Height="16" Width="16"  Margin="32,0,32,0" x:Name="BtnClose"  BorderBrush="#23cefd" BorderThickness="1" Click="BtnClose_Click">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/WpfStyleApi;component/Resources/Auto/AppBar/close.png"/>
+                            </Button.Background>
+                        </Button>
+                    </StackPanel>
+                </Expander>
+            </Grid>
+            <Button Content="test" Visibility="Collapsed" FontSize="16" Width="100" Height="50" Margin="1010,10,540,14" Click="ButtonBase_OnClick"></Button>
+        </Grid>
+
+        <Grid Grid.Row="1"  Grid.RowSpan="2" Grid.Column="0" >
+            <Grid.Background>
+                <ImageBrush ImageSource="View/Resources/MenuBar_bg.png"/>
+            </Grid.Background>
+            <StackPanel >
+                <Expander Header="{wpf:Gettext MODE}" IsExpanded="True" Style="{StaticResource MenuExpanderStyle}"  Foreground="#23cefd" FontSize="18"  FontWeight="Bold">
+                    <StackPanel Margin="0,-8,0,0">
+                        <RadioButton Height="75" Visibility="{Binding Source={StaticResource login},Path=Level,Converter={StaticResource VisibleConvert},ConverterParameter='h1'}" x:Name="RadioAuto" Click="RadioAuto_Click" GroupName="DefRadio"  Content="{wpf:Gettext AUTO}" Style="{StaticResource DefRadio}">
+                        </RadioButton>
+                        <RadioButton Height="75" x:Name="RadioManual" Click="RadioManual_Click"  GroupName="DefRadio" Content="{wpf:Gettext MANUAL}"  Style="{StaticResource DefRadio}" Tag="&#58894;" IsChecked="True"></RadioButton>
+                    </StackPanel>
+                </Expander>
+                <Expander Header="{wpf:Gettext MODULE}" IsExpanded="True"  Style="{StaticResource MenuExpanderStyle}"  Foreground="#23cefd" FontSize="18" FontWeight="Bold">
+                    <StackPanel Margin="0,-8,0,0">
+                        <RadioButton Height="75" x:Name="RadioVision" Click="RadioVision_OnClick" GroupName="OrangeRadio" Content="{wpf:Gettext VISION}" Style="{StaticResource DefRadio}"  Tag="&#59073;" IsChecked="true"></RadioButton>
+                        <RadioButton Height="75" x:Name="RadioTester" Click="RadioTester_OnClick" GroupName="OrangeRadio" Content="{wpf:Gettext TESTER}" Style="{StaticResource DefRadio}"  Tag="&#xe692;" ></RadioButton>
+                        <RadioButton Height="75" x:Name="RadioStimulus" Click="RadioStimulus_OnClick" GroupName="OrangeRadio" Content="{wpf:Gettext STIMULUS}" Style="{StaticResource DefRadio}"  Tag="&#58935;" Visibility="Collapsed"></RadioButton>
+                    </StackPanel>
+                </Expander>
+                <Expander Header="{wpf:Gettext SETTING}" IsExpanded="True"  Style="{StaticResource MenuExpanderStyle}" Foreground="#23cefd" FontSize="18" FontWeight="Bold">
+                    <StackPanel Margin="0,-8,0,0">
+                        <RadioButton Height="75" x:Name="RadioSystem" Click="RadioSystem_Click"  GroupName="PaleVioletRedRadio" Content="{wpf:Gettext SYSTEM}" Style="{StaticResource DefRadio}"  Tag="&#58937;" ></RadioButton>
+                        <RadioButton Height="75" x:Name="RadioConfig" Click="RadioCONFIG_Click" GroupName="PaleVioletRedRadio" Content="{wpf:Gettext CONFIG}" Style="{StaticResource DefRadio}"  Tag="&#58925;" ></RadioButton>
+                        <RadioButton Height="75" x:Name="RadioCali" Click="RadioCALI_Click" GroupName="PaleVioletRedRadio" Content="{wpf:Gettext CALI}" Style="{StaticResource DefRadio}"  Tag="&#58912;"></RadioButton>
+                    </StackPanel>
+                </Expander>
+                <Expander Visibility="Collapsed" Header="{wpf:Gettext DATA}" IsExpanded="True"  Style="{StaticResource MenuExpanderStyle}" Foreground="#23cefd" FontSize="18" FontWeight="Bold">
+                    <StackPanel Margin="0,-8,0,0">
+                        <RadioButton x:Name="RadioReport" Click="RadioREPORT_Click"  GroupName="PaleVioletRedRadio" Content="{wpf:Gettext REPORT}" Style="{StaticResource DefRadio}"  Tag="&#58904;"></RadioButton>
+
+                    </StackPanel>
+                </Expander>
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="GridGlobal"  Grid.Row="1" Grid.Column="1"  Grid.RowSpan="2" Margin="0,0,0,0"></Grid>
+
+        <StackPanel x:Name="PanelRun" Grid.Row="2" Grid.Column="1" Orientation="Horizontal" Margin="30,-5,0,10">
+            <Button Margin="28,0,0,0" x:Name="BtnStartLot" Width="70" Content="{wpf:Gettext START LOT}" Click="BtnStartLot_OnClick" IsEnabled="{Binding NewLotEnabled}">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Label x:Name="radioGrid" Margin="-8,0,0,0">
+                            <Grid Margin="0,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="54"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="img" Source="View/Resources/STARTLOT.png" HorizontalAlignment="Center" Width="54">
+                                </Image>
+                                <TextBlock Grid.Row="2" x:Name="radioContent" VerticalAlignment="Center" Foreground="#23cefd" FontSize="12"  Width="66"
+                                                Text="{TemplateBinding Content}" HorizontalAlignment="Right" Block.TextAlignment="Center">
+                                   <!--<TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#00B050"/>
+                                    </TextBlock.Effect>-->
+
+                                </TextBlock>
+                            </Grid>
+                        </Label>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled"  Value="false">
+                                <Setter  Property="Opacity" Value="0.3" ></Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver"  Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/BtnMoveOn/STARTLOT.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Margin="12,0,0,0" x:Name="BtnEndLot" Width="70" Content="{wpf:Gettext END LOT}"  Click="BtnEndLot_OnClick" IsEnabled="{Binding EndLotEnabled}">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Label x:Name="radioGrid" Margin="-8,0,0,0">
+                            <Grid Margin="0,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="54" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="54"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="img" Source="View/Resources/ENDLOT.png" HorizontalAlignment="Center">
+                                </Image>
+                                <TextBlock Grid.Row="2" x:Name="radioContent" VerticalAlignment="Center" Foreground="#23cefd" FontSize="12" 
+                                                Text="{TemplateBinding Content}" HorizontalAlignment="Center" Block.TextAlignment="Center">
+                                   <!--<TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#00B050"/>
+                                    </TextBlock.Effect>-->
+
+                                </TextBlock>
+                            </Grid>
+                        </Label>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled"  Value="false">
+                                <Setter  Property="Opacity" Value="0.3" ></Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver"  Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/BtnMoveOn/ENDLOT.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Margin="64,0,0,0" x:Name="BtnStart" Width="54" Content="{wpf:Gettext START}" Click="BtnStart_OnClick" IsEnabled="{Binding StartEnabled}">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Label x:Name="radioGrid">
+                            <Grid Margin="-7,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="54" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="54"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="img" Source="View/Resources/START.png" HorizontalAlignment="Center">
+                                </Image>
+                                <TextBlock Grid.Row="2" x:Name="radioContent" VerticalAlignment="Center" Foreground="#23cefd" FontSize="12" 
+                                                Text="{TemplateBinding Content}" HorizontalAlignment="Center" Block.TextAlignment="Center">
+                                   <!--<TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#00B050"/>
+                                    </TextBlock.Effect>-->
+
+                                </TextBlock>
+                            </Grid>
+                        </Label>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled"  Value="false">
+                                <Setter  Property="Opacity" Value="0.3" ></Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver"  Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/BtnMoveOn/START.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Margin="28,0,0,0" x:Name="BtnPause" Width="54"  Content="{wpf:Gettext PAUSE}"   Click="BtnPause_OnClick" IsEnabled="{Binding PauseEnabled}">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Label x:Name="radioGrid">
+                            <Grid Margin="-7,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="54" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="54"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="img" Source="View/Resources/PAUSE.png" HorizontalAlignment="Center">
+                                </Image>
+                                <TextBlock Grid.Row="2" x:Name="radioContent" VerticalAlignment="Center" Foreground="#23cefd" FontSize="12" 
+                                                Text="{TemplateBinding Content}" HorizontalAlignment="Center" Block.TextAlignment="Center">
+                                   <!--<TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#00B050"/>
+                                    </TextBlock.Effect>-->
+
+                                </TextBlock>
+                            </Grid>
+                        </Label>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled"  Value="false">
+                                <Setter  Property="Opacity" Value="0.3" ></Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver"  Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/BtnMoveOn/PAUSE.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Margin="28,0,0,0" x:Name="BtnEnd" Width="54"  Content="{wpf:Gettext END}"   Click="BtnEnd_OnClick" IsEnabled="{Binding EndEnabled}">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Label x:Name="radioGrid">
+                            <Grid Margin="-7,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="54" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="54"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="img" Source="View/Resources/END.png" HorizontalAlignment="Center">
+                                </Image>
+                                <TextBlock Grid.Row="2" x:Name="radioContent" VerticalAlignment="Center" Foreground="#23cefd" FontSize="12" 
+                                                Text="{TemplateBinding Content}" HorizontalAlignment="Center" Block.TextAlignment="Center">
+                                   <!--<TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#00B050"/>
+                                    </TextBlock.Effect>-->
+
+                                </TextBlock>
+                            </Grid>
+                        </Label>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled"  Value="false">
+                                <Setter  Property="Opacity" Value="0.3" ></Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver"  Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/BtnMoveOn/END.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Margin="28,0,0,0" x:Name="BtnReset" Width="54" Content="{wpf:Gettext RESET}"   Click="BtnReset_OnClick" IsEnabled="{Binding ResetEnabled}">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Label x:Name="radioGrid">
+                            <Grid Margin="-7,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="54" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="54"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="img" Source="View/Resources/RESET.png" HorizontalAlignment="Center">
+                                </Image>
+                                <TextBlock Grid.Row="2" x:Name="radioContent" VerticalAlignment="Center" Foreground="#23cefd" FontSize="12" 
+                                                Text="{TemplateBinding Content}" HorizontalAlignment="Center" Block.TextAlignment="Center">
+                                   <!--<TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#00B050"/>
+                                    </TextBlock.Effect>-->
+
+                                </TextBlock>
+                            </Grid>
+                        </Label>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled"  Value="false">
+                                <Setter  Property="Opacity" Value="0.3" ></Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver"  Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/BtnMoveOn/RESET.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Margin="28,0,0,0" x:Name="BtnInit" Width="54" Content="{wpf:Gettext INIT}"  Click="BtnInit_OnClick" IsEnabled="{Binding InitEnabled}">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Label x:Name="radioGrid">
+                            <Grid Margin="-7,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="54" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="54"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="img" Source="View/Resources/INIT.png" HorizontalAlignment="Center">
+                                </Image>
+                                <TextBlock Grid.Row="2" x:Name="radioContent" VerticalAlignment="Center" Foreground="#23cefd" FontSize="12" 
+                                                Text="{TemplateBinding Content}" HorizontalAlignment="Center" Block.TextAlignment="Center">
+                                   <!--<TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#00B050"/>
+                                    </TextBlock.Effect>-->
+
+                                </TextBlock>
+                            </Grid>
+                        </Label>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled"  Value="false">
+                                <Setter  Property="Opacity" Value="0.3" ></Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver"  Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/BtnMoveOn/INIT.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Margin="28,0,0,0" x:Name="BtnPurge" Width="54" Content="{wpf:Gettext PURGE}"  Click="BtnPurge_OnClick" IsEnabled="{Binding PurgeEnabled}">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Label x:Name="radioGrid">
+                            <Grid Margin="-7,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="54" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="54"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="img" Source="View/Resources/PURGE.png" HorizontalAlignment="Center">
+                                </Image>
+                                <TextBlock Grid.Row="2" x:Name="radioContent" VerticalAlignment="Center" Foreground="#23cefd" FontSize="12" 
+                                                Text="{TemplateBinding Content}" HorizontalAlignment="Center" Block.TextAlignment="Center">
+                                   <!--<TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#00B050"/>
+                                    </TextBlock.Effect>-->
+
+                                </TextBlock>
+                            </Grid>
+                        </Label>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled"  Value="false">
+                                <Setter  Property="Opacity" Value="0.3" ></Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver"  Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/BtnMoveOn/PURGE.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <!--<Button Margin="28,0,0,0" x:Name="BtnAbort" Width="54" Content="ABORT"  Click="BtnAbort_OnClick">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Label x:Name="radioGrid">
+                            <Grid Margin="-7,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="54" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="54"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="img" Source="View/Resources/PURGE.png" HorizontalAlignment="Center">
+                                </Image>
+                                <TextBlock Grid.Row="2" x:Name="radioContent" VerticalAlignment="Center" Foreground="#23cefd" FontSize="12" 
+                                                Text="{TemplateBinding Content}" HorizontalAlignment="Center" Block.TextAlignment="Center">
+                                   -->
+            <!--<TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#00B050"/>
+                                    </TextBlock.Effect>-->
+            <!--
+
+                                </TextBlock>
+                            </Grid>
+                        </Label>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled"  Value="false">
+                                <Setter  Property="Opacity" Value="0.3" ></Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver"  Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/BtnMoveOn/PURGE.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>-->
+            <Button Margin="28,0,0,0" x:Name="BtnTOOLS" Width="54" Content="{wpf:Gettext TOOLS}" Click="BtnTOOLS_Click"   >
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Label x:Name="radioGrid">
+                            <Grid Margin="-7,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="54" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="54"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="img" Source="View/Resources/TOOLS.png" HorizontalAlignment="Center">
+                                </Image>
+                                <TextBlock Grid.Row="2" x:Name="radioContent" VerticalAlignment="Center" Foreground="#23cefd" FontSize="12" 
+                                                Text="{TemplateBinding Content}" HorizontalAlignment="Center" Block.TextAlignment="Center">
+                                   <!--<TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#00B050"/>
+                                    </TextBlock.Effect>-->
+
+                                </TextBlock>
+                            </Grid>
+                        </Label>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled"  Value="false">
+                                <Setter  Property="Opacity" Value="0.3" ></Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver"  Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/BtnMoveOn/TOOLS.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Margin="28,0,0,0" x:Name="RadioLOGGER" Width="54"  Content="{wpf:Gettext LOGGER}"   Click="BtnLog_OnClick">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Label x:Name="radioGrid">
+                            <Grid Margin="-7,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="54" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="54"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="img" Source="View/Resources/LOGGER.png" HorizontalAlignment="Center">
+                                </Image>
+                                <TextBlock Grid.Row="2" x:Name="radioContent" VerticalAlignment="Center" Foreground="#23cefd" FontSize="12" 
+                                                Text="{TemplateBinding Content}" HorizontalAlignment="Center" Block.TextAlignment="Center">
+                                   <!--<TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#00B050"/>
+                                    </TextBlock.Effect>-->
+
+                                </TextBlock>
+                            </Grid>
+                        </Label>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled"  Value="false">
+                                <Setter  Property="Opacity" Value="0.3" ></Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver"  Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/BtnMoveOn/LOGGER.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+        </StackPanel>
+
+        <StackPanel x:Name="PanelDry" Grid.Row="1" Grid.Column="1" Orientation="Horizontal"  HorizontalAlignment="Right" Margin="0,862,0,10" Grid.RowSpan="2" Width="760">
+            <Button  Margin="28,0,0,0" x:Name="BtnDryRun" Width="54"  Content="{wpf:Gettext DRYRUN}"  IsEnabled="false" Click="BtnDryRun_OnClick">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Label x:Name="radioGrid">
+                            <Grid Margin="-7,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="54" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="54"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="img" Source="View/Resources/DRYRUN.png" HorizontalAlignment="Center">
+                                </Image>
+                                <TextBlock Grid.Row="2" x:Name="radioContent" VerticalAlignment="Center" Foreground="#23cefd" FontSize="12" 
+                                                Text="{TemplateBinding Content}" HorizontalAlignment="Center" Block.TextAlignment="Center">
+                                    <TextBlock.Effect>
+                                        <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#00B050"/>
+                                    </TextBlock.Effect>
+                                </TextBlock>
+                            </Grid>
+                        </Label>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/DRYRUN.png"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled"  Value="false">
+                                <Setter  Property="Opacity" Value="0.3" ></Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver"  Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/BtnMoveOn/DRYRUN.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Margin="28,0,0,0" x:Name="BtnEndRun" Width="59"  Content="{wpf:Gettext ENGRUN}"  IsEnabled="False"  Click="BtnEndRun_OnClick">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Label x:Name="radioGrid">
+                            <Grid Margin="-7,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="54" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="54"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="img" Source="View/Resources/ENGRUN.png" HorizontalAlignment="Center">
+                                </Image>
+                                <TextBlock Grid.Row="2" x:Name="radioContent" VerticalAlignment="Center" Foreground="#23cefd" FontSize="12" 
+                                                Text="{TemplateBinding Content}" HorizontalAlignment="Center" Block.TextAlignment="Center">
+                                    <TextBlock.Effect>
+                                        <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#00B050"/>
+                                    </TextBlock.Effect>
+
+                                </TextBlock>
+                            </Grid>
+                        </Label>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/ENGRUN.png"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled"  Value="false">
+                                <Setter  Property="Opacity" Value="0.3" ></Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver"  Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/BtnMoveOn/ENGRUN.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <CheckBox Margin="28,0,0,0" Content="{wpf:Gettext STEPBYSTEP}"  IsChecked="{Binding IsDebugStepByStep}" >
+                <CheckBox.Template>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <Label x:Name="radioGrid">
+                            <Grid Margin="-17,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="54"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="img" Source="View/Resources/STEPBYSTEP.png" HorizontalAlignment="Center" Width="54">
+                                </Image>
+                                <TextBlock Grid.Row="2" x:Name="radioContent" VerticalAlignment="Center" Foreground="#23cefd" FontSize="12" 
+                                                Text="{TemplateBinding Content}" HorizontalAlignment="Center" Block.TextAlignment="Center">
+                                    <TextBlock.Effect>
+                                        <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#00B050"/>
+                                    </TextBlock.Effect>
+
+                                </TextBlock>
+                            </Grid>
+                        </Label>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/BtnMoveOn/STEPBYSTEP.png"/>
+
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="false">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/STEPBYSTEP.png"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled"  Value="false">
+                                <Setter  Property="Opacity" Value="0.3" ></Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver"  Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/BtnMoveOn/STEPBYSTEP.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </CheckBox.Template>
+            </CheckBox>
+
+            <Button Margin="50,0,0,0" x:Name="BtnLANGUAGE" Width="70"  Content="{wpf:Gettext LANGUAGE}" Click="BtnLANGUAGE_Click" >
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Label x:Name="radioGrid">
+                            <Grid Margin="-7,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition  />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="54"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="img" Source="View/Resources/LANGUAGE.png" HorizontalAlignment="Center">
+                                </Image>
+                                <TextBlock Grid.Row="2" x:Name="radioContent" VerticalAlignment="Center" Foreground="#23cefd" FontSize="12" 
+                                                Text="{TemplateBinding Content}" HorizontalAlignment="Right" Block.TextAlignment="Center">
+                                    <TextBlock.Effect>
+                                        <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#00B050"/>
+                                    </TextBlock.Effect>
+
+                                </TextBlock>
+                            </Grid>
+                        </Label>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver"  Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/BtnMoveOn/LANGUAGE.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <!--<RadioButton Margin="18,0,0,0" x:Name="RadioABOUT" Width="54"  Content="{wpf:Gettext ABOUT}">
+                <RadioButton.Template>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <Label x:Name="radioGrid">
+                            <Grid Margin="-7,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="54" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="54"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="img" Source="View/Resources/ABOUT.png" HorizontalAlignment="Center">
+                                </Image>
+                                <TextBlock Grid.Row="2" x:Name="radioContent" VerticalAlignment="Center" Foreground="#23cefd" FontSize="12" 
+                                                Text="{TemplateBinding Content}" HorizontalAlignment="Center" Block.TextAlignment="Center">
+                                    <TextBlock.Effect>
+                                        <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#00B050"/>
+                                    </TextBlock.Effect>
+
+                                </TextBlock>
+                            </Grid>
+                        </Label>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/CHECKED_ABOUT.png"/>
+
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="false">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/ABOUT.png"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver"  Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/BtnMoveOn/ABOUT.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </RadioButton.Template>
+            </RadioButton>
+
+            <RadioButton Margin="18,0,0,0" x:Name="RadioHELP" Width="54"  Content="{wpf:Gettext HELP}"   >
+                <RadioButton.Template>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <Label x:Name="radioGrid">
+                            <Grid Margin="-7,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="54" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="54"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="img" Source="View/Resources/HELP.png" HorizontalAlignment="Center">
+                                </Image>
+                                <TextBlock Grid.Row="2" x:Name="radioContent" VerticalAlignment="Center" Foreground="#23cefd" FontSize="12" 
+                                                Text="{TemplateBinding Content}" HorizontalAlignment="Center" Block.TextAlignment="Center">
+                                    <TextBlock.Effect>
+                                        <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#00B050"/>
+                                    </TextBlock.Effect>
+
+                                </TextBlock>
+                            </Grid>
+                        </Label>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/CHECKED_HELP.png"/>
+
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="false">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/HELP.png"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver"  Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/BtnMoveOn/ABOUT.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </RadioButton.Template>
+            </RadioButton>-->
+
+            <CheckBox Margin="18,0,0,0" x:Name="RadioOnlineMode" Width="54"  Content="{wpf:Gettext ONLINE}" 
+                      Checked="RadioOnlineMode_Checked" Unchecked="RadioOnlineMode_Unchecked"  IsEnabled="{Binding ModeEnabled}">
+                <CheckBox.Template>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <Label x:Name="radioGrid">
+                            <Grid Margin="-7,15,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="54" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="54"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                    <RowDefinition Height="12"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="img" Source="View/Resources/OFF.png" HorizontalAlignment="Center">
+                                </Image>
+                                <TextBlock Grid.Row="2" x:Name="radioContent" VerticalAlignment="Center" Foreground="#23cefd" FontSize="12" 
+                                                Text="{TemplateBinding Content}" HorizontalAlignment="Center" Block.TextAlignment="Center">
+                                    <TextBlock.Effect>
+                                        <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#00B050"/>
+                                    </TextBlock.Effect>
+
+                                </TextBlock>
+                            </Grid>
+                        </Label>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/BtnMoveOn/ON.png"/>
+
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="false">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/OFF.png"/>
+                            </Trigger>
+                            <!--<Trigger Property="IsMouseOver"  Value="true">
+                                <Setter Property="Source" TargetName="img" Value="View/Resources/BtnMoveOn/ABOUT.png"/>
+                            </Trigger>-->
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </CheckBox.Template>
+            </CheckBox>
+            <Label Content="{wpf:Gettext SW Ver:}" Foreground="White" FontSize="14" Height="40" Width="70" Margin="28,30,0,0"></Label>
+            <Label Name="lblVersion" Content="1.2.3.1" Foreground="White" FontSize="14" Height="40" Width="80" Margin="0,30,0,0"></Label>
+        </StackPanel>
+    </Grid>
+</Window>

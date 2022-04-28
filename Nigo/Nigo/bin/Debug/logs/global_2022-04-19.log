@@ -1,0 +1,611 @@
+[10:49:46.213556 I 17776 global_logger] create factory logger completed.
+[10:49:46.213896 I 17776 global_logger] prepare to init system...
+[10:49:46.213938 I 17776 global_logger] config path: , argvs: ["D:\\Nigo\\Nigo\\bin\\Debug\\"]
+[10:49:46.214282 D 17776 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\hardware.dll"...
+[10:49:46.214522 D 17776 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\hardware.dll" completed.
+[10:49:46.214561 D 17776 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\lua_bindings.dll"...
+[10:49:46.218785 D 17776 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\lua_bindings.dll" completed.
+[10:49:46.218839 D 17776 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\csharp_bridge.dll"...
+[10:49:46.220955 D 17776 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\csharp_bridge.dll" completed.
+[10:49:46.221000 D 17776 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\GM91ECU.dll"...
+[10:49:46.223494 D 17776 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\GM91ECU.dll" completed.
+[10:49:46.223539 D 17776 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\AdvCan.dll"...
+[10:49:46.225771 D 17776 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\AdvCan.dll" completed.
+[10:49:46.225817 D 17776 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\hardware_wrapper_help.dll"...
+[10:49:46.227914 D 17776 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\hardware_wrapper_help.dll" completed.
+[10:49:46.227981 D 17776 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\amc2d.dll"...
+[10:49:46.276374 D 17776 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\amc2d.dll" completed.
+[10:49:46.276466 D 17776 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\GM06EC.dll"...
+[10:49:46.279519 D 17776 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\GM06EC.dll" completed.
+[10:49:46.279577 D 17776 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\CanMotionIo.dll"...
+[10:49:46.282124 D 17776 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\CanMotionIo.dll" completed.
+[10:49:46.282194 I 17776 global_logger] load pre-load libraries completed.
+[10:49:46.282229 I 17776 global_logger] execute function: init_clr_factory ...
+[10:49:46.720066 W 17776 global_logger] Factory Compose() in C# used 419 ms
+[10:49:46.728443 W 17776 global_logger] Factory call RegisterTypes2System() in C# used 4 ms
+[10:49:46.739390 W 17776 global_logger] Factory InitScriptSys() in C# used 0 ms
+[10:49:46.739489 I 17776 global_logger] execute function: init_clr_factory completed.
+[10:49:46.743459 D 17776 global_logger] start to create nodes in module: [global]...
+[10:49:46.743638 D 17776 global_logger] start to create nodes in module: robot_1...
+[10:49:46.763503 I 17776 global_logger] execute function: init_wrapper_sys ...
+[10:49:46.786168 W 17776 global_logger] Factory CreateOmd in C# used 18 ms
+[10:49:46.786261 I 17776 global_logger] execute function: init_wrapper_sys completed.
+[10:49:46.786305 D 17776 global_logger] start to check version in module: LogManager...
+[10:49:46.786364 D 17776 global_logger] start to check version in module: Root...
+[10:49:46.786400 D 17776 global_logger] start to check version in module: Logger...
+[10:49:46.786444 D 17776 global_logger] start to check version in module: Null...
+[10:49:46.786479 I 17776 global_logger] check version dependence for nodes in module: [global] completed.
+[10:49:46.786513 D 17776 global_logger] start to check version in module: Machine...
+[10:49:46.787045 D 17776 global_logger] start to check version in module: HardwareManager...
+[10:49:46.787195 D 17776 global_logger] start to check version in module: LuaScriptManager...
+[10:49:46.787431 D 17776 global_logger] start to check version in module: MotionApi...
+[10:49:46.787527 D 17776 global_logger] start to check version in module: Axis...
+[10:49:46.787661 D 17776 global_logger] start to check version in module: IoApi...
+[10:49:46.787736 D 17776 global_logger] start to check version in module: DigitalInput...
+[10:49:46.788103 D 17776 global_logger] start to check version in module: AnalogInput...
+[10:49:46.788174 D 17776 global_logger] start to check version in module: DigitalOutput...
+[10:49:46.788436 D 17776 global_logger] start to check version in module: Cylinder...
+[10:49:46.788518 D 17776 global_logger] start to check version in module: Beacon...
+[10:49:46.788566 D 17776 global_logger] start to check version in module: EncoderReader...
+[10:49:46.788608 D 17776 global_logger] start to check version in module: SimpleSynComm...
+[10:49:46.788649 D 17776 global_logger] start to check version in module: CmdAgent...
+[10:49:46.789463 D 17776 global_logger] start to check version in module: Logger...
+[10:49:46.789574 I 17776 global_logger] check version dependence for nodes in module: robot_1 completed.
+[10:49:46.789616 D 17776 global_logger] start to set nodes configs in module: [global]
+[10:49:46.789659 D 17776 global_logger] start to set nodes configs in module: robot_1
+[10:49:46.793014 W 17776 global_logger] robot_1::Axis::s1_turner(DefaultAxis)@robot_1.json. neg_limit bigger than pos_limit, soft limit disabled!
+[10:49:46.802829 I 17776 global_logger] set config for nodes completed.
+[10:49:46.802953 D 17776 global_logger] start to link in module: LogManager...
+[10:49:46.802998 D 17776 global_logger] start to link in module: Root...
+[10:49:46.803037 D 17776 global_logger] start to link in module: Logger...
+[10:49:46.803099 D 17776 global_logger] start to link in module: Null...
+[10:49:46.803139 I 17776 global_logger] link for nodes in module: [global] completed.
+[10:49:46.803178 D 17776 global_logger] start to link in module: Machine...
+[10:49:46.803341 D 17776 global_logger] start to link in module: HardwareManager...
+[10:49:46.803742 D 17776 global_logger] start to link in module: LuaScriptManager...
+[10:49:46.803813 D 17776 global_logger] start to link in module: MotionApi...
+[10:49:46.803861 D 17776 global_logger] start to link in module: Axis...
+[10:49:46.804282 D 17776 global_logger] start to link in module: IoApi...
+[10:49:46.804346 D 17776 global_logger] start to link in module: DigitalInput...
+[10:49:46.804855 D 17776 global_logger] start to link in module: AnalogInput...
+[10:49:46.804942 D 17776 global_logger] start to link in module: DigitalOutput...
+[10:49:46.806177 D 17776 global_logger] start to link in module: Cylinder...
+[10:49:46.806305 D 17776 global_logger] start to link in module: Beacon...
+[10:49:46.806369 D 17776 global_logger] start to link in module: EncoderReader...
+[10:49:46.806417 D 17776 global_logger] start to link in module: SimpleSynComm...
+[10:49:46.806463 D 17776 global_logger] start to link in module: CmdAgent...
+[10:49:46.806631 D 17776 global_logger] start to link in module: Logger...
+[10:49:46.806713 I 17776 global_logger] link for nodes in module: robot_1 completed.
+[10:49:46.806785 I 17776 global_logger] add to parent for nodes in module: [global] completed.
+[10:49:46.807866 I 17776 global_logger] add to parent for nodes in module: robot_1 completed.
+[10:49:46.807936 I 17776 global_logger] link logger for nodes in module: [global] completed.
+[10:49:46.808128 I 17776 global_logger] link logger for nodes in module: robot_1 completed.
+[10:49:46.808167 I 17776 global_logger] check pointers for nodes in module: [global] completed.
+[10:49:46.808205 I 17776 global_logger] check pointers for nodes in module: robot_1 completed.
+[10:49:46.808257 I 17776 global_logger] add default dependence for nodes in module: [global] completed.
+[10:49:46.809377 I 17776 global_logger] add default dependence for nodes in module: robot_1 completed.
+[10:49:46.809425 I 17776 global_logger] initialize default nodes in module: [global] completed.
+[10:49:46.809464 I 17776 global_logger] initialize default nodes in module: robot_1 completed.
+[10:49:46.809501 I 17776 global_logger] execute function: link_nodes ...
+[10:49:46.880911 I 17776 global_logger] Link Machine in c#
+[10:49:46.893642 W 17776 global_logger] Factory call LinkAllNodes() in C# used 82 ms
+[10:49:46.893797 I 17776 global_logger] execute function: link_nodes completed.
+[10:49:46.893845 I 17776 global_logger] system init completed.
+[10:49:46.894902 D 17776 global_logger] node: [global]::LogManager::singleton_instance(LogManager)@, init recursive completed. 
+[10:49:46.894950 D 17776 global_log] node: robot_1::Logger::global_log(Logger)@robot_1.json, init recursive completed. 
+[10:49:46.895113 D 17776 global_log] node: robot_1::IoApi::GM06EC_IO_0(IO_GM06EC)@robot_1.json, init recursive completed. 
+[10:49:46.895141 D 17776 global_logger] node: robot_1::DigitalOutput::out_fly_capture_trigger(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.895165 D 17776 global_logger] node: robot_1::DigitalInput::in_handler_emo(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.895252 D 17776 global_log] node: robot_1::IoApi::GM04EC_IO_1(IoGm91Ecu)@robot_1.json, init recursive completed. 
+[10:49:46.895277 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station11(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.895298 D 17776 global_logger] node: robot_1::DigitalOutput::out_rear_door_cylinder_lock(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.895318 D 17776 global_logger] node: robot_1::DigitalOutput::out_led_yellow(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.895541 D 17776 global_log] node: robot_1::IoApi::GM04EC_IO_0(IoGm91Ecu)@robot_1.json, init recursive completed. 
+[10:49:46.895578 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station4(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.895604 D 17776 global_logger] node: robot_1::DigitalOutput::out_led_red(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.895629 D 17776 global_logger] node: robot_1::DigitalOutput::out_led_green(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.895653 D 17776 global_logger] node: robot_1::DigitalOutput::out_led_beep(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.895678 D 17776 global_logger] node: robot_1::Beacon::default(DefaultBeacon)@robot_1.json, init recursive completed. 
+[10:49:46.895701 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station11(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.895725 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station9(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.895834 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station12(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.896177 D 17776 global_logger] node: robot_1::DigitalInput::in_left_door_cylinder_release(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.897760 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station6(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.897790 D 17776 global_logger] node: robot_1::DigitalInput::in_right_door_cylinder_release(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.897814 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station9(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.897839 D 17776 global_logger] node: robot_1::DigitalInput::in_left_door_sensor(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.897863 D 17776 global_logger] node: robot_1::DigitalInput::in_vacc_station5(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.897889 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station3(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.897912 D 17776 global_logger] node: robot_1::DigitalInput::in_rear_door_cylinder_release(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.897935 D 17776 global_logger] node: robot_1::DigitalOutput::out_left_door_cylinder_lock(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.897961 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station3(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.898028 D 17776 global_logger] node: robot_1::DigitalOutput::out_right_door_cylinder_lock(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.898052 D 17776 global_logger] node: robot_1::DigitalOutput::out_turner_svon(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.898076 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station7(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.898099 D 17776 global_logger] node: robot_1::DigitalInput::in_ccdz4_lmtp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.898122 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station1(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.898144 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station1(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.898167 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station2(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.898189 D 17776 global_logger] node: robot_1::DigitalInput::in_air_source(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.898212 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station2(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.898234 D 17776 global_logger] node: robot_1::DigitalInput::in_vacc_station8(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.898257 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station4(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.898279 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station10(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.898302 D 17776 global_logger] node: robot_1::DigitalInput::in_rear_door_sensor(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.898324 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station5(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.898347 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station5(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.898369 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station6(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.898394 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station7(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.898419 D 17776 global_logger] node: robot_1::DigitalInput::in_ccdz3_lmtp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.898443 D 17776 global_logger] node: robot_1::LuaScriptManager::default(DefaultLuaScriptManager)@robot_1.json, init recursive completed. 
+[10:49:46.898465 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station8(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.898488 D 17776 global_logger] node: robot_1::DigitalInput::in_vacc_station4(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.898510 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station8(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.898535 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station12(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.898558 D 17776 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station10(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[10:49:46.898580 D 17776 global_logger] node: robot_1::DigitalInput::in_ccdz2_lmtp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.898603 D 17776 global_logger] node: robot_1::DigitalInput::in_ccdz4_lmtn(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.898625 D 17776 global_logger] node: robot_1::DigitalInput::in_handler_ems(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.898723 D 17776 global_logger] node: robot_1::DigitalInput::in_ccdz2_lmtn(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.899057 D 17776 global_log] node: robot_1::IoApi::GM06EC_IO_1(IO_GM06EC)@robot_1.json, init recursive completed. 
+[10:49:46.899116 D 17776 global_logger] node: robot_1::DigitalInput::in_handler_door_close(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.899155 D 17776 global_logger] node: robot_1::DigitalInput::in_vacc_station1(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.899189 D 17776 global_logger] node: robot_1::DigitalInput::in_turner_phase_sensor(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.899217 D 17776 global_logger] node: robot_1::DigitalInput::in_right_door_sensor(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.899249 D 17776 global_logger] node: robot_1::DigitalInput::in_rear_door_cylinder_clamp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.899409 D 17776 global_logger] node: robot_1::DigitalInput::in_vacc_station11(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.899462 D 17776 global_logger] node: robot_1::DigitalInput::in_left_door_cylinder_clamp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.899503 D 17776 global_logger] node: robot_1::DigitalInput::in_ccdz1_lmtn(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.899538 D 17776 global_logger] node: robot_1::DigitalInput::in_right_door_cylinder_clamp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.899583 D 17776 global_logger] node: robot_1::DigitalInput::in_vacc_station2(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.899688 D 17776 global_logger] node: robot_1::DigitalInput::in_vacc_station3(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.899774 D 17776 global_logger] node: robot_1::DigitalInput::in_vacc_station6(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.899874 D 17776 global_logger] node: robot_1::DigitalInput::in_ccdz1_lmtp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.899919 D 17776 global_logger] node: robot_1::DigitalInput::in_vacc_station7(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.899947 D 17776 global_logger] node: robot_1::DigitalInput::in_vacc_station9(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.899972 D 17776 global_logger] node: robot_1::DigitalInput::in_vacc_station10(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.899998 D 17776 global_logger] node: robot_1::DigitalInput::in_vacc_station12(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.900023 D 17776 global_logger] node: robot_1::DigitalInput::in_ccdz5_lmtp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.900050 D 17776 global_logger] node: robot_1::DigitalInput::in_ccdz3_lmtn(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.900078 D 17776 global_logger] node: robot_1::DigitalInput::in_ccdz5_lmtn(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.900103 D 17776 global_logger] node: robot_1::DigitalInput::in_ccdz6_lmtp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.900127 D 17776 global_logger] node: robot_1::DigitalInput::in_ccdz6_lmtn(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.900151 D 17776 global_logger] node: robot_1::DigitalInput::emg(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[10:49:46.900176 D 17776 global_logger] node: robot_1::AnalogInput::light_intensity_ch1(DefaultAnalogInput)@robot_1.json, init recursive completed. 
+[10:49:46.900201 D 17776 global_logger] node: robot_1::AnalogInput::light_intensity_ch3(DefaultAnalogInput)@robot_1.json, init recursive completed. 
+[10:49:46.900270 D 17776 global_logger] node: robot_1::AnalogInput::light_intensity_ch0(DefaultAnalogInput)@robot_1.json, init recursive completed. 
+[10:49:46.900295 D 17776 global_logger] node: robot_1::AnalogInput::light_intensity_ch2(DefaultAnalogInput)@robot_1.json, init recursive completed. 
+[10:49:46.900844 D 17776 global_logger] node: robot_1::Machine::default(Machine)@robot_1.json, init recursive completed. 
+[10:49:46.994279 E 17776 global_log] failed to communicated with board ip=192.168.5.110
+[10:49:46.994496 D 17776 global_log] node: robot_1::MotionApi::GM06EC_MOTION_0(Motion_GM06EC)@robot_1.json, init recursive completed. 
+[10:49:47.085755 E 17776 global_log] failed to communicated with board ip=192.168.5.110
+[10:49:47.085832 E 17776 global_logger] DefaultAxis:robot_1::Axis::s1_turner(DefaultAxis)@robot_1.json board return error:failed to communicated with s1_turner board
+[10:49:47.086001 E 17776 global_logger EXCEPTION] exception occurred at: robot_1::Axis::s1_turner(DefaultAxis)@robot_1.json, code: 1
+"failed to communicated with s1_turner board, function: 'GraphScript::DefaultAxis::set_start_speed_percent', line: 985."
+[10:49:47.086685 E 17776 global_logger EXCEPTION] exception occurred at: robot_1::Axis::s1_turner(DefaultAxis)@robot_1.json, code: 1
+""failed to communicated with s1_turner board, function: 'GraphScript::DefaultAxis::set_start_speed_percent', line: 985.", function: 'GraphScript::Node::init_recursive', line: 265."
+[10:49:48.952333 E 12180 global_log] failed to communicated with board ip=192.168.5.110
+[10:49:48.955189 W 12180 global_logger] out_led_greenset_status error_code =1
+[10:49:48.955238 E 12180 global_logger EXCEPTION] exception occurred at: robot_1::DigitalOutput::out_led_green(DefaultDigitalOutput)@robot_1.json, code: 1
+"function:GraphScript::DefaultDigitalOutput::set_status, function: 'GraphScript::DefaultDigitalOutput::set_status', line: 232."
+[10:49:48.955597 E 12180 global_logger] work thread catch a exception(node:robot_1::DigitalOutput::out_led_green(DefaultDigitalOutput)@robot_1.json error code:1 msg:"function:GraphScript::DefaultDigitalOutput::set_status, function: 'GraphScript::DefaultDigitalOutput::set_status', line: 232.") . thread exited!
+[10:49:49.025550 E 12576 global_log] failed to communicated with board ip=192.168.5.140
+[10:49:50.458267 E 17776 global_logger EXCEPTION] exception occurred at: robot_1::Axis::s1_turner(DefaultAxis)@robot_1.json, code: -1
+"node:robot_1::Axis::s1_turner(DefaultAxis)@robot_1.json need be inited before it executes the function:GraphScript::DefaultAxis::set_velocity_percent_of_default, function: 'GraphScript::DefaultAxis::set_velocity_percent_of_default', line: 935."
+[10:49:52.087709 E 12576 global_log] failed to communicated with board ip=192.168.5.140
+[10:49:54.215924 E 12576 global_log] failed to communicated with board ip=192.168.5.140
+[10:49:56.308823 E 12576 global_log] failed to communicated with board ip=192.168.5.140
+[10:49:58.428306 E 12576 global_log] failed to communicated with board ip=192.168.5.140
+[10:50:00.520813 E 12576 global_log] failed to communicated with board ip=192.168.5.140
+[10:50:02.612147 E 12576 global_log] failed to communicated with board ip=192.168.5.140
+[10:50:04.703946 E 12576 global_log] failed to communicated with board ip=192.168.5.140
+[10:50:06.796010 E 12576 global_log] failed to communicated with board ip=192.168.5.140
+[10:50:08.887908 E 12576 global_log] failed to communicated with board ip=192.168.5.140
+[10:50:10.979361 E 12576 global_log] failed to communicated with board ip=192.168.5.140
+[10:50:13.071557 E 12576 global_log] failed to communicated with board ip=192.168.5.140
+[10:50:15.163555 E 12576 global_log] failed to communicated with board ip=192.168.5.140
+[17:01:41.722069 I 14076 global_logger] create factory logger completed.
+[17:01:41.722404 I 14076 global_logger] prepare to init system...
+[17:01:41.722449 I 14076 global_logger] config path: , argvs: ["D:\\Nigo\\Nigo\\bin\\Debug\\"]
+[17:01:41.722869 D 14076 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\hardware.dll"...
+[17:01:41.723101 D 14076 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\hardware.dll" completed.
+[17:01:41.723143 D 14076 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\lua_bindings.dll"...
+[17:01:41.729573 D 14076 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\lua_bindings.dll" completed.
+[17:01:41.729639 D 14076 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\csharp_bridge.dll"...
+[17:01:41.732910 D 14076 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\csharp_bridge.dll" completed.
+[17:01:41.732972 D 14076 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\GM91ECU.dll"...
+[17:01:41.735809 D 14076 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\GM91ECU.dll" completed.
+[17:01:41.735867 D 14076 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\AdvCan.dll"...
+[17:01:41.739132 D 14076 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\AdvCan.dll" completed.
+[17:01:41.739184 D 14076 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\hardware_wrapper_help.dll"...
+[17:01:41.741931 D 14076 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\hardware_wrapper_help.dll" completed.
+[17:01:41.741984 D 14076 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\amc2d.dll"...
+[17:01:41.811996 D 14076 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\amc2d.dll" completed.
+[17:01:41.812068 D 14076 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\GM06EC.dll"...
+[17:01:41.817892 D 14076 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\GM06EC.dll" completed.
+[17:01:41.817959 D 14076 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\CanMotionIo.dll"...
+[17:01:41.821910 D 14076 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\CanMotionIo.dll" completed.
+[17:01:41.821976 I 14076 global_logger] load pre-load libraries completed.
+[17:01:41.822009 I 14076 global_logger] execute function: init_clr_factory ...
+[17:01:42.256452 W 14076 global_logger] Factory Compose() in C# used 417 ms
+[17:01:42.265186 W 14076 global_logger] Factory call RegisterTypes2System() in C# used 4 ms
+[17:01:42.275529 W 14076 global_logger] Factory InitScriptSys() in C# used 0 ms
+[17:01:42.275630 I 14076 global_logger] execute function: init_clr_factory completed.
+[17:01:42.280245 D 14076 global_logger] start to create nodes in module: [global]...
+[17:01:42.280507 D 14076 global_logger] start to create nodes in module: robot_1...
+[17:01:42.300093 I 14076 global_logger] execute function: init_wrapper_sys ...
+[17:01:42.321455 W 14076 global_logger] Factory CreateOmd in C# used 17 ms
+[17:01:42.321554 I 14076 global_logger] execute function: init_wrapper_sys completed.
+[17:01:42.321600 D 14076 global_logger] start to check version in module: LogManager...
+[17:01:42.321682 D 14076 global_logger] start to check version in module: Root...
+[17:01:42.321716 D 14076 global_logger] start to check version in module: Logger...
+[17:01:42.321763 D 14076 global_logger] start to check version in module: Null...
+[17:01:42.321796 I 14076 global_logger] check version dependence for nodes in module: [global] completed.
+[17:01:42.321828 D 14076 global_logger] start to check version in module: Machine...
+[17:01:42.322172 D 14076 global_logger] start to check version in module: HardwareManager...
+[17:01:42.322414 D 14076 global_logger] start to check version in module: LuaScriptManager...
+[17:01:42.322860 D 14076 global_logger] start to check version in module: MotionApi...
+[17:01:42.322992 D 14076 global_logger] start to check version in module: Axis...
+[17:01:42.323115 D 14076 global_logger] start to check version in module: IoApi...
+[17:01:42.323213 D 14076 global_logger] start to check version in module: DigitalInput...
+[17:01:42.324145 D 14076 global_logger] start to check version in module: AnalogInput...
+[17:01:42.324309 D 14076 global_logger] start to check version in module: DigitalOutput...
+[17:01:42.324781 D 14076 global_logger] start to check version in module: Cylinder...
+[17:01:42.324865 D 14076 global_logger] start to check version in module: Beacon...
+[17:01:42.324912 D 14076 global_logger] start to check version in module: EncoderReader...
+[17:01:42.324961 D 14076 global_logger] start to check version in module: SimpleSynComm...
+[17:01:42.325007 D 14076 global_logger] start to check version in module: CmdAgent...
+[17:01:42.325750 D 14076 global_logger] start to check version in module: Logger...
+[17:01:42.325848 I 14076 global_logger] check version dependence for nodes in module: robot_1 completed.
+[17:01:42.325891 D 14076 global_logger] start to set nodes configs in module: [global]
+[17:01:42.325932 D 14076 global_logger] start to set nodes configs in module: robot_1
+[17:01:42.329209 W 14076 global_logger] robot_1::Axis::s1_turner(DefaultAxis)@robot_1.json. neg_limit bigger than pos_limit, soft limit disabled!
+[17:01:42.338732 I 14076 global_logger] set config for nodes completed.
+[17:01:42.338928 D 14076 global_logger] start to link in module: LogManager...
+[17:01:42.338997 D 14076 global_logger] start to link in module: Root...
+[17:01:42.339051 D 14076 global_logger] start to link in module: Logger...
+[17:01:42.339141 D 14076 global_logger] start to link in module: Null...
+[17:01:42.339207 I 14076 global_logger] link for nodes in module: [global] completed.
+[17:01:42.339263 D 14076 global_logger] start to link in module: Machine...
+[17:01:42.339577 D 14076 global_logger] start to link in module: HardwareManager...
+[17:01:42.340538 D 14076 global_logger] start to link in module: LuaScriptManager...
+[17:01:42.340678 D 14076 global_logger] start to link in module: MotionApi...
+[17:01:42.340739 D 14076 global_logger] start to link in module: Axis...
+[17:01:42.341350 D 14076 global_logger] start to link in module: IoApi...
+[17:01:42.341893 D 14076 global_logger] start to link in module: DigitalInput...
+[17:01:42.345616 D 14076 global_logger] start to link in module: AnalogInput...
+[17:01:42.346972 D 14076 global_logger] start to link in module: DigitalOutput...
+[17:01:42.347411 D 14076 global_logger] start to link in module: Cylinder...
+[17:01:42.347507 D 14076 global_logger] start to link in module: Beacon...
+[17:01:42.347568 D 14076 global_logger] start to link in module: EncoderReader...
+[17:01:42.347615 D 14076 global_logger] start to link in module: SimpleSynComm...
+[17:01:42.347662 D 14076 global_logger] start to link in module: CmdAgent...
+[17:01:42.347828 D 14076 global_logger] start to link in module: Logger...
+[17:01:42.347907 I 14076 global_logger] link for nodes in module: robot_1 completed.
+[17:01:42.347961 I 14076 global_logger] add to parent for nodes in module: [global] completed.
+[17:01:42.349185 I 14076 global_logger] add to parent for nodes in module: robot_1 completed.
+[17:01:42.349258 I 14076 global_logger] link logger for nodes in module: [global] completed.
+[17:01:42.349864 I 14076 global_logger] link logger for nodes in module: robot_1 completed.
+[17:01:42.351917 I 14076 global_logger] check pointers for nodes in module: [global] completed.
+[17:01:42.351980 I 14076 global_logger] check pointers for nodes in module: robot_1 completed.
+[17:01:42.352061 I 14076 global_logger] add default dependence for nodes in module: [global] completed.
+[17:01:42.353630 I 14076 global_logger] add default dependence for nodes in module: robot_1 completed.
+[17:01:42.353698 I 14076 global_logger] initialize default nodes in module: [global] completed.
+[17:01:42.353734 I 14076 global_logger] initialize default nodes in module: robot_1 completed.
+[17:01:42.353769 I 14076 global_logger] execute function: link_nodes ...
+[17:01:42.362216 I 14076 global_logger] Link Machine in c#
+[17:01:42.369769 W 14076 global_logger] Factory call LinkAllNodes() in C# used 12 ms
+[17:01:42.369873 I 14076 global_logger] execute function: link_nodes completed.
+[17:01:42.369977 I 14076 global_logger] system init completed.
+[17:01:42.371004 D 14076 global_logger] node: [global]::LogManager::singleton_instance(LogManager)@, init recursive completed. 
+[17:01:42.371057 D 14076 global_log] node: robot_1::Logger::global_log(Logger)@robot_1.json, init recursive completed. 
+[17:01:42.371234 D 14076 global_log] node: robot_1::IoApi::GM06EC_IO_0(IO_GM06EC)@robot_1.json, init recursive completed. 
+[17:01:42.371261 D 14076 global_logger] node: robot_1::DigitalOutput::out_fly_capture_trigger(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.371284 D 14076 global_logger] node: robot_1::DigitalInput::in_handler_emo(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.371371 D 14076 global_log] node: robot_1::IoApi::GM04EC_IO_1(IoGm91Ecu)@robot_1.json, init recursive completed. 
+[17:01:42.371397 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station11(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.371419 D 14076 global_logger] node: robot_1::DigitalOutput::out_rear_door_cylinder_lock(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.371440 D 14076 global_logger] node: robot_1::DigitalOutput::out_led_yellow(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.371519 D 14076 global_log] node: robot_1::IoApi::GM04EC_IO_0(IoGm91Ecu)@robot_1.json, init recursive completed. 
+[17:01:42.371543 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station4(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.371564 D 14076 global_logger] node: robot_1::DigitalOutput::out_led_red(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.371584 D 14076 global_logger] node: robot_1::DigitalOutput::out_led_green(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.371605 D 14076 global_logger] node: robot_1::DigitalOutput::out_led_beep(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.371625 D 14076 global_logger] node: robot_1::Beacon::default(DefaultBeacon)@robot_1.json, init recursive completed. 
+[17:01:42.371646 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station11(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.371666 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station9(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.371685 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station12(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.371705 D 14076 global_logger] node: robot_1::DigitalInput::in_left_door_cylinder_release(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.371726 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station6(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.371747 D 14076 global_logger] node: robot_1::DigitalInput::in_right_door_cylinder_release(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.371769 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station9(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.371791 D 14076 global_logger] node: robot_1::DigitalInput::in_left_door_sensor(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.371811 D 14076 global_logger] node: robot_1::DigitalInput::in_vacc_station5(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.371832 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station3(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.371852 D 14076 global_logger] node: robot_1::DigitalInput::in_rear_door_cylinder_release(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.371873 D 14076 global_logger] node: robot_1::DigitalOutput::out_left_door_cylinder_lock(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.371893 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station3(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.371943 D 14076 global_logger] node: robot_1::DigitalOutput::out_right_door_cylinder_lock(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.371965 D 14076 global_logger] node: robot_1::DigitalOutput::out_turner_svon(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.371985 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station7(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.372006 D 14076 global_logger] node: robot_1::DigitalInput::in_ccdz4_lmtp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372026 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station1(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.372050 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station1(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.372070 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station2(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.372091 D 14076 global_logger] node: robot_1::DigitalInput::in_air_source(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372111 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station2(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.372130 D 14076 global_logger] node: robot_1::DigitalInput::in_vacc_station8(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372151 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station4(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.372170 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station10(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.372190 D 14076 global_logger] node: robot_1::DigitalInput::in_rear_door_sensor(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372210 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station5(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.372231 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station5(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.372250 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station6(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.372271 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station7(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.372290 D 14076 global_logger] node: robot_1::DigitalInput::in_ccdz3_lmtp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372311 D 14076 global_logger] node: robot_1::LuaScriptManager::default(DefaultLuaScriptManager)@robot_1.json, init recursive completed. 
+[17:01:42.372330 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station8(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.372352 D 14076 global_logger] node: robot_1::DigitalInput::in_vacc_station4(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372373 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station8(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.372394 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station12(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.372414 D 14076 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station10(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:01:42.372433 D 14076 global_logger] node: robot_1::DigitalInput::in_ccdz2_lmtp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372453 D 14076 global_logger] node: robot_1::DigitalInput::in_ccdz4_lmtn(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372473 D 14076 global_logger] node: robot_1::DigitalInput::in_handler_ems(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372514 D 14076 global_logger] node: robot_1::DigitalInput::in_ccdz2_lmtn(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372598 D 14076 global_log] node: robot_1::IoApi::GM06EC_IO_1(IO_GM06EC)@robot_1.json, init recursive completed. 
+[17:01:42.372623 D 14076 global_logger] node: robot_1::DigitalInput::in_handler_door_close(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372644 D 14076 global_logger] node: robot_1::DigitalInput::in_vacc_station1(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372666 D 14076 global_logger] node: robot_1::DigitalInput::in_turner_phase_sensor(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372686 D 14076 global_logger] node: robot_1::DigitalInput::in_right_door_sensor(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372706 D 14076 global_logger] node: robot_1::DigitalInput::in_rear_door_cylinder_clamp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372727 D 14076 global_logger] node: robot_1::DigitalInput::in_vacc_station11(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372748 D 14076 global_logger] node: robot_1::DigitalInput::in_left_door_cylinder_clamp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372768 D 14076 global_logger] node: robot_1::DigitalInput::in_ccdz1_lmtn(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372788 D 14076 global_logger] node: robot_1::DigitalInput::in_right_door_cylinder_clamp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372808 D 14076 global_logger] node: robot_1::DigitalInput::in_vacc_station2(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372829 D 14076 global_logger] node: robot_1::DigitalInput::in_vacc_station3(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372849 D 14076 global_logger] node: robot_1::DigitalInput::in_vacc_station6(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372869 D 14076 global_logger] node: robot_1::DigitalInput::in_ccdz1_lmtp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372889 D 14076 global_logger] node: robot_1::DigitalInput::in_vacc_station7(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372908 D 14076 global_logger] node: robot_1::DigitalInput::in_vacc_station9(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372928 D 14076 global_logger] node: robot_1::DigitalInput::in_vacc_station10(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372949 D 14076 global_logger] node: robot_1::DigitalInput::in_vacc_station12(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372969 D 14076 global_logger] node: robot_1::DigitalInput::in_ccdz5_lmtp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.372989 D 14076 global_logger] node: robot_1::DigitalInput::in_ccdz3_lmtn(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.373010 D 14076 global_logger] node: robot_1::DigitalInput::in_ccdz5_lmtn(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.373030 D 14076 global_logger] node: robot_1::DigitalInput::in_ccdz6_lmtp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.373050 D 14076 global_logger] node: robot_1::DigitalInput::in_ccdz6_lmtn(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.373070 D 14076 global_logger] node: robot_1::DigitalInput::emg(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:01:42.373091 D 14076 global_logger] node: robot_1::AnalogInput::light_intensity_ch1(DefaultAnalogInput)@robot_1.json, init recursive completed. 
+[17:01:42.373111 D 14076 global_logger] node: robot_1::AnalogInput::light_intensity_ch3(DefaultAnalogInput)@robot_1.json, init recursive completed. 
+[17:01:42.373151 D 14076 global_logger] node: robot_1::AnalogInput::light_intensity_ch0(DefaultAnalogInput)@robot_1.json, init recursive completed. 
+[17:01:42.373171 D 14076 global_logger] node: robot_1::AnalogInput::light_intensity_ch2(DefaultAnalogInput)@robot_1.json, init recursive completed. 
+[17:01:42.373688 D 14076 global_logger] node: robot_1::Machine::default(Machine)@robot_1.json, init recursive completed. 
+[17:01:42.467417 E 14076 global_log] failed to communicated with board ip=192.168.5.110
+[17:01:42.467689 D 14076 global_log] node: robot_1::MotionApi::GM06EC_MOTION_0(Motion_GM06EC)@robot_1.json, init recursive completed. 
+[17:01:42.558974 E 14076 global_log] failed to communicated with board ip=192.168.5.110
+[17:01:42.559098 E 14076 global_logger] DefaultAxis:robot_1::Axis::s1_turner(DefaultAxis)@robot_1.json board return error:failed to communicated with s1_turner board
+[17:01:42.559379 E 14076 global_logger EXCEPTION] exception occurred at: robot_1::Axis::s1_turner(DefaultAxis)@robot_1.json, code: 1
+"failed to communicated with s1_turner board, function: 'GraphScript::DefaultAxis::set_start_speed_percent', line: 985."
+[17:01:42.560428 E 14076 global_logger EXCEPTION] exception occurred at: robot_1::Axis::s1_turner(DefaultAxis)@robot_1.json, code: 1
+""failed to communicated with s1_turner board, function: 'GraphScript::DefaultAxis::set_start_speed_percent', line: 985.", function: 'GraphScript::Node::init_recursive', line: 265."
+[17:01:45.844155 E 16488 global_log] failed to communicated with board ip=192.168.5.110
+[17:01:45.846079 W 16488 global_logger] out_led_greenset_status error_code =1
+[17:01:45.846117 E 16488 global_logger EXCEPTION] exception occurred at: robot_1::DigitalOutput::out_led_green(DefaultDigitalOutput)@robot_1.json, code: 1
+"function:GraphScript::DefaultDigitalOutput::set_status, function: 'GraphScript::DefaultDigitalOutput::set_status', line: 232."
+[17:01:45.846639 E 16488 global_logger] work thread catch a exception(node:robot_1::DigitalOutput::out_led_green(DefaultDigitalOutput)@robot_1.json error code:1 msg:"function:GraphScript::DefaultDigitalOutput::set_status, function: 'GraphScript::DefaultDigitalOutput::set_status', line: 232.") . thread exited!
+[17:01:45.904334 E 16948 global_log] failed to communicated with board ip=192.168.5.140
+[17:01:47.190400 E 14076 global_logger EXCEPTION] exception occurred at: robot_1::Axis::s1_turner(DefaultAxis)@robot_1.json, code: -1
+"node:robot_1::Axis::s1_turner(DefaultAxis)@robot_1.json need be inited before it executes the function:GraphScript::DefaultAxis::set_velocity_percent_of_default, function: 'GraphScript::DefaultAxis::set_velocity_percent_of_default', line: 935."
+[17:01:48.859877 E 16948 global_log] failed to communicated with board ip=192.168.5.140
+[17:01:50.960033 E 16948 global_log] failed to communicated with board ip=192.168.5.140
+[17:01:53.051533 E 16948 global_log] failed to communicated with board ip=192.168.5.140
+[17:07:48.515775 I 1972 global_logger] create factory logger completed.
+[17:07:48.515910 I 1972 global_logger] prepare to init system...
+[17:07:48.515949 I 1972 global_logger] config path: , argvs: ["D:\\Nigo\\Nigo\\bin\\Debug\\"]
+[17:07:48.516203 D 1972 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\hardware.dll"...
+[17:07:48.516447 D 1972 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\hardware.dll" completed.
+[17:07:48.516489 D 1972 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\lua_bindings.dll"...
+[17:07:48.518056 D 1972 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\lua_bindings.dll" completed.
+[17:07:48.518114 D 1972 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\csharp_bridge.dll"...
+[17:07:48.519422 D 1972 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\csharp_bridge.dll" completed.
+[17:07:48.519474 D 1972 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\GM91ECU.dll"...
+[17:07:48.520781 D 1972 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\GM91ECU.dll" completed.
+[17:07:48.520830 D 1972 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\AdvCan.dll"...
+[17:07:48.521895 D 1972 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\AdvCan.dll" completed.
+[17:07:48.521942 D 1972 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\hardware_wrapper_help.dll"...
+[17:07:48.523174 D 1972 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\hardware_wrapper_help.dll" completed.
+[17:07:48.523229 D 1972 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\amc2d.dll"...
+[17:07:48.538822 D 1972 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\amc2d.dll" completed.
+[17:07:48.538916 D 1972 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\GM06EC.dll"...
+[17:07:48.540548 D 1972 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\GM06EC.dll" completed.
+[17:07:48.540642 D 1972 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\CanMotionIo.dll"...
+[17:07:48.542788 D 1972 global_logger] load plugin library: "D:\Nigo\Nigo\bin\Debug\CanMotionIo.dll" completed.
+[17:07:48.542998 I 1972 global_logger] load pre-load libraries completed.
+[17:07:48.543056 I 1972 global_logger] execute function: init_clr_factory ...
+[17:07:48.973324 W 1972 global_logger] Factory Compose() in C# used 415 ms
+[17:07:48.982295 W 1972 global_logger] Factory call RegisterTypes2System() in C# used 4 ms
+[17:07:48.990993 W 1972 global_logger] Factory InitScriptSys() in C# used 0 ms
+[17:07:48.991172 I 1972 global_logger] execute function: init_clr_factory completed.
+[17:07:48.997209 D 1972 global_logger] start to create nodes in module: [global]...
+[17:07:48.997523 D 1972 global_logger] start to create nodes in module: robot_1...
+[17:07:49.022441 I 1972 global_logger] execute function: init_wrapper_sys ...
+[17:07:49.056262 W 1972 global_logger] Factory CreateOmd in C# used 32 ms
+[17:07:49.056589 I 1972 global_logger] execute function: init_wrapper_sys completed.
+[17:07:49.056635 D 1972 global_logger] start to check version in module: LogManager...
+[17:07:49.056693 D 1972 global_logger] start to check version in module: Root...
+[17:07:49.056728 D 1972 global_logger] start to check version in module: Logger...
+[17:07:49.056771 D 1972 global_logger] start to check version in module: Null...
+[17:07:49.056806 I 1972 global_logger] check version dependence for nodes in module: [global] completed.
+[17:07:49.056840 D 1972 global_logger] start to check version in module: Machine...
+[17:07:49.057419 D 1972 global_logger] start to check version in module: HardwareManager...
+[17:07:49.057682 D 1972 global_logger] start to check version in module: LuaScriptManager...
+[17:07:49.057765 D 1972 global_logger] start to check version in module: MotionApi...
+[17:07:49.057884 D 1972 global_logger] start to check version in module: Axis...
+[17:07:49.058110 D 1972 global_logger] start to check version in module: IoApi...
+[17:07:49.058229 D 1972 global_logger] start to check version in module: DigitalInput...
+[17:07:49.058770 D 1972 global_logger] start to check version in module: AnalogInput...
+[17:07:49.058888 D 1972 global_logger] start to check version in module: DigitalOutput...
+[17:07:49.059381 D 1972 global_logger] start to check version in module: Cylinder...
+[17:07:49.059511 D 1972 global_logger] start to check version in module: Beacon...
+[17:07:49.059589 D 1972 global_logger] start to check version in module: EncoderReader...
+[17:07:49.059664 D 1972 global_logger] start to check version in module: SimpleSynComm...
+[17:07:49.059738 D 1972 global_logger] start to check version in module: CmdAgent...
+[17:07:49.060733 D 1972 global_logger] start to check version in module: Logger...
+[17:07:49.060849 I 1972 global_logger] check version dependence for nodes in module: robot_1 completed.
+[17:07:49.060910 D 1972 global_logger] start to set nodes configs in module: [global]
+[17:07:49.061108 D 1972 global_logger] start to set nodes configs in module: robot_1
+[17:07:49.062982 W 1972 global_logger] robot_1::Axis::s1_turner(DefaultAxis)@robot_1.json. neg_limit bigger than pos_limit, soft limit disabled!
+[17:07:49.072567 I 1972 global_logger] set config for nodes completed.
+[17:07:49.072681 D 1972 global_logger] start to link in module: LogManager...
+[17:07:49.072748 D 1972 global_logger] start to link in module: Root...
+[17:07:49.072802 D 1972 global_logger] start to link in module: Logger...
+[17:07:49.072867 D 1972 global_logger] start to link in module: Null...
+[17:07:49.072906 I 1972 global_logger] link for nodes in module: [global] completed.
+[17:07:49.072943 D 1972 global_logger] start to link in module: Machine...
+[17:07:49.073142 D 1972 global_logger] start to link in module: HardwareManager...
+[17:07:49.073526 D 1972 global_logger] start to link in module: LuaScriptManager...
+[17:07:49.073599 D 1972 global_logger] start to link in module: MotionApi...
+[17:07:49.073647 D 1972 global_logger] start to link in module: Axis...
+[17:07:49.073853 D 1972 global_logger] start to link in module: IoApi...
+[17:07:49.073899 D 1972 global_logger] start to link in module: DigitalInput...
+[17:07:49.074412 D 1972 global_logger] start to link in module: AnalogInput...
+[17:07:49.074496 D 1972 global_logger] start to link in module: DigitalOutput...
+[17:07:49.075120 D 1972 global_logger] start to link in module: Cylinder...
+[17:07:49.075456 D 1972 global_logger] start to link in module: Beacon...
+[17:07:49.077164 D 1972 global_logger] start to link in module: EncoderReader...
+[17:07:49.077222 D 1972 global_logger] start to link in module: SimpleSynComm...
+[17:07:49.077268 D 1972 global_logger] start to link in module: CmdAgent...
+[17:07:49.077418 D 1972 global_logger] start to link in module: Logger...
+[17:07:49.077498 I 1972 global_logger] link for nodes in module: robot_1 completed.
+[17:07:49.077549 I 1972 global_logger] add to parent for nodes in module: [global] completed.
+[17:07:49.078723 I 1972 global_logger] add to parent for nodes in module: robot_1 completed.
+[17:07:49.079258 I 1972 global_logger] link logger for nodes in module: [global] completed.
+[17:07:49.079451 I 1972 global_logger] link logger for nodes in module: robot_1 completed.
+[17:07:49.079489 I 1972 global_logger] check pointers for nodes in module: [global] completed.
+[17:07:49.079525 I 1972 global_logger] check pointers for nodes in module: robot_1 completed.
+[17:07:49.079574 I 1972 global_logger] add default dependence for nodes in module: [global] completed.
+[17:07:49.080917 I 1972 global_logger] add default dependence for nodes in module: robot_1 completed.
+[17:07:49.081974 I 1972 global_logger] initialize default nodes in module: [global] completed.
+[17:07:49.082019 I 1972 global_logger] initialize default nodes in module: robot_1 completed.
+[17:07:49.083310 I 1972 global_logger] execute function: link_nodes ...
+[17:07:49.091385 I 1972 global_logger] Link Machine in c#
+[17:07:49.096753 W 1972 global_logger] Factory call LinkAllNodes() in C# used 12 ms
+[17:07:49.096847 I 1972 global_logger] execute function: link_nodes completed.
+[17:07:49.096886 I 1972 global_logger] system init completed.
+[17:07:49.098085 D 1972 global_logger] node: [global]::LogManager::singleton_instance(LogManager)@, init recursive completed. 
+[17:07:49.098165 D 1972 global_log] node: robot_1::Logger::global_log(Logger)@robot_1.json, init recursive completed. 
+[17:07:49.098385 D 1972 global_log] node: robot_1::IoApi::GM06EC_IO_0(IO_GM06EC)@robot_1.json, init recursive completed. 
+[17:07:49.098431 D 1972 global_logger] node: robot_1::DigitalOutput::out_fly_capture_trigger(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.098473 D 1972 global_logger] node: robot_1::DigitalInput::in_handler_emo(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.098621 D 1972 global_log] node: robot_1::IoApi::GM04EC_IO_1(IoGm91Ecu)@robot_1.json, init recursive completed. 
+[17:07:49.098664 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station11(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.098704 D 1972 global_logger] node: robot_1::DigitalOutput::out_rear_door_cylinder_lock(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.098746 D 1972 global_logger] node: robot_1::DigitalOutput::out_led_yellow(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.098867 D 1972 global_log] node: robot_1::IoApi::GM04EC_IO_0(IoGm91Ecu)@robot_1.json, init recursive completed. 
+[17:07:49.098911 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station4(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.098955 D 1972 global_logger] node: robot_1::DigitalOutput::out_led_red(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.098994 D 1972 global_logger] node: robot_1::DigitalOutput::out_led_green(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.099031 D 1972 global_logger] node: robot_1::DigitalOutput::out_led_beep(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.099068 D 1972 global_logger] node: robot_1::Beacon::default(DefaultBeacon)@robot_1.json, init recursive completed. 
+[17:07:49.099125 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station11(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.099163 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station9(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.099196 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station12(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.099230 D 1972 global_logger] node: robot_1::DigitalInput::in_left_door_cylinder_release(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.099263 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station6(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.099298 D 1972 global_logger] node: robot_1::DigitalInput::in_right_door_cylinder_release(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.099335 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station9(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.099367 D 1972 global_logger] node: robot_1::DigitalInput::in_left_door_sensor(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.099401 D 1972 global_logger] node: robot_1::DigitalInput::in_vacc_station5(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.099435 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station3(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.099470 D 1972 global_logger] node: robot_1::DigitalInput::in_rear_door_cylinder_release(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.099509 D 1972 global_logger] node: robot_1::DigitalOutput::out_left_door_cylinder_lock(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.099541 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station3(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.099698 D 1972 global_logger] node: robot_1::DigitalOutput::out_right_door_cylinder_lock(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.099733 D 1972 global_logger] node: robot_1::DigitalOutput::out_turner_svon(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.099767 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station7(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.099803 D 1972 global_logger] node: robot_1::DigitalInput::in_ccdz4_lmtp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.099841 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station1(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.099873 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station1(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.099906 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station2(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.099939 D 1972 global_logger] node: robot_1::DigitalInput::in_air_source(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.099977 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station2(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.100014 D 1972 global_logger] node: robot_1::DigitalInput::in_vacc_station8(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.100047 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station4(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.100095 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station10(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.100133 D 1972 global_logger] node: robot_1::DigitalInput::in_rear_door_sensor(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.100173 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station5(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.100207 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station5(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.100241 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station6(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.100277 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station7(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.100315 D 1972 global_logger] node: robot_1::DigitalInput::in_ccdz3_lmtp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.100357 D 1972 global_logger] node: robot_1::LuaScriptManager::default(DefaultLuaScriptManager)@robot_1.json, init recursive completed. 
+[17:07:49.100391 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_open_station8(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.100426 D 1972 global_logger] node: robot_1::DigitalInput::in_vacc_station4(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.100461 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station8(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.100499 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station12(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.100541 D 1972 global_logger] node: robot_1::DigitalOutput::out_vacc_break_station10(DefaultDigitalOutput)@robot_1.json, init recursive completed. 
+[17:07:49.100576 D 1972 global_logger] node: robot_1::DigitalInput::in_ccdz2_lmtp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.100612 D 1972 global_logger] node: robot_1::DigitalInput::in_ccdz4_lmtn(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.100647 D 1972 global_logger] node: robot_1::DigitalInput::in_handler_ems(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.100725 D 1972 global_logger] node: robot_1::DigitalInput::in_ccdz2_lmtn(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.100881 D 1972 global_log] node: robot_1::IoApi::GM06EC_IO_1(IO_GM06EC)@robot_1.json, init recursive completed. 
+[17:07:49.100923 D 1972 global_logger] node: robot_1::DigitalInput::in_handler_door_close(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.100963 D 1972 global_logger] node: robot_1::DigitalInput::in_vacc_station1(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101003 D 1972 global_logger] node: robot_1::DigitalInput::in_turner_phase_sensor(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101043 D 1972 global_logger] node: robot_1::DigitalInput::in_right_door_sensor(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101168 D 1972 global_logger] node: robot_1::DigitalInput::in_rear_door_cylinder_clamp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101268 D 1972 global_logger] node: robot_1::DigitalInput::in_vacc_station11(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101311 D 1972 global_logger] node: robot_1::DigitalInput::in_left_door_cylinder_clamp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101346 D 1972 global_logger] node: robot_1::DigitalInput::in_ccdz1_lmtn(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101382 D 1972 global_logger] node: robot_1::DigitalInput::in_right_door_cylinder_clamp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101419 D 1972 global_logger] node: robot_1::DigitalInput::in_vacc_station2(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101506 D 1972 global_logger] node: robot_1::DigitalInput::in_vacc_station3(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101545 D 1972 global_logger] node: robot_1::DigitalInput::in_vacc_station6(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101580 D 1972 global_logger] node: robot_1::DigitalInput::in_ccdz1_lmtp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101614 D 1972 global_logger] node: robot_1::DigitalInput::in_vacc_station7(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101649 D 1972 global_logger] node: robot_1::DigitalInput::in_vacc_station9(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101683 D 1972 global_logger] node: robot_1::DigitalInput::in_vacc_station10(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101718 D 1972 global_logger] node: robot_1::DigitalInput::in_vacc_station12(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101763 D 1972 global_logger] node: robot_1::DigitalInput::in_ccdz5_lmtp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101867 D 1972 global_logger] node: robot_1::DigitalInput::in_ccdz3_lmtn(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101908 D 1972 global_logger] node: robot_1::DigitalInput::in_ccdz5_lmtn(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101933 D 1972 global_logger] node: robot_1::DigitalInput::in_ccdz6_lmtp(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101956 D 1972 global_logger] node: robot_1::DigitalInput::in_ccdz6_lmtn(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.101985 D 1972 global_logger] node: robot_1::DigitalInput::emg(DefaultDigitalInput)@robot_1.json, init recursive completed. 
+[17:07:49.102012 D 1972 global_logger] node: robot_1::AnalogInput::light_intensity_ch1(DefaultAnalogInput)@robot_1.json, init recursive completed. 
+[17:07:49.102039 D 1972 global_logger] node: robot_1::AnalogInput::light_intensity_ch3(DefaultAnalogInput)@robot_1.json, init recursive completed. 
+[17:07:49.102069 D 1972 global_logger] node: robot_1::AnalogInput::light_intensity_ch0(DefaultAnalogInput)@robot_1.json, init recursive completed. 
+[17:07:49.102247 D 1972 global_logger] node: robot_1::AnalogInput::light_intensity_ch2(DefaultAnalogInput)@robot_1.json, init recursive completed. 
+[17:07:49.102984 D 1972 global_logger] node: robot_1::Machine::default(Machine)@robot_1.json, init recursive completed. 
+[17:07:49.196818 E 1972 global_log] failed to communicated with board ip=192.168.5.110
+[17:07:49.197075 D 1972 global_log] node: robot_1::MotionApi::GM06EC_MOTION_0(Motion_GM06EC)@robot_1.json, init recursive completed. 
+[17:07:49.288774 E 1972 global_log] failed to communicated with board ip=192.168.5.110
+[17:07:49.288861 E 1972 global_logger] DefaultAxis:robot_1::Axis::s1_turner(DefaultAxis)@robot_1.json board return error:failed to communicated with s1_turner board
+[17:07:49.288896 E 1972 global_logger EXCEPTION] exception occurred at: robot_1::Axis::s1_turner(DefaultAxis)@robot_1.json, code: 1
+"failed to communicated with s1_turner board, function: 'GraphScript::DefaultAxis::set_start_speed_percent', line: 985."
+[17:07:49.288994 E 1972 global_logger EXCEPTION] exception occurred at: robot_1::Axis::s1_turner(DefaultAxis)@robot_1.json, code: 1
+""failed to communicated with s1_turner board, function: 'GraphScript::DefaultAxis::set_start_speed_percent', line: 985.", function: 'GraphScript::Node::init_recursive', line: 265."
+[17:07:51.262936 E 132 global_log] failed to communicated with board ip=192.168.5.110
+[17:07:51.279275 W 132 global_logger] out_led_greenset_status error_code =1
+[17:07:51.279332 E 132 global_logger EXCEPTION] exception occurred at: robot_1::DigitalOutput::out_led_green(DefaultDigitalOutput)@robot_1.json, code: 1
+"function:GraphScript::DefaultDigitalOutput::set_status, function: 'GraphScript::DefaultDigitalOutput::set_status', line: 232."
+[17:07:51.279521 E 132 global_logger] work thread catch a exception(node:robot_1::DigitalOutput::out_led_green(DefaultDigitalOutput)@robot_1.json error code:1 msg:"function:GraphScript::DefaultDigitalOutput::set_status, function: 'GraphScript::DefaultDigitalOutput::set_status', line: 232.") . thread exited!
+[17:07:51.332864 E 17236 global_log] failed to communicated with board ip=192.168.5.140
+[17:07:52.606913 E 1972 global_logger EXCEPTION] exception occurred at: robot_1::Axis::s1_turner(DefaultAxis)@robot_1.json, code: -1
+"node:robot_1::Axis::s1_turner(DefaultAxis)@robot_1.json need be inited before it executes the function:GraphScript::DefaultAxis::set_velocity_percent_of_default, function: 'GraphScript::DefaultAxis::set_velocity_percent_of_default', line: 935."
+[17:07:54.293924 E 17236 global_log] failed to communicated with board ip=192.168.5.140
+[17:07:56.386568 E 17236 global_log] failed to communicated with board ip=192.168.5.140
+[17:07:58.478961 E 17236 global_log] failed to communicated with board ip=192.168.5.140
+[17:08:00.573106 E 17236 global_log] failed to communicated with board ip=192.168.5.140
+[17:08:02.664742 E 17236 global_log] failed to communicated with board ip=192.168.5.140
+[17:08:03.586572 E 18788 global_log] failed to communicated with board ip=192.168.5.140
+[17:08:03.586652 W 18788 global_logger] out_vacc_open_station1set_status error_code =1
+[17:08:03.586668 E 18788 global_logger EXCEPTION] exception occurred at: robot_1::DigitalOutput::out_vacc_open_station1(DefaultDigitalOutput)@robot_1.json, code: 1
+"function:GraphScript::DefaultDigitalOutput::set_status, function: 'GraphScript::DefaultDigitalOutput::set_status', line: 232."
+[17:08:04.757595 E 17236 global_log] failed to communicated with board ip=192.168.5.140
+[17:08:06.849668 E 17236 global_log] failed to communicated with board ip=192.168.5.140
+[17:08:08.941813 E 17236 global_log] failed to communicated with board ip=192.168.5.140
+[17:08:11.034259 E 17236 global_log] failed to communicated with board ip=192.168.5.140
+[17:08:13.126514 E 17236 global_log] failed to communicated with board ip=192.168.5.140

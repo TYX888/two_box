@@ -1,0 +1,7 @@
+{
+    "LogPath": "D:/log/",    
+    "MaxSize":10,
+    "MaxAge":5,
+    "DeleteHour":"17",
+    "DeleteMinute":"40"
+}

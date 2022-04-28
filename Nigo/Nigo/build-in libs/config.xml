@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System AppName ="Nigo" Version ="1.0.0.0">
+  <servers>
+    <jsonServer port="8899"></jsonServer>
+  </servers>
+  <modules>
+	<moduleName>Loader</moduleName>
+	<moduleName>UnLoader</moduleName>
+	<moduleName>Dispatcher</moduleName>
+	<moduleName>AVI_Tester</moduleName>
+  </modules>
+  <plugins>
+    <plugin>
+      <dllName>PluginHandler.dll</dllName>
+      <version check ="True">1.0.0.0</version>
+      <icon>1</icon>
+      <initSequence>1</initSequence>
+      <startSequence>1</startSequence>
+      <endSequence>1</endSequence>
+      <resetSequence>1</resetSequence>
+      <userControl Margin_Left="10" Margin_Right="50" Margin_Up="1500" Margin_Down="710" Width="100" Height="100"></userControl>
+	  <viewPage Margin_Left="10" Margin_Right="50" Margin_Up="1500" Margin_Down="710" Width="100" Height="100"></viewPage>
+    </plugin>
+	<plugin>
+      <dllName>PluginDispatcher.dll</dllName>
+      <version check ="True">1.0.0.0</version>
+      <icon>1</icon>
+      <initSequence>1</initSequence>
+      <startSequence>1</startSequence>
+      <endSequence>1</endSequence>
+      <resetSequence>1</resetSequence>
+      <userControl Margin_Left="10" Margin_Right="50" Margin_Up="1500" Margin_Down="710" Width="100" Height="100"></userControl>
+	  <viewPage Margin_Left="10" Margin_Right="50" Margin_Up="1500" Margin_Down="710" Width="100" Height="100"></viewPage>
+    </plugin>
+    <!--
+    <plugin>
+      ...
+    </plugin>
+    -->
+  </plugins>
+</System>

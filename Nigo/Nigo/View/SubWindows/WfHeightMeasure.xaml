@@ -1,0 +1,179 @@
+﻿<Window x:Class="MemsHandler.WfHeightMeasure"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MemsHandler"
+        mc:Ignorable="d"
+        Title="WfHeightTeach" Height="1000" Width="1380" Closing="WfHeightMeasure_OnClosing">
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Grid Background="Black" x:Name="grid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <Label Grid.ColumnSpan="3" Foreground="White" Content="HEIGHT MEASURE"  FontSize="24" HorizontalContentAlignment="Center"  VerticalContentAlignment="Bottom"></Label>
+            <Label Grid.Column="0" Grid.Row="2" Foreground="DeepSkyBlue" BorderThickness="0,0,0,1" BorderBrush="DeepSkyBlue" Width="300" Content="LOAD PICKER"  FontSize="18" HorizontalContentAlignment="Center"  VerticalContentAlignment="Bottom"></Label>
+            <Label Grid.Column="2" Grid.Row="2" Foreground="DeepSkyBlue" BorderThickness="0,0,0,1" BorderBrush="DeepSkyBlue" Width="300" Content="UNLOAD PICKER"  FontSize="18" HorizontalContentAlignment="Center"  VerticalContentAlignment="Bottom"></Label>
+            <Border Grid.Column="1" Grid.Row="3" Margin="2" Grid.RowSpan="3" BorderThickness="2" Style="{StaticResource BlueBorder}"></Border>
+
+            <StackPanel  Orientation="Horizontal" Margin="5" Height="50" Grid.Row="1" Grid.ColumnSpan="3">
+                <Label Content="DUT Height:"  Foreground="DeepSkyBlue" FontSize="14" Height="30" HorizontalContentAlignment="Center" Width="100" ></Label>
+                <TextBox x:Name="txt_DutHeight"  Text="{Binding DutHeight}"   Width="90"  Height="25" Margin="0,0,0,0" Style="{ StaticResource BlueTextBox}"></TextBox>
+
+                <Label Content="Offset:"  Foreground="DeepSkyBlue" FontSize="14" Height="30" HorizontalContentAlignment="Right" Width="100" ></Label>
+                <TextBox x:Name="txt_offset"  Text="{Binding Offset}"   Width="90"  Height="25" Margin="0,0,0,0" Style="{ StaticResource BlueTextBox}"></TextBox>
+                <Button   Content="Calculate Height" Click="BtnCalculate"  Width="160" Height="40"   Margin="70,5,10,5" Style="{StaticResource DefBtn}" ></Button>
+                <Button   Content="Save" Click="BtnSave"  Width="160" Height="40"   Margin="20,5,10,5" Style="{StaticResource DefBtn}" ></Button>
+            </StackPanel>
+            <StackPanel  Orientation="Horizontal" Margin="5" Grid.Column="2" Grid.Row="3">
+                <Label Content="PRESSURE Height"  Foreground="DeepSkyBlue" FontSize="14" Height="30" HorizontalContentAlignment="Center" Width="140"></Label>
+                <TextBox x:Name="txt_TeachHeight_unload" IsReadOnly="True" Text="{Binding PressureHeight[1]}"   Width="90"  Height="25" Margin="10,0,0,0" Style="{ StaticResource BlueTextBox}"></TextBox>
+                <Button   Content="Tech 1st Picker" Click="BtnTeachPre_Unload"  Width="160" Height="40"   Margin="20,5,10,5" Style="{StaticResource DefBtn}" ></Button>
+            </StackPanel>
+            <StackPanel  Orientation="Horizontal" Margin="5" Grid.Column="0" Grid.Row="3">
+                <Label Content="PRESSURE Height"  Foreground="DeepSkyBlue" FontSize="14" Height="30" HorizontalContentAlignment="Center" Width="140"></Label>
+                <TextBox x:Name="txt_TeachHeight_load"  Text="{Binding PressureHeight[0]}"   Width="90"  Height="25" Margin="10,0,0,0" Style="{ StaticResource BlueTextBox}"></TextBox>
+                <Button   Content="Tech 1st Picker" Click="BtnTeachPre_load"  Width="160" Height="40"   Margin="20,5,10,5" Style="{StaticResource DefBtn}" ></Button>
+            </StackPanel>
+
+            <DataGrid x:Name="dgvPosLoad" Grid.Row="4"  Style="{StaticResource MyDataGridStyle}" Margin="5" MouseLeave="DgvPosLoad_OnMouseLeave">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Name}" ClipboardContentBinding="{x:Null}" Header="NAME" Width="70" IsReadOnly="True" />
+                    <DataGridTextColumn Binding="{Binding Xpos}" ClipboardContentBinding="{x:Null}" Header="X" Width="70"/>
+                    <DataGridTextColumn Binding="{Binding Ypos}" ClipboardContentBinding="{x:Null}" Header="Y" Width="70"/>
+                    <DataGridTextColumn Binding="{Binding Height}" ClipboardContentBinding="{x:Null}" Header="H" Width="70"/>
+                    <DataGridTextColumn Binding="{Binding CalHeight}" ClipboardContentBinding="{x:Null}" Header="CalH" Width="70"/>
+
+                    <DataGridTemplateColumn Header="Read XY" IsReadOnly="true" Width="80" ClipboardContentBinding="{Binding ID}">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Read" Click="BtnRead" IsEnabled="{Binding IsUiEnabled}"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Move to" Width="80" IsReadOnly="true">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Move to" Click="BtnMove" IsEnabled="{Binding IsUiEnabled}"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Teach H" Width="80" IsReadOnly="true" >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Teach" Click="BtnTeach" IsEnabled="{Binding IsUiEnabled}"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <DataGrid x:Name="dgvPosUnload" Grid.Row="4" Grid.Column="2" Style="{StaticResource MyDataGridStyle}" Margin="5" MouseLeave="DgvPosUnload_OnMouseLeave">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Name}" ClipboardContentBinding="{x:Null}" Header="NAME" Width="70" IsReadOnly="True" />
+                    <DataGridTextColumn Binding="{Binding Xpos}" ClipboardContentBinding="{x:Null}" Header="X" Width="70"/>
+                    <DataGridTextColumn Binding="{Binding Ypos}" ClipboardContentBinding="{x:Null}" Header="Y" Width="70"/>
+                    <DataGridTextColumn Binding="{Binding Height}" ClipboardContentBinding="{x:Null}" Header="H" Width="70"/>
+                    <DataGridTextColumn Binding="{Binding CalHeight}" ClipboardContentBinding="{x:Null}" Header="CalH" Width="70"/>
+
+                    <DataGridTemplateColumn Header="Read XY" IsReadOnly="true" Width="80" ClipboardContentBinding="{Binding ID}">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Read"  Click="BtnRead" IsEnabled="{Binding IsUiEnabled}"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Move to" Width="80" IsReadOnly="true">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Move" Click="BtnMove" IsEnabled="{Binding IsUiEnabled}"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Teach H" Width="80" IsReadOnly="true" >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Teach" Click="BtnTeach" IsEnabled="{Binding IsUiEnabled}"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <StackPanel Orientation="Vertical" Grid.Row="5">
+                <StackPanel  Orientation="Horizontal" Margin="5" >
+                    <ComboBox Style="{StaticResource ComboBoxStyle}" Width="180" Margin="20,5,10,5" SelectedIndex="0"
+                              x:Name="BoxMultiPickerSel" >
+                        <ComboBoxItem >MULTIPICKER1</ComboBoxItem>
+                        <ComboBoxItem >MULTIPICKER2</ComboBoxItem>
+                    </ComboBox>
+                    <Button   Content="Bot PR Sel Picker All Nozzle"  Click="BtnBotPrPicker" Width="180" Height="40"   Margin="20,5,10,5" Style="{StaticResource DefBtn}" ></Button>
+                    <Button   Content="Bot PR Sel Picker All Dut"  Click="BtnBotPrPickDut" Width="180" Height="40"   Margin="20,5,10,5" Style="{StaticResource DefBtn}" ></Button>
+
+                </StackPanel>
+  
+                <StackPanel  Orientation="Horizontal" Margin="5" >
+                    <Button   Content="Tech 1st Socket All Height"  Click="BtnTeachSocket" Width="180" Height="40"   Margin="20,5,10,5" Style="{StaticResource DefBtn}" ></Button>
+                    <Button   Content="PR 1st Socket All Site"  Click="BtnPrSocket" Width="180" Height="40"   Margin="20,5,10,5" Style="{StaticResource DefBtn}" ></Button>
+                    <Button   Content="PR 1st Socket All Site Dut"  Click="BtnPrSocketDut" Width="180" Height="40"   Margin="20,5,10,5" Style="{StaticResource DefBtn}" ></Button>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Grid.Row="5" Grid.Column="2">
+                <StackPanel  Orientation="Horizontal" Margin="5" >
+                    <ComboBox Style="{StaticResource ComboBoxStyle}" Width="180" Margin="20,5,10,5" SelectedIndex="0" x:Name="BoxUnloadPickerSel" >
+                        <ComboBoxItem >MULTIPICKER1</ComboBoxItem>
+                        <ComboBoxItem >MULTIPICKER2</ComboBoxItem>
+                    </ComboBox>
+                    <Button   Content="Bot PR Sel Picker All Nozzle"  Click="BtnBotPrPicker_unload" Width="180" Height="40"   Margin="20,5,10,5" Style="{StaticResource DefBtn}" ></Button>
+                    <Button   Content="Bot PR Sel Picker All Dut"  Click="BtnBotPrPickDut_unload" Width="180" Height="40"   Margin="20,5,10,5" Style="{StaticResource DefBtn}" ></Button>
+                </StackPanel>
+                <StackPanel  Orientation="Horizontal" Margin="5" >
+                    <Button   Content="Tech 1st Socket All Height"  Click="BtnTeachSocket_unload" Width="180" Height="40"   Margin="20,5,10,5" Style="{StaticResource DefBtn}" ></Button>
+                </StackPanel>
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="6" Grid.ColumnSpan="3">
+                <StackPanel  Orientation="Horizontal" Margin="5" >
+                    <ComboBox x:Name="BoxTraySel" Style="{StaticResource ComboBoxStyle}" Width="180" Margin="20,5,10,5"  Height="40"  
+                              SelectedIndex="0" >
+                        <ComboBoxItem >TRAYFEEDER1</ComboBoxItem>
+                        <ComboBoxItem >TRAYFEEDER2</ComboBoxItem>
+                        <ComboBoxItem >TRAYFEEDER3</ComboBoxItem>
+                        <ComboBoxItem >TRAYFEEDER4</ComboBoxItem>
+                        <ComboBoxItem >TRAYFEEDER5</ComboBoxItem>
+                        <ComboBoxItem >TRAYFEEDER6</ComboBoxItem>
+                        <ComboBoxItem >TRAYFEEDER7</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Style="{StaticResource ComboBoxStyle}" Width="180" Margin="20,5,10,5" SelectedIndex="0"
+                              x:Name="BoxTrayAreaSel" >
+                        <ComboBoxItem >Area 1</ComboBoxItem>
+                        <ComboBoxItem >Area 2</ComboBoxItem>
+                        <ComboBoxItem >Area 3</ComboBoxItem>
+                        <ComboBoxItem >Area 4</ComboBoxItem>
+                    </ComboBox>
+                    <Button   Content="PR Tray Area"  Click="BtnPrArea" Width="180" Height="40"   Margin="20,5,10,5" Style="{StaticResource DefBtn}" ></Button>
+                    <Button   Content="PR Tray Area Dut"  Click="BtnPrAreaDut" Width="180" Height="40"   Margin="20,5,10,5" Style="{StaticResource DefBtn}" ></Button>
+
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        <Button   Content="Exit" Grid.Row="1" Click="Exit" Width="200" Height="60"   Margin="20,5,10,5" Style="{StaticResource DefBtn}" ></Button>
+
+    </Grid>
+</Window>

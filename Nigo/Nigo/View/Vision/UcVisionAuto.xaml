@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="AviTester.UcVisionAuto"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AviTester"
+             xmlns:wpfStyleApi="clr-namespace:WpfStyleApi;assembly=WpfStyleApi"
+             mc:Ignorable="d" 
+             d:DesignHeight="860" d:DesignWidth="1750" Loaded="UserControl_Loaded">
+    <Grid>
+        <Border  Grid.Row="0" Grid.Column="1" BorderThickness="2"  BorderBrush="DeepSkyBlue" Margin="0,0,0,0" >
+            <TabControl x:Name="tabPC"/>
+        </Border>
+    </Grid>
+</UserControl>

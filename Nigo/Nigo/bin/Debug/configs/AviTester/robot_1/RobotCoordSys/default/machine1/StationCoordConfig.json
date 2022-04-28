@@ -1,0 +1,200 @@
+{
+    "_vecAllTransInfo": [
+        {
+            "_strTransName": "RbtMtn2dwnCam",
+            "_iTransType": 3
+        },
+        {
+            "_strTransName": "dwnCamMarkPos",
+            "_iTransType": 4
+        },
+        {
+            "_strTransName": "orgPos",
+            "_iTransType": 4
+        },
+        {
+            "_strTransName": "nozzle0RotatePixelCenter",
+            "_iTransType": 5
+        },
+        {
+            "_strTransName": "nozzle1RotatePixelCenter",
+            "_iTransType": 5
+        },
+        {
+            "_strTransName": "nozzle2RotatePixelCenter",
+            "_iTransType": 5
+        },
+        {
+            "_strTransName": "nozzle3RotatePixelCenter",
+            "_iTransType": 5
+        },
+        {
+            "_strTransName": "nozzle4RotatePixelCenter",
+            "_iTransType": 5
+        },
+        {
+            "_strTransName": "nozzle5RotatePixelCenter",
+            "_iTransType": 5
+        },
+        {
+            "_strTransName": "Nozzle0RbtMtn2UpCam",
+            "_iTransType": 2
+        },
+        {
+            "_strTransName": "Nozzle1RbtMtn2UpCam",
+            "_iTransType": 2
+        },
+        {
+            "_strTransName": "Nozzle2RbtMtn2UpCam",
+            "_iTransType": 2
+        },
+        {
+            "_strTransName": "Nozzle3RbtMtn2UpCam",
+            "_iTransType": 2
+        },
+        {
+            "_strTransName": "Nozzle4RbtMtn2UpCam",
+            "_iTransType": 2
+        },
+        {
+            "_strTransName": "Nozzle5RbtMtn2UpCam",
+            "_iTransType": 2
+        },
+        {
+            "_strTransName": "nozzle0UpCamTakePicPos",
+            "_iTransType": 4
+        },
+        {
+            "_strTransName": "nozzle1UpCamTakePicPos",
+            "_iTransType": 4
+        },
+        {
+            "_strTransName": "nozzle2UpCamTakePicPos",
+            "_iTransType": 4
+        },
+        {
+            "_strTransName": "nozzle3UpCamTakePicPos",
+            "_iTransType": 4
+        },
+        {
+            "_strTransName": "nozzle4UpCamTakePicPos",
+            "_iTransType": 4
+        },
+        {
+            "_strTransName": "nozzle5UpCamTakePicPos",
+            "_iTransType": 4
+        },
+        {
+            "_strTransName": "nozzle0UpCamUNormalPixelPos",
+            "_iTransType": 4
+        },
+        {
+            "_strTransName": "nozzle1UpCamUNormalPixelPos",
+            "_iTransType": 4
+        },
+        {
+            "_strTransName": "nozzle2UpCamUNormalPixelPos",
+            "_iTransType": 4
+        },
+        {
+            "_strTransName": "nozzle3UpCamUNormalPixelPos",
+            "_iTransType": 4
+        },
+        {
+            "_strTransName": "nozzle4UpCamUNormalPixelPos",
+            "_iTransType": 4
+        },
+        {
+            "_strTransName": "nozzle5UpCamUNormalPixelPos",
+            "_iTransType": 4
+        },
+        {
+            "_strTransName": "nz0G0EMPos2RealPos",
+            "_iTransType": 1
+        },
+        {
+            "_strTransName": "nz1G0EMPos2RealPos",
+            "_iTransType": 1
+        },
+        {
+            "_strTransName": "nz2G0EMPos2RealPos",
+            "_iTransType": 1
+        },
+        {
+            "_strTransName": "nz3G0EMPos2RealPos",
+            "_iTransType": 1
+        },
+        {
+            "_strTransName": "nz4G0EMPos2RealPos",
+            "_iTransType": 1
+        },
+        {
+            "_strTransName": "nz5G0EMPos2RealPos",
+            "_iTransType": 1
+        },
+        {
+            "_strTransName": "nz0G1EMPos2RealPos",
+            "_iTransType": 1
+        },
+        {
+            "_strTransName": "nz1G1EMPos2RealPos",
+            "_iTransType": 1
+        },
+        {
+            "_strTransName": "nz2G1EMPos2RealPos",
+            "_iTransType": 1
+        },
+        {
+            "_strTransName": "nz3G1EMPos2RealPos",
+            "_iTransType": 1
+        },
+        {
+            "_strTransName": "nz4G1EMPos2RealPos",
+            "_iTransType": 1
+        },
+        {
+            "_strTransName": "nz5G1EMPos2RealPos",
+            "_iTransType": 1
+        },
+        {
+            "_strTransName": "global2Glass0",
+            "_iTransType": 1
+        },
+        {
+            "_strTransName": "global2Glass1",
+            "_iTransType": 1
+        },
+        {
+            "_strTransName": "topCam2Glass",
+            "_iTransType": 1
+        },
+        {
+            "_strTransName": "anotherGantryToThis",
+            "_iTransType": 1
+        },
+        {
+            "_strTransName": "topCamToGlobal",
+            "_iTransType": 1
+        },
+        {
+            "_strTransName": "tempTray",
+            "_iTransType": 6
+        }
+    ],
+    "_vecAllSolversInfo": [
+        {
+            "_strSolversName": "GetPosFromDwnCam",
+            "_iSolversType": 0,
+            "_vecTrans": [
+                [
+                    false,
+                    "RbtMtn2dwnCam"
+                ],
+                [
+                    false,
+                    "orgPos"
+                ]
+            ]
+        }
+    ]
+}

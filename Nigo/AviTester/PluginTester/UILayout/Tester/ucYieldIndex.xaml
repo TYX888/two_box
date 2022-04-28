@@ -1,0 +1,110 @@
+﻿<UserControl x:Class="AviTester.ucYieldIndex"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AviTester"
+             mc:Ignorable="d" 
+             d:DesignHeight="350" d:DesignWidth="230">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="25"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="Blue" Margin="5,0,0,0" BorderThickness="1,1,1,1" Grid.ColumnSpan="4" Grid.RowSpan="14"/>
+        <Border BorderBrush="DeepSkyBlue" Margin="5,0,0,0" BorderThickness="1,1,1,1" Grid.ColumnSpan="4" Grid.RowSpan="1"  Grid.Row="0"/>
+        <Border BorderBrush="DeepSkyBlue" Margin="5,0,0,0" BorderThickness="1,1,1,1" Grid.ColumnSpan="4" Grid.RowSpan="1"  Grid.Row="1"/>
+        <Border BorderBrush="DeepSkyBlue" Margin="5,0,0,0" BorderThickness="1,1,1,1" Grid.ColumnSpan="4" Grid.RowSpan="1"  Grid.Row="2"/>
+        <Border BorderBrush="DeepSkyBlue" Margin="5,0,0,0" BorderThickness="1,1,1,1" Grid.ColumnSpan="4" Grid.RowSpan="1"  Grid.Row="3"/>
+        <Border BorderBrush="DeepSkyBlue" Margin="5,0,0,0" BorderThickness="1,1,1,1" Grid.ColumnSpan="4" Grid.RowSpan="1"  Grid.Row="4"/>
+        <Border BorderBrush="DeepSkyBlue" Margin="5,0,0,0" BorderThickness="1,1,1,1" Grid.ColumnSpan="4" Grid.RowSpan="1"  Grid.Row="5"/>
+        <Border BorderBrush="DeepSkyBlue" Margin="5,0,0,0" BorderThickness="1,1,1,1" Grid.ColumnSpan="4" Grid.RowSpan="1"  Grid.Row="6"/>
+        <Border BorderBrush="DeepSkyBlue" Margin="5,0,0,0" BorderThickness="1,1,1,1" Grid.ColumnSpan="4" Grid.RowSpan="1"  Grid.Row="7"/>
+        <Border BorderBrush="DeepSkyBlue" Margin="5,0,0,0" BorderThickness="1,1,1,1" Grid.ColumnSpan="4" Grid.RowSpan="1"  Grid.Row="8"/>
+        <Border BorderBrush="DeepSkyBlue" Margin="5,0,0,0" BorderThickness="1,1,1,1" Grid.ColumnSpan="4" Grid.RowSpan="1"  Grid.Row="9"/>
+        <Border BorderBrush="DeepSkyBlue" Margin="5,0,0,0" BorderThickness="1,1,1,1" Grid.ColumnSpan="4" Grid.RowSpan="1"  Grid.Row="10"/>
+        <Border BorderBrush="DeepSkyBlue" Margin="5,0,0,0" BorderThickness="1,1,1,1" Grid.ColumnSpan="4" Grid.RowSpan="1"  Grid.Row="11"/>
+        <Border BorderBrush="DeepSkyBlue" Margin="5,0,0,0" BorderThickness="1,1,1,1" Grid.ColumnSpan="4" Grid.RowSpan="1"  Grid.Row="12"/>
+        <Border BorderBrush="DeepSkyBlue" Margin="5,0,0,0" BorderThickness="1,1,1,1" Grid.ColumnSpan="4" Grid.RowSpan="1"  Grid.Row="13"/>
+
+        <Label Content="转盘治具良率信息" Height="30" Foreground="DeepSkyBlue" FontSize="14" HorizontalContentAlignment="Center" Grid.ColumnSpan="4" Width="300" />
+        <Label Content="治具编号" Height="30" Foreground="White" Grid.Row="1" Grid.Column="0" FontSize="14" HorizontalAlignment="Center" />
+        <Label Content="不良数量" Height="30" Foreground="White" Grid.Row="1" Grid.Column="1" FontSize="14" HorizontalAlignment="Left" />
+        <Label Content="良率" Height="30" Foreground="White" Grid.Row="1" Grid.Column="2" FontSize="14" HorizontalAlignment="Left" />
+        <Label Content="Index1" Foreground="OrangeRed" Grid.Row="2" Grid.Column="0" FontSize="14" HorizontalAlignment="Center" />
+        <Label Width="65"  Grid.Row="2" Grid.Column="1" Foreground="White" FontSize="14" Content="{Binding Index1Count}" />
+        <Label Width="45" Foreground="White"  Grid.Row="2" Grid.Column="2" FontSize="14" Content="{Binding Yield_Index1}" />
+        <Label Content="%"  Grid.Row="2" Grid.Column="3" FontSize="14" Foreground="White" HorizontalContentAlignment="Center" ></Label>
+        <Label Content="Index2" Foreground="OrangeRed" Grid.Row="3" Grid.Column="0" FontSize="14" HorizontalAlignment="Center" />
+        <Label Width="65"  Grid.Row="3" Grid.Column="1" Foreground="White" FontSize="14" Content="{Binding Index2Count}" />
+        <Label Width="45" Foreground="White"  Grid.Row="3" Grid.Column="2" FontSize="14" Content="{Binding Yield_Index2}" />
+        <Label Content="%"  Grid.Row="3" Grid.Column="3" FontSize="14" Foreground="White" HorizontalContentAlignment="Center" ></Label>
+        <Label Content="Index3" Foreground="OrangeRed" Grid.Row="4" Grid.Column="0" FontSize="14" HorizontalAlignment="Center" />
+        <Label Width="65"  Grid.Row="4" Grid.Column="1" Foreground="White" FontSize="14" Content="{Binding Index3Count}" />
+        <Label Width="45" Foreground="White"  Grid.Row="4" Grid.Column="2" FontSize="14" Content="{Binding Yield_Index3}" />
+        <Label Content="%"  Grid.Row="4" Grid.Column="3" FontSize="14" Foreground="White" HorizontalContentAlignment="Center" ></Label>
+
+        <Label Content="Index4" Foreground="OrangeRed" Grid.Row="5" Grid.Column="0" FontSize="14" HorizontalAlignment="Center" />
+        <Label Width="65"  Grid.Row="5" Grid.Column="1" Foreground="White" FontSize="14" Content="{Binding Index4Count}" />
+        <Label Width="45" Foreground="White"  Grid.Row="5" Grid.Column="2" FontSize="14" Content="{Binding Yield_Index4}" />
+        <Label Content="%"  Grid.Row="5" Grid.Column="3" FontSize="14" Foreground="White" HorizontalContentAlignment="Center" ></Label>
+
+        <Label Content="Index5" Foreground="OrangeRed" Grid.Row="6" Grid.Column="0" FontSize="14" HorizontalAlignment="Center" />
+        <Label Width="65"  Grid.Row="6" Grid.Column="1" Foreground="White" FontSize="14" Content="{Binding Index5Count}" />
+        <Label Width="45" Foreground="White"  Grid.Row="6" Grid.Column="2" FontSize="14" Content="{Binding Yield_Index5}" />
+        <Label Content="%"  Grid.Row="6" Grid.Column="3" FontSize="14" Foreground="White" HorizontalContentAlignment="Center" ></Label>
+        
+        <Label Content="Index6" Foreground="OrangeRed" Grid.Row="7" Grid.Column="0" FontSize="14" HorizontalAlignment="Center" />
+        <Label Width="65"  Grid.Row="7" Grid.Column="1" Foreground="White" FontSize="14" Content="{Binding Index6Count}" />
+        <Label Width="45" Foreground="White"  Grid.Row="7" Grid.Column="2" FontSize="14" Content="{Binding Yield_Index6}" />
+        <Label Content="%"  Grid.Row="7" Grid.Column="3" FontSize="14" Foreground="White" HorizontalContentAlignment="Center" ></Label>
+
+        <Label Content="Index7" Foreground="OrangeRed" Grid.Row="8" Grid.Column="0" FontSize="14" HorizontalAlignment="Center" />
+        <Label Width="65"  Grid.Row="8" Grid.Column="1" Foreground="White" FontSize="14" Content="{Binding Index7Count}" />
+        <Label Width="45" Foreground="White"  Grid.Row="8" Grid.Column="2" FontSize="14" Content="{Binding Yield_Index7}" />
+        <Label Content="%"  Grid.Row="8" Grid.Column="3" FontSize="14" Foreground="White" HorizontalContentAlignment="Center" ></Label>
+
+        <Label Content="Index8" Foreground="OrangeRed" Grid.Row="9" Grid.Column="0" FontSize="14" HorizontalAlignment="Center" />
+        <Label Width="65"  Grid.Row="9" Grid.Column="1" Foreground="White" FontSize="14" Content="{Binding Index8Count}" />
+        <Label Width="45" Foreground="White"  Grid.Row="9" Grid.Column="2" FontSize="14" Content="{Binding Yield_Index8}" />
+        <Label Content="%"  Grid.Row="9" Grid.Column="3" FontSize="14" Foreground="White" HorizontalContentAlignment="Center" ></Label>
+
+        <Label Content="Index9" Foreground="OrangeRed" Grid.Row="10" Grid.Column="0" FontSize="14" HorizontalAlignment="Center" />
+        <Label Width="65"  Grid.Row="10" Grid.Column="1" Foreground="White" FontSize="14" Content="{Binding Index9Count}" />
+        <Label Width="45" Foreground="White"  Grid.Row="10" Grid.Column="2" FontSize="14" Content="{Binding Yield_Index9}" />
+        <Label Content="%"  Grid.Row="10" Grid.Column="3" FontSize="14" Foreground="White" HorizontalContentAlignment="Center" ></Label>
+
+        <Label Content="Index10" Foreground="OrangeRed" Grid.Row="11" Grid.Column="0" FontSize="14" HorizontalAlignment="Center" />
+        <Label Width="65"  Grid.Row="11" Grid.Column="1" Foreground="White" FontSize="14" Content="{Binding Index10Count}" />
+        <Label Width="45" Foreground="White"  Grid.Row="11" Grid.Column="2" FontSize="14" Content="{Binding Yield_Index10}" />
+        <Label Content="%"  Grid.Row="11" Grid.Column="3" FontSize="14" Foreground="White" HorizontalContentAlignment="Center" ></Label>
+
+        <Label Content="Index11" Foreground="OrangeRed" Grid.Row="12" Grid.Column="0" FontSize="14" HorizontalAlignment="Center" />
+        <Label Width="65"  Grid.Row="12" Grid.Column="1" Foreground="White" FontSize="14" Content="{Binding Index11Count}" />
+        <Label Width="45" Foreground="White"  Grid.Row="12" Grid.Column="2" FontSize="14" Content="{Binding Yield_Index11}" />
+        <Label Content="%"  Grid.Row="12" Grid.Column="3" FontSize="14" Foreground="White" HorizontalContentAlignment="Center" ></Label>
+
+        <Label Content="Index12" Foreground="OrangeRed" Grid.Row="13" Grid.Column="0" FontSize="14" HorizontalAlignment="Center" />
+        <Label Width="65"  Grid.Row="13" Grid.Column="1" Foreground="White" FontSize="14" Content="{Binding Index12Count}" />
+        <Label Width="45" Foreground="White"  Grid.Row="13" Grid.Column="2" FontSize="14" Content="{Binding Yield_Index12}" />
+        <Label Content="%"  Grid.Row="13" Grid.Column="3" FontSize="14" Foreground="White" HorizontalContentAlignment="Center" ></Label>
+    </Grid>
+</UserControl>

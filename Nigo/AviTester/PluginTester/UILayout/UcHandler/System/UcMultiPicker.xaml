@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="AviTester.UcMultiPicker"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AviTester"
+             xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+             mc:Ignorable="d" 
+             d:DesignHeight="860" d:DesignWidth="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="1*"/>
+          
+        </Grid.ColumnDefinitions>
+
+        <UniformGrid Rows="0" Columns="0" Grid.Column="1" Grid.Row="1" Name="GridPickers2" Margin="0,0,50,50">
+        </UniformGrid>
+
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="MULTIPICKER"   Foreground="DeepSkyBlue" 
+               VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="26"
+               Margin="40,5"></Label>
+        <StackPanel  Grid.Row="1" Grid.Column="0">
+            <Label Content="MULTIPICKER SELECTION:"   Foreground="DeepSkyBlue" FontSize="14"
+                   VerticalContentAlignment="Bottom" Margin="0,5,0,0"></Label>
+
+            <ComboBox Style="{StaticResource ComboBoxStyle}" x:Name="BoxLoadUnloadSel"  Width="180" Height="30"  
+                      Margin="10,10,0,5" SelectionChanged="BoxSel_OnSelectionChanged">
+                <ComboBoxItem >LOAD</ComboBoxItem>
+                <ComboBoxItem >UNLOAD</ComboBoxItem>
+            </ComboBox>
+            <ComboBox Style="{StaticResource ComboBoxStyle}" x:Name="BoxPickerSel" Width="180" Height="30" 
+                      Margin="10,10,0,5" SelectionChanged="BoxSel_OnSelectionChanged">
+                <ComboBoxItem >MultiPickers1</ComboBoxItem>
+                <ComboBoxItem >MultiPickers2</ComboBoxItem>
+            </ComboBox>
+            <StackPanel  Margin="30,100,30,5" Orientation="Vertical">
+          
+            <Label BorderThickness="0,0,0,2" Content="ALL PICKERS" HorizontalContentAlignment="Center"  Margin="3" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" BorderBrush="#FF0CD415" Background="{x:Null}" Foreground="White" />
+            <local:UcPicker x:Name="AllPicker" Width="120" Height="100" Idx="-1"></local:UcPicker>
+
+        </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,979 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-15 16:48+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: E:\Work\CSharp\Nigo\Nigo\View\Auto\UcMachineInfo.xaml.cs:23
+msgid "LotNO:"
+msgstr ""
+
+#: E:\Work\CSharp\Nigo\Nigo\View\Auto\UcMachineInfo.xaml.cs:24
+msgid "Dut Model:"
+msgstr ""
+
+#: E:\Work\CSharp\Nigo\Nigo\View\Auto\UcMachineInfo.xaml.cs:25
+msgid "Machine ID:"
+msgstr ""
+
+#: E:\Work\CSharp\Nigo\Nigo\View\Auto\UcMachineInfo.xaml.cs:26
+msgid "LotQty:"
+msgstr ""
+
+#: UcTestStatus.xaml:21
+msgid "Right"
+msgstr ""
+
+#: UcTesterConfig.xaml:253
+msgid "Station 8"
+msgstr ""
+
+#: UcTesterConfig.xaml:254
+msgid "Station 9"
+msgstr ""
+
+#: UcTesterConfig.xaml:213 UcSysConfig.xaml:67
+msgid "Save"
+msgstr ""
+
+#: UcTesterConfig.xaml:252
+msgid "Station 7"
+msgstr ""
+
+#: UcTesterConfig.xaml:249
+msgid "Station 4"
+msgstr ""
+
+#: UcTesterConfig.xaml:250
+msgid "Station 5"
+msgstr ""
+
+#: UcTesterConfig.xaml:247
+msgid "Station 2"
+msgstr ""
+
+#: UcTesterConfig.xaml:248
+msgid "Station 3"
+msgstr ""
+
+#: UcTesterConfig.xaml:245
+msgid "Station 0"
+msgstr ""
+
+#: UcTesterConfig.xaml:246
+msgid "Station 1"
+msgstr ""
+
+#: UcTesterAxisCollection.xaml:39
+msgid "X+"
+msgstr ""
+
+#: UcAxesParameters.xaml:77
+msgid "SOFT NEG LIMIT"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:39
+msgid "STATION12"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:37
+msgid "STATION10"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:38
+msgid "STATION11"
+msgstr ""
+
+#: UcTesterConfig.xaml:272
+msgid "FlyCaptureSpeed:"
+msgstr ""
+
+#: UcTesterConfig.xaml:320
+msgid "Is Enable Paste Label"
+msgstr ""
+
+#: UcTesterAxisCollection.xaml:47
+msgid "ZSafe"
+msgstr ""
+
+#: UcMachineStatus.xaml:33
+msgid "Running"
+msgstr ""
+
+#: UcTesterSystem.xaml:25
+msgid "VACUUM ANALOG"
+msgstr ""
+
+#: MainWindow.xaml:747
+msgid "ABOUT"
+msgstr ""
+
+#: UcMachinePerformance.xaml:18
+msgid "PERFORMANCE"
+msgstr ""
+
+#: UcAxesParameters.xaml:104
+msgid "HOME DCC:"
+msgstr ""
+
+#: UcTurnTableIo.xaml:92
+msgid "VACC 12#:"
+msgstr ""
+
+#: UcAxis.xaml:24
+msgid "Alarm"
+msgstr ""
+
+#: UcTesterAxisCollection.xaml:40
+msgid "TURNER+"
+msgstr ""
+
+#: UcTesterAxisCollection.xaml:54
+msgid "Z4-"
+msgstr ""
+
+#: UcTesterAutoTurn.xaml:39 UcTesterAutoTurn.xaml:43
+msgid "FAIL"
+msgstr ""
+
+#: UcAxisOriginAndLimited.xaml:29
+msgid "LMT(SW) +"
+msgstr ""
+
+#: UcMachineALLInfo.xaml:16
+msgid "INFORMATION"
+msgstr ""
+
+#: UcTurnTableIo.xaml:141
+msgid "Behind Door Lock:"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:50
+msgid "FlyCapturePos"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:48
+msgid "SendCmd"
+msgstr ""
+
+#: MainWindow.xaml:404
+msgid "INIT"
+msgstr ""
+
+#: UcTurnTableIo.xaml:55
+msgid "VACC 2#:"
+msgstr ""
+
+#: UcTesterOrgAndLimitCal.xaml:37 UcAxisOriginAndLimited.xaml:14
+#: UcAxisOriginAndLimited.xaml:20 UcAxisOriginAndLimited.xaml:26
+#: UcAxisOriginAndLimited.xaml:32 UcAxisOriginAndLimited.xaml:38
+#: UcAxesParameters.xaml:167
+msgid "SET"
+msgstr ""
+
+#: UcTesterFlyCaptureCal.xaml:45
+msgid "COMPARE POS 1 OFFEST"
+msgstr ""
+
+#: UcTurnTableIo.xaml:119
+msgid "TURNER SVON:"
+msgstr ""
+
+#: MainWindow.xaml:101
+msgid "Debug"
+msgstr ""
+
+#: UcTesterFlyCaptureCal.xaml:58
+msgid "Read DirP Start Pos"
+msgstr ""
+
+#: MainWindow.xaml:178
+msgid "CALI"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:31
+msgid "STATION4"
+msgstr ""
+
+#: MainWindow.xaml:167
+msgid "MODULE"
+msgstr ""
+
+#: UcAxesParameters.xaml:151
+msgid "SOFT POS LIMIT :"
+msgstr ""
+
+#: MainWindow.xaml:177
+msgid "CONFIG"
+msgstr ""
+
+#: UcAxisOriginAndLimited.xaml:19 UcAxisOriginAndLimited.xaml:25
+#: UcAxisOriginAndLimited.xaml:31 UcAxisOriginAndLimited.xaml:37
+msgid "READ"
+msgstr ""
+
+#: UcTurnTableIo.xaml:56
+msgid "VACC 3#:"
+msgstr ""
+
+#: UcTesterAxisCollection.xaml:50
+msgid "TURNER-"
+msgstr ""
+
+#: UcTesterConfig.xaml:264
+msgid "Delete SubItem"
+msgstr ""
+
+#: UcTesterFlyCaptureCal.xaml:32
+msgid "NEG FLY START POS"
+msgstr ""
+
+#: MainWindow.xaml:176
+msgid "SYSTEM"
+msgstr ""
+
+#: UcTesterConfig.xaml:256
+msgid "Station 11"
+msgstr ""
+
+#: UcTesterAxisCollection.xaml:51
+msgid "Z1-"
+msgstr ""
+
+#: UcYieldStatus.xaml:35
+msgid "YIELD SUMMARY"
+msgstr ""
+
+#: UcTurnTableIo.xaml:122
+msgid "Behind Door:"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:51
+msgid "ReadyCaptureNegtive"
+msgstr ""
+
+#: UcVisionManual.xaml:19 MainWindow.xaml:164
+msgid "MANUAL"
+msgstr ""
+
+#: MainWindow.xaml:228
+msgid "END LOT"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:36
+msgid "STATION9"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:56
+msgid "WaitResult"
+msgstr ""
+
+#: UcTesterConfig.xaml:257
+msgid "Station 12"
+msgstr ""
+
+#: MainWindow.xaml:160
+msgid "MODE"
+msgstr ""
+
+#: UcTesterConfig.xaml:280
+msgid "Turner Start Pos:"
+msgstr ""
+
+#: UcTesterAxisCollection.xaml:52
+msgid "Z2-"
+msgstr ""
+
+#: UcSysConfig.xaml:35
+msgid "Base Config"
+msgstr ""
+
+#: UcTesterFlyCaptureCal.xaml:28
+msgid "FLY SPEED PERCENT"
+msgstr ""
+
+#: UcLogger.xaml:40
+msgid "TITLE"
+msgstr ""
+
+#: UcAxesParameters.xaml:87
+msgid "RUN MAX VELOCITY"
+msgstr ""
+
+#: UcTurnTableIo.xaml:54
+msgid "VACC 1#:"
+msgstr ""
+
+#: UcTesterSystem.xaml:30
+msgid "MAN CTRL"
+msgstr ""
+
+#: UcTestStatus.xaml:18
+msgid "Top"
+msgstr ""
+
+#: MainWindow.xaml:706
+msgid "LANGUAGE"
+msgstr ""
+
+#: UcAxesParameters.xaml:64 UcAxesParameters.xaml:116
+msgid "HOME MAX VELOCITY:"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:30
+msgid "STATION3"
+msgstr ""
+
+#: UcAxis.xaml:25
+msgid "SvOn"
+msgstr ""
+
+#: UcTesterAxisCollection.xaml:53
+msgid "Z3-"
+msgstr ""
+
+#: MainWindow.xaml:183
+msgid "REPORT"
+msgstr ""
+
+#: UcTesterConfig.xaml:260
+msgid "Add"
+msgstr ""
+
+#: UcTestStatus.xaml:17
+msgid "All"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:73
+msgid "All WaitResult"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:69
+msgid "All MultiFly3Times"
+msgstr ""
+
+#: UcTurnTableIo.xaml:59
+msgid "VACC 6#:"
+msgstr ""
+
+#: UcAxesParameters.xaml:91
+msgid "SOFT POS LIMIT "
+msgstr ""
+
+#: UcTesterFlyCaptureCal.xaml:21
+msgid "TESTER CAMERA FLY CAPTURE CAL"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:65
+msgid "All FlyCapturePos"
+msgstr ""
+
+#: UcVisionManual.xaml:12 UcSystemProfile.xaml:25
+msgid "LOAD"
+msgstr ""
+
+#: UcTesterFlyCaptureCal.xaml:50
+msgid "IS POSTIVE DIRECTION"
+msgstr ""
+
+#: UcTurnTableIo.xaml:121
+msgid "Right Door:"
+msgstr ""
+
+#: MainWindow.xaml:299
+msgid "PAUSE"
+msgstr ""
+
+#: MainWindow.xaml:193
+msgid "START LOT"
+msgstr ""
+
+#: UcTesterSystem.xaml:29
+msgid "ORG CONFIG"
+msgstr ""
+
+#: MainWindow.xaml:264
+msgid "START"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:66
+msgid "All ReadyCaptureNegtive"
+msgstr ""
+
+#: UcTesterConfig.xaml:268
+msgid "TurnerSpeed:"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:52
+msgid "FlyCaptureNeg"
+msgstr ""
+
+#: UcAxesParameters.xaml:73
+msgid "RUN START VELOCITY"
+msgstr ""
+
+#: UcTurnTableIo.xaml:120
+msgid "Left Door:"
+msgstr ""
+
+#: UcTesterConfig.xaml:287
+msgid "S3 CCD Z1Height:"
+msgstr ""
+
+#: UcTurnTableIo.xaml:87
+msgid "VACC 7#:"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:44
+msgid "SerialNo:"
+msgstr ""
+
+#: UcTesterConfig.xaml:295
+msgid "S5 CCD Z3Height:"
+msgstr ""
+
+#: UcAxesParameters.xaml:51 UcAxesParameters.xaml:110
+msgid "HOME START VELOCITY:"
+msgstr ""
+
+#: UcTesterConfig.xaml:215
+msgid "Save As"
+msgstr ""
+
+#: UcMachineStatus.xaml:24 UcYieldStatus.xaml:19
+msgid "STATUS"
+msgstr ""
+
+#: MainWindow.xaml:439
+msgid "PURGE"
+msgstr ""
+
+#: UcTesterAxisCollection.xaml:55
+msgid "Z5-"
+msgstr ""
+
+#: UcAxesParameters.xaml:146
+msgid "SOFT NEG LIMIT :"
+msgstr ""
+
+#: MainWindow.xaml:169
+msgid "VISION"
+msgstr ""
+
+#: UcTurnTableIo.xaml:124
+msgid "Right Door Lock:"
+msgstr ""
+
+#: UcTesterAxisCollection.xaml:49
+msgid "X-"
+msgstr ""
+
+#: UcTestStatus.xaml:19
+msgid "Bottom"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:28
+msgid "STATION1"
+msgstr ""
+
+#: MainWindow.xaml:170
+msgid "TESTER"
+msgstr ""
+
+#: UcTurnTableIo.xaml:57
+msgid "VACC 4#:"
+msgstr ""
+
+#: UcLogger.xaml:22
+msgid "DATALOG"
+msgstr ""
+
+#: UcTurnTableIo.xaml:89
+msgid "VACC 9#:"
+msgstr ""
+
+#: UcTestStatus.xaml:20
+msgid "Left"
+msgstr ""
+
+#: UcTesterConfig.xaml:299
+msgid "S6 CCD Z4Height:"
+msgstr ""
+
+#: UcTurnTableIo.xaml:26
+msgid "TURN TABLE"
+msgstr ""
+
+#: UcTesterAxisCollection.xaml:56
+msgid "Z6-"
+msgstr ""
+
+#: UcConnectStatus.xaml:16
+msgid "CONNECTION"
+msgstr ""
+
+#: UcAxesParameters.xaml:55 UcAxesParameters.xaml:122
+msgid "RUN ACC:"
+msgstr ""
+
+#: UcTesterConfig.xaml:251
+msgid "Station 6"
+msgstr ""
+
+#: UcTesterConfig.xaml:321
+msgid "Is Record Last Pos"
+msgstr ""
+
+#: MainWindow.xaml:662
+msgid "STEPBYSTEP"
+msgstr ""
+
+#: MainWindow.xaml:67
+msgid "OPERATOR:"
+msgstr ""
+
+#: UcTurnTableIo.xaml:58
+msgid "VACC 5#:"
+msgstr ""
+
+#: UcAxesParameters.xaml:28
+msgid "AXIS SELECTION"
+msgstr ""
+
+#: UcTestStatus.xaml:23
+msgid "Behind"
+msgstr ""
+
+#: MainWindow.xaml:546
+msgid "LOGGER"
+msgstr ""
+
+#: UcTesterFlyCaptureCal.xaml:36
+msgid "POS FLY START POS"
+msgstr ""
+
+#: UcTesterOrgAndLimitCal.xaml:26
+msgid "ORIGIN AND LIMIT CAL"
+msgstr ""
+
+#: MainWindow.xaml:826
+msgid "ONLINE"
+msgstr ""
+
+#: UcTesterConfig.xaml:304
+msgid "S7 CCD Z5Height:"
+msgstr ""
+
+#: UcTesterConfig.xaml:276
+msgid "Socket Space:"
+msgstr ""
+
+#: MainWindow.xaml:72
+msgid "LOGIN"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:68
+msgid "All WaitCaptureFinish"
+msgstr ""
+
+#: UcAxesParameters.xaml:99
+msgid "HOME ACC:"
+msgstr ""
+
+#: MainWindow.xaml:174
+msgid "SETTING"
+msgstr ""
+
+#: UcTesterConfig.xaml:308
+msgid "S7 CCD Z7Height:"
+msgstr ""
+
+#: UcTesterConfig.xaml:291
+msgid "S4 CCD Z2Height:"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:34
+msgid "STATION7"
+msgstr ""
+
+#: UcTesterAutoTurn.xaml:37 UcTesterAutoTurn.xaml:41 UcTesterAutoTurn.xaml:45
+#: UcTesterAutoTurn.xaml:47
+msgid "PASS"
+msgstr ""
+
+#: UcAxesParameters.xaml:81 UcAxesParameters.xaml:156
+msgid "MOTION TIMEOUT:"
+msgstr ""
+
+#: UcTesterFlyCaptureCal.xaml:62 UcTesterFlyCaptureCal.xaml:63
+msgid "Fly Capture Cal"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:67
+msgid "All FlyCaptureNeg"
+msgstr ""
+
+#: UcTesterSystem.xaml:26
+msgid "MACHINE IO"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:57
+msgid "NextIndex"
+msgstr ""
+
+#: UcTesterConfig.xaml:235
+msgid "STATION"
+msgstr ""
+
+#: UcTesterSystem.xaml:27
+msgid "FEEDER TRAY"
+msgstr ""
+
+#: UcTesterAxisCollection.xaml:99 UcTurnTableIo.xaml:28
+msgid "STEP SIZE[mm]"
+msgstr ""
+
+#: UcAxis.xaml:11
+msgid "X轴:"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:35
+msgid "STATION8"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:55
+msgid "WaitCaptureFinish"
+msgstr ""
+
+#: UcTesterAxisCollection.xaml:41
+msgid "Z1+"
+msgstr ""
+
+#: UcTurnTableIo.xaml:88
+msgid "VACC 8#:"
+msgstr ""
+
+#: UcTesterConfig.xaml:263
+msgid "Add SubItem"
+msgstr ""
+
+#: UcTesterConfig.xaml:261
+msgid "Delete"
+msgstr ""
+
+#: UcAxis.xaml:22
+msgid "LMT-"
+msgstr ""
+
+#: UcTestStatus.xaml:22
+msgid "Front"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:49
+msgid "ReadyCapture"
+msgstr ""
+
+#: MainWindow.xaml:865
+msgid "SW Ver:"
+msgstr ""
+
+#: UcSystemProfile.xaml:16
+msgid "System Profile"
+msgstr ""
+
+#: UcTesterFlyCaptureCal.xaml:54
+msgid "Read DirN Start Pos"
+msgstr ""
+
+#: UcTesterConfig.xaml:432
+msgid "SOCKET"
+msgstr ""
+
+#: MainWindow.xaml:585
+msgid "DRYRUN"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:32
+msgid "STATION5"
+msgstr ""
+
+#: UcAxesParameters.xaml:140
+msgid "RUN MAX VELOCITY:"
+msgstr ""
+
+#: MainWindow.xaml:171
+msgid "STIMULUS"
+msgstr ""
+
+#: UcTesterAxisCollection.xaml:42
+msgid "Z2+"
+msgstr ""
+
+#: UcTesterConfig.xaml:322
+msgid "Set Speed"
+msgstr ""
+
+#: MainWindow.xaml:787
+msgid "HELP"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:29
+msgid "STATION2"
+msgstr ""
+
+#: UcTurnTableIo.xaml:50
+msgid "SOCKET IO"
+msgstr ""
+
+#: MainWindow.xaml:369
+msgid "RESET"
+msgstr ""
+
+#: UcTestStatus.xaml:14
+msgid "STATUS:"
+msgstr ""
+
+#: UcAxesParameters.xaml:47
+msgid "HOME ACC"
+msgstr ""
+
+#: MainWindow.xaml:181
+msgid "DATA"
+msgstr ""
+
+#: UcTurnTableIo.xaml:34
+msgid "Check door"
+msgstr ""
+
+#: UcTesterOrgAndLimitCal.xaml:33
+msgid "TurnTable Axis"
+msgstr ""
+
+#: UcAxesParameters.xaml:43
+msgid "TESTER AXIS"
+msgstr ""
+
+#: UcTesterSystem.xaml:31
+msgid "System Config"
+msgstr ""
+
+#: UcLogger.xaml:38
+msgid "LEVEL"
+msgstr ""
+
+#: UcTesterAxisCollection.xaml:43
+msgid "Z3+"
+msgstr ""
+
+#: UcTurnTableIo.xaml:91
+msgid "VACC 11#:"
+msgstr ""
+
+#: UcLogger.xaml:41
+msgid "MESSAGE"
+msgstr ""
+
+#: UcAxisOriginAndLimited.xaml:17
+msgid "LMT(HW) +"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:74
+msgid "GetFinalResult"
+msgstr ""
+
+#: UcAxisOriginAndLimited.xaml:23
+msgid "LMT(HW) -"
+msgstr ""
+
+#: MainWindow.xaml:162
+msgid "AUTO"
+msgstr ""
+
+#: UcTesterConfig.xaml:201
+msgid "TEST PLAN"
+msgstr ""
+
+#: UcAxis.xaml:27
+msgid "TIME:"
+msgstr ""
+
+#: UcTesterConfig.xaml:312
+msgid "S8 CCD Z6Height:"
+msgstr ""
+
+#: UcTesterConfig.xaml:255
+msgid "Station 10"
+msgstr ""
+
+#: UcTesterFlyCaptureCal.xaml:55
+msgid "Move To DirN Start Pos"
+msgstr ""
+
+#: UcTurnTableIo.xaml:35
+msgid "Check AirSource"
+msgstr ""
+
+#: UcTesterAxisCollection.xaml:44
+msgid "Z4+"
+msgstr ""
+
+#: UcAxesParameters.xaml:60
+msgid "HOME DCC"
+msgstr ""
+
+#: MainWindow.xaml:623
+msgid "ENGRUN"
+msgstr ""
+
+#: UcAxesParameters.xaml:68 UcAxesParameters.xaml:128
+msgid "RUN DCC:"
+msgstr ""
+
+#: UcAxesParameters.xaml:165
+msgid "Fly Speed Ratio:"
+msgstr ""
+
+#: MainWindow.xaml:334
+msgid "END"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:27
+msgid "STATION0"
+msgstr ""
+
+#: UcTesterFlyCaptureCal.xaml:59
+msgid "Move To DirP Start Pos"
+msgstr ""
+
+#: UcAxisOriginAndLimited.xaml:11
+msgid "X AXIS"
+msgstr ""
+
+#: UcTesterConfig.xaml:210
+msgid "Load"
+msgstr ""
+
+#: UcVisionManual.xaml:18
+msgid "VISION:"
+msgstr ""
+
+#: UcTurnTableIo.xaml:90
+msgid "VACC 10#:"
+msgstr ""
+
+#: UcTesterAxisCollection.xaml:45
+msgid "Z5+"
+msgstr ""
+
+#: UcYieldStatus.xaml:33
+msgid "DISTRIBUTION"
+msgstr ""
+
+#: UcTesterCaliNew.xaml:25
+msgid "FLY CAPTURE"
+msgstr ""
+
+#: UcAxisOriginAndLimited.xaml:35
+msgid "LMT(SW) -"
+msgstr ""
+
+#: UcTurnTableIo.xaml:123
+msgid "Left Door Lock:"
+msgstr ""
+
+#: UcTesterFlyCaptureCal.xaml:40
+msgid "FLY START POS OFFSET"
+msgstr ""
+
+#: UcTesterConfig.xaml:230
+msgid "TOTAL"
+msgstr ""
+
+#: UcTesterFlyCaptureCal.xaml:24
+msgid "CALIBRATION COUNT"
+msgstr ""
+
+#: MainWindow.xaml:511
+msgid "TOOLS"
+msgstr ""
+
+#: UcAxesParameters.xaml:134
+msgid "RUN START VELOCITY:"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:59
+msgid "All ReadyCapture"
+msgstr ""
+
+#: UcAxis.xaml:20
+msgid "ORG"
+msgstr ""
+
+#: UcTesterSystem.xaml:28
+msgid "Axis PARAM"
+msgstr ""
+
+#: UcTesterAxisCollection.xaml:46
+msgid "Z6+"
+msgstr ""
+
+#: UcTesterOrgAndLimitCal.xaml:36 UcAxisOriginAndLimited.xaml:13
+msgid "ORIGIN"
+msgstr ""
+
+#: UcTesterAutoTurn.xaml:33
+msgid "Socket 1 ~ 6 :"
+msgstr ""
+
+#: UcTesterConfig.xaml:318
+msgid "Fly Capture Number:"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:33
+msgid "STATION6"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:75
+msgid "SendCmd_Reset"
+msgstr ""
+
+#: UcTestStatus.xaml:51
+msgid "TEST SUMMARY"
+msgstr ""
+
+#: UcTesterFlyCaptureCal.xaml:66
+msgid "SAVE"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:58
+msgid "All SendCmd"
+msgstr ""
+
+#: UcTesterCaliNew.xaml:40
+msgid "CAMERA VIEW"
+msgstr ""
+
+#: UcTesterManCtrl.xaml:42
+msgid "CmdId:"
+msgstr ""
+
+#: UcLogger.xaml:39
+msgid "DATE TIME"
+msgstr ""
+
+#: UcAxis.xaml:21
+msgid "LMT+"
+msgstr ""

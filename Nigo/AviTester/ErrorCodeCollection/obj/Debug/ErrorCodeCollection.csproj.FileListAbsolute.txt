@@ -1,0 +1,13 @@
+E:\Work\CSharp\Nigo\AviTester\exe\ErrorCodeCollection.dll
+E:\Work\CSharp\Nigo\AviTester\exe\ErrorCodeCollection.pdb
+E:\Work\CSharp\Nigo\AviTester\ErrorCodeCollection\obj\Debug\ErrorCodeCollection.csproj.CoreCompileInputs.cache
+E:\Work\CSharp\Nigo\AviTester\ErrorCodeCollection\obj\Debug\ErrorCodeCollection.dll
+E:\Work\CSharp\Nigo\AviTester\ErrorCodeCollection\obj\Debug\ErrorCodeCollection.pdb
+E:\Work\CSharp\Nigo\Nigo\bin\Debug\ErrorCodeCollection.dll
+E:\Work\CSharp\Nigo\Nigo\bin\Debug\ErrorCodeCollection.pdb
+E:\Work\CSharp\Nigo\AviTester\ErrorCodeCollection\obj\Debug\ErrorCodeCollection.csproj.AssemblyReference.cache
+D:\Nigo\Nigo\bin\Debug\ErrorCodeCollection.dll
+D:\Nigo\Nigo\bin\Debug\ErrorCodeCollection.pdb
+D:\Nigo\AviTester\ErrorCodeCollection\obj\Debug\ErrorCodeCollection.csprojAssemblyReference.cache
+D:\Nigo\AviTester\ErrorCodeCollection\obj\Debug\ErrorCodeCollection.dll
+D:\Nigo\AviTester\ErrorCodeCollection\obj\Debug\ErrorCodeCollection.pdb
